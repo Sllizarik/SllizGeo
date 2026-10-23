@@ -1,0 +1,86 @@
+[
+  {
+    "name": "Франция",
+    "code": "FR",
+    "continent": "Европа",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Париж",
+    "flagUrl": "https://flagcdn.com/fr.svg",
+    "food": {
+      "name": "Рататуй",
+      "desc": "Традиционное овощное рагу из прованских трав",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ratatouille_01.jpg/640px-Ratatouille_01.jpg"
+    },
+    "population": 68,
+    "regionsCount": 18,
+    "millionCitiesCount": 9,
+    "leader": {
+      "name": "Эмманюэль Макрон",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Emmanuel_Macron_July_2024_%28cropped%29.jpg/440px-Emmanuel_Macron_July_2024_%28cropped%29.jpg"
+    }
+  },
+  {
+    "name": "Япония",
+    "code": "JP",
+    "continent": "Азия",
+    "isUN": true,
+    "isMainland": false,
+    "capital": "Токио",
+    "flagUrl": "https://flagcdn.com/jp.svg",
+    "food": {
+      "name": "Суши",
+      "desc": "Традиционное блюдо из риса и свежих морепродуктов",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/640px-Sushi_platter.jpg"
+    },
+    "population": 124,
+    "regionsCount": 47,
+    "millionCitiesCount": 12,
+    "leader": {
+      "name": "Санаэ Такаити",
+      "photoUrl": ""
+    }
+  },
+  {
+    "name": "Приднестровье",
+    "code": "XT",
+    "continent": "Европа",
+    "isUN": false,
+    "isMainland": true,
+    "capital": "Тирасполь",
+    "flagUrl": "https://flagcdn.com/pm.svg",
+    "food": {
+      "name": "Плацинды",
+      "desc": "Тонкие молдавские пироги с начинкой из сыра или зелени",
+      "photoUrl": ""
+    },
+    "population": 0.4,
+    "regionsCount": 7,
+    "millionCitiesCount": 0,
+    "leader": {
+      "name": "Вадим Красносельский",
+      "photoUrl": ""
+    }
+  },
+  {
+    "name": "Непал",
+    "code": "NP",
+    "continent": "Азия",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Катманду",
+    "flagUrl": "https://flagcdn.com/np.svg",
+    "food": {
+      "name": "Дал-бхат",
+      "desc": "Сет из чечевичного супа, варёного риса и пряностей",
+      "photoUrl": ""
+    },
+    "population": 30,
+    "regionsCount": 7,
+    "millionCitiesCount": 1,
+    "leader": {
+      "name": "Рамчандра Паудел",
+      "photoUrl": ""
+    }
+  }
+]
