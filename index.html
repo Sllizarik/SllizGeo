@@ -254,7 +254,20 @@ function openShop(){
 }
 $("bGear").onclick=openSettings;$("bShop").onclick=openShop;
 
-initDB();
+initDB(async function initDB() {
+  try {
+    const res = await fetch('data.json?v=' + Date.now());
+    DB = await res.json();
+    ALLCONT = [...new Set(DB.map(item => item.continent))];
+    S.settings.conts = ALLCONT.slice();
+    save();
+    upd();
+    showMenu();
+  } catch(e) {
+    document.getElementById('view').innerHTML = `<div class="card"><h2>Ошибка чтения data.json</h2><p>Проверьте файл на GitHub.</p></div>`;
+  }
+}
+);
 </script>
 </body>
 </html>
