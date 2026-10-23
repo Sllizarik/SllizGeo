@@ -25,9 +25,9 @@ h1{text-align:center;margin:6px 0 2px;font-size:30px;color:var(--acc);letter-spa
 .q{min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
 .qt{font-size:26px;font-weight:700}
 .qs{font-size:14px;opacity:.8}
-.media-img{max-width:100%;max-height:180px;border-radius:10px;object-fit:cover;border:1px solid var(--line);margin-bottom:8px}
-.flag-img{max-width:180px;height:auto;border-radius:4px;border:1px solid var(--line);display:block;margin:0 auto 8px}
-.grid .flag-img{width:100%;max-height:100px;object-fit:contain}
+.media-img{max-width:100%;max-height:220px;border-radius:12px;object-fit:cover;border:1px solid var(--line);margin-bottom:8px}
+.flag-img{max-width:200px;max-height:140px;width:auto;height:auto;border-radius:6px;border:1px solid var(--line);display:block;margin:0 auto 8px;object-fit:contain}
+.grid .flag-img{width:100%;max-height:90px;object-fit:contain}
 .opts{display:flex;flex-direction:column;gap:10px}
 .opts.grid{display:grid;grid-template-columns:1fr 1fr}
 .opt{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 10px;font-size:17px;min-height:56px;display:flex;align-items:center;justify-content:center;box-shadow:var(--glow)}
@@ -74,17 +74,29 @@ label.row input{width:20px;height:20px;accent-color:var(--acc)}
 let DB = [];
 let ALLCONT = [];
 
-/* Загрузка внешней JSON базы данных */
 async function initDB() {
   try {
-    const res = await fetch('data.json');
+    const res = await fetch('data.json?v=' + Date.now());
     DB = await res.json();
-    ALLCONT = [...new Set(DB.map(item => item.continent))];
-    S.settings.conts = ALLCONT.slice();
+    
+    // Находим все доступные континенты
+    ALLCONT = [...new Set(DB.map(item => item.continent))].filter(Boolean);
+    
+    // Если в сохраненных настройках пусто — жестко включаем ВСЕ континенты
+    if (!S.settings.conts || S.settings.conts.length === 0) {
+      S.settings.conts = ALLCONT.slice();
+    } else {
+      // Добавляем новые континенты, если их не было
+      ALLCONT.forEach(c => {
+        if (!S.settings.conts.includes(c)) S.settings.conts.push(c);
+      });
+    }
+    
+    save();
     upd();
     showMenu();
   } catch(e) {
-    document.getElementById('view').innerHTML = `<div class="card"><h2>Ошибка загрузки data.json</h2><p>Убедитесь, что файл data.json создан на GitHub.</p></div>`;
+    document.getElementById('view').innerHTML = `<div class="card"><h2>Ошибка чтения data.json</h2><p>Проверьте синтаксис JSON файла на GitHub.</p></div>`;
   }
 }
 
@@ -103,11 +115,19 @@ const $=id=>document.getElementById(id);
 function toast(t){const e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1600)}
 function upd(){$("hc").textContent=S.coins;$("hs").textContent=S.score;document.body.dataset.theme=S.theme}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function pool(){const s=S.settings;return DB.filter(c=>s.conts.includes(c.continent)&&(!s.onlyUN||c.isUN)&&(!s.onlyMain||c.isMainland))}
+function pool(){
+  const s=S.settings;
+  return DB.filter(c => {
+    const cOk = !s.conts || s.conts.length === 0 || s.conts.includes(c.continent);
+    const unOk = !s.onlyUN || c.isUN;
+    const mainOk = !s.onlyMain || c.isMainland;
+    return cOk && unOk && mainOk;
+  });
+}
 function fmtPop(m){if(m>=1)return "≈ "+(m>=10?Math.round(m):m)+" млн";return "≈ "+Math.round(m*1e6).toLocaleString("ru")+" чел."}
 
 function flagHTML(c){
-  return `<img src="${c.flagUrl}" class="flag-img" alt="Flag" loading="lazy" onerror="this.src='https://flagcdn.com/${c.code.toLowerCase()}.svg'">`;
+  return `<img src="${c.flagUrl}" class="flag-img" alt="Flag" loading="lazy">`;
 }
 
 const MODES={
@@ -254,20 +274,7 @@ function openShop(){
 }
 $("bGear").onclick=openSettings;$("bShop").onclick=openShop;
 
-initDB(async function initDB() {
-  try {
-    const res = await fetch('data.json?v=' + Date.now());
-    DB = await res.json();
-    ALLCONT = [...new Set(DB.map(item => item.continent))];
-    S.settings.conts = ALLCONT.slice();
-    save();
-    upd();
-    showMenu();
-  } catch(e) {
-    document.getElementById('view').innerHTML = `<div class="card"><h2>Ошибка чтения data.json</h2><p>Проверьте файл на GitHub.</p></div>`;
-  }
-}
-);
+initDB();
 </script>
 </body>
 </html>
