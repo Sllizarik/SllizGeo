@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="theme-color" content="#121417">
+<title>SllizGeo</title>
+<style>
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+body{margin:0;font-family:system-ui,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
+body[data-theme=dark]{--bg:#121417;--card:#1d2127;--text:#eceff4;--acc:#4ea1ff;--ok:#2ecc71;--bad:#e74c3c;--line:#2d333b;--glow:none}
+body[data-theme=neon]{--bg:#0a0014;--card:#17002b;--text:#e6fff9;--acc:#00ffd5;--ok:#39ff14;--bad:#ff2d75;--line:#6a00b8;--glow:0 0 10px #00ffd566}
+body[data-theme=light]{--bg:#f2f5f9;--card:#ffffff;--text:#1b1f24;--acc:#1e6fe0;--ok:#1fa653;--bad:#d63a2f;--line:#d5dbe3;--glow:none}
+#app{max-width:520px;margin:0 auto;padding:10px 12px 30px}
+header{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px}
+.stats{display:flex;gap:12px;font-size:15px}
+.hbtns{display:flex;gap:8px}
+button{font:inherit;color:var(--text);cursor:pointer}
+.ib{background:var(--card);border:1px solid var(--line);border-radius:12px;font-size:20px;padding:6px 12px;box-shadow:var(--glow)}
+h1{text-align:center;margin:6px 0 2px;font-size:30px;color:var(--acc);letter-spacing:1px}
+.sub{text-align:center;font-size:12px;opacity:.7;margin-bottom:14px}
+.menu button.mode{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin-bottom:10px;font-size:17px;box-shadow:var(--glow)}
+.mode .ic{font-size:26px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:12px;text-align:center;box-shadow:var(--glow)}
+.q{min-height:150px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}
+.qt{font-size:26px;font-weight:700}
+.qs{font-size:14px;opacity:.8}
+.fe{font-size:96px;line-height:1.1}
+.fb{display:flex;align-items:center;justify-content:center;background:var(--bg);border:2px dashed var(--acc);border-radius:10px;font-weight:700;color:var(--acc);padding:14px 22px;font-size:26px}
+.flag svg{width:150px;height:auto;border-radius:6px;border:1px solid var(--line);display:block}
+.grid .flag svg{width:100%}
+.opts{display:flex;flex-direction:column;gap:10px}
+.opts.grid{display:grid;grid-template-columns:1fr 1fr}
+.opt{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:14px 10px;font-size:17px;min-height:56px;display:flex;align-items:center;justify-content:center;box-shadow:var(--glow)}
+.opt .fe{font-size:56px}
+.opt.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 25%,var(--card))}
+.opt.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 25%,var(--card))}
+.opt.hide{visibility:hidden}
+.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;font-size:15px}
+.bar{height:6px;background:var(--line);border-radius:4px;margin-bottom:12px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc)}
+.hints{display:flex;gap:10px;margin-top:12px}
+.hints button,.btn{flex:1;background:var(--card);border:1px solid var(--acc);color:var(--acc);border-radius:12px;padding:12px;font-size:15px}
+.btn.pri{background:var(--acc);color:#fff}
+.map{width:200px;height:200px}
+.map polygon{fill:var(--acc);stroke:var(--text);stroke-width:1;stroke-linejoin:round}
+.facts{text-align:left;font-size:18px;line-height:1.8}
+#modal{position:fixed;inset:0;background:#000a;display:flex;align-items:flex-end;justify-content:center;z-index:10}
+#modal.hidden{display:none}
+.sheet{background:var(--bg);width:100%;max-width:520px;max-height:88vh;overflow:auto;border-radius:20px 20px 0 0;padding:16px;border:1px solid var(--line)}
+.sheet h2{margin:0 0 10px}
+.sec{margin:14px 0 6px;font-weight:700;color:var(--acc)}
+label.row{display:flex;align-items:center;gap:10px;padding:10px;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:6px;font-size:16px}
+label.row input{width:20px;height:20px;accent-color:var(--acc)}
+.small{font-size:12px;opacity:.7;margin-top:6px}
+.shopi{display:flex;justify-content:space-between;align-items:center;gap:8px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px}
+.shopi button{background:var(--acc);color:#fff;border:0;border-radius:10px;padding:10px 14px}
+.shopi button.off{background:var(--line);color:var(--text)}
+#toast{position:fixed;left:50%;bottom:30px;transform:translateX(-50%);background:var(--acc);color:#fff;padding:10px 18px;border-radius:20px;z-index:20;opacity:0;transition:.3s;pointer-events:none;font-size:15px}
+#toast.show{opacity:1}
+.res{font-size:18px;line-height:1.9}
+.big{font-size:44px}
+</style>
+</head>
+<body data-theme="dark">
+<div id="app">
+  <header>
+    <div class="stats"><span>🪙 <b id="hc">0</b></span><span>⭐ <b id="hs">0</b></span></div>
+    <div class="hbtns"><button class="ib" id="bShop">🛒</button><button class="ib" id="bGear">⚙️</button></div>
+  </header>
+  <main id="view"></main>
+</div>
+<div id="modal" class="hidden"><div class="sheet" id="sheet"></div></div>
+<div id="toast"></div>
+
+<script>
+/* ================= БАЗА ДАННЫХ ================= */
+/* Формат строки: название|код|континент|ООН,материк|столица|блюдо — описание|население(млн)|областей|миллионников|лидер */
+const CONT={E:"Европа",A:"Азия",F:"Африка",O:"Австралия и Океания",S:"Южная Америка",N:"Северная Америка"};
+const ALLCONT=Object.values(CONT);
+const RAW=`Албания|AL|E|11|Тирана|Тавё кози — запечённая баранина с йогуртом|2.4|12|0|Эди Рама
+Андорра|AD|E|11|Андорра-ла-Велья|Эскудэлья — густой мясной суп|0.08|7|0|Шави Эспот
+Австрия|AT|E|11|Вена|Венский шницель — отбивная из телятины|9.1|9|1|Александер Ван дер Беллен
+Беларусь|BY|E|11|Минск|Драники — картофельные оладьи|9.2|6|1|Александр Лукашенко
+Бельгия|BE|E|11|Брюссель|Мидии с картофелем фри — моллюски в бульоне|11.8|3|0|Барт Де Вевер
+Босния и Герцеговина|BA|E|11|Сараево|Чевапи — маленькие мясные колбаски на гриле|3.2|3|0|Борьяна Кришто
+Болгария|BG|E|11|София|Шопский салат — овощи с брынзой|6.4|28|1|Илияна Йотова
+Хорватия|HR|E|11|Загреб|Сарма — голубцы из квашеной капусты|3.9|21|0|Зоран Милланович
+Чехия|CZ|E|11|Прага|Свичкова — говядина в сливочном соусе с кнедликами|10.9|14|1|Петр Павел
+Дания|DK|E|11|Копенгаген|Смёрребрёд — открытый бутерброд на ржаном хлебе|5.9|5|0|Метте Фредериксен
+Эстония|EE|E|11|Таллин|Верибырст — кровяная колбаса|1.4|15|0|Алар Карис
+Финляндия|FI|E|11|Хельсинки|Калакукко — рыбный пирог в ржаном тесте|5.6|19|0|Александр Стубб
+Франция|FR|E|11|Париж|Рататуй — тушёные овощи|68|18|9|Эмманюэль Макрон
+Германия|DE|E|11|Берлин|Айсбайн — запечённая свиная рулька|84|16|4|Фридрих Мерц
+Греция|GR|E|11|Афины|Мусака — запеканка из баклажанов и фарша|10.4|13|0|Кириакос Мицотакис
+Венгрия|HU|E|11|Будапешт|Гуляш — суп-рагу с паприкой|9.6|19|1|Виктор Орбан
+Исландия|IS|E|10|Рейкьявик|Хаукарль — ферментированное мясо акулы|0.4|8|0|Халла Томасдоттир
+Ирландия|IE|E|10|Дублин|Ирландское рагу — баранина с картофелем|5.3|26|0|Кэтрин Коннолли
+Италия|IT|E|10|Рим|Карбонара — паста с яйцом и гуанчале|59|20|2|Джорджа Мелони
+Латвия|LV|E|11|Рига|Серые горох со шпиком — горох с копчёным салом|1.9|36|0|Эдгарс Ринкевичс
+Лихтенштейн|LI|E|11|Вадуц|Кезеклёссле — сырные клёцки|0.04|11|0|Даниэль Риш
+Литва|LT|E|11|Вильнюс|Цеппелины — картофельные клёцки с мясом|2.9|10|0|Гитанас Науседа
+Люксембург|LU|E|11|Люксембург|Юдде мат гардебунен — копчёная свинина с бобами|0.66|12|0|Люк Фриден
+Мальта|MT|E|10|Валлетта|Стуффат тал-фенек — кроличье рагу|0.54|5|0|Роберт Абела
+Молдова|MD|E|11|Кишинёв|Мамалыга с брынзой — кукурузная каша|2.5|32|0|Майя Санду
+Монако|MC|E|11|Монако|Барбажуан — жареный пирожок со шпинатом|0.04|1|0|Альбер II
+Черногория|ME|E|11|Подгорица|Каштрадина — баранина с капустой|0.62|24|0|Яков Милатович
+Нидерланды|NL|E|11|Амстердам|Стампот — картофельное пюре с овощами и колбасой|17.9|12|3|Дик Схоф
+Северная Македония|MK|E|11|Скопье|Тавче гравче — запечённая фасоль|1.8|80|0|Гордана Силяновска-Давкова
+Норвегия|NO|E|11|Осло|Фаликол — баранина с капустой|5.5|15|0|Йонас Гар Стёре
+Польша|PL|E|11|Варшава|Бигос — туш��ная капуста с мясом|37.6|16|1|Кароль Навроцкий
+Португалия|PT|E|10|Лиссабон|Бакальяу — блюда из вяленой трески|10.3|18|0|Антониу Жозе Сегуру
+Румыния|RO|E|11|Бухарест|Сармале — голубцы в виноградных листьях|19|41|1|Никушор Дан
+Россия|RU|E|11|Москва|Пельмени — тесто с мясной начинкой|146|89|16|Владимир Путин
+Сан-Марино|SM|E|11|Сан-Марино|Торта Титано — ореховый торт|0.034|9|0|Капитаны-регенты
+Сербия|RS|E|11|Белград|Плескавица — мясная лепёшка на гриле|6.6|29|1|Александр Вучич
+Словакия|SK|E|11|Братислава|Бряндзовые халушки — клёцки с овечьим сыром|5.4|8|0|Петер Пеллегрини
+Словения|SI|E|11|Любляна|Потица — сладкий ореховый рулет|2.1|12|0|Наташа Пирц Мусар
+Испания|ES|E|10|Мадрид|Паэлья — рис с морепродуктами|48.6|17|2|Педро Санчес
+Швеция|SE|E|11|Стокгольм|Шведские фрикадельки — с брусничным соусом|10.6|21|0|Ульф Кристерссон
+Швейцария|CH|E|11|Берн|Фондю — расплавленный сыр|9|26|0|Ги Пармелен
+Украина|UA|E|11|Киев|Борщ — свекольный суп со сметаной|38|27|4|Владимир Зеленский
+Великобритания|GB|E|10|Лондон|Фиш-энд-чипс — жареная рыба с картофелем|68|4|2|Киир Стармер
+Ватикан|VA|E|01|Ватикан|Качо э пепе — паста с сыром и перцем|0.0008|1|0|Лев XIV
+Кипр|CY|E|10|Никосия|Сувлаки — мясо на шпажке|0.92|6|0|Никос Христодулидис
+Косово|XK|E|01|Приштина|Флия — слоёный блин, запечённый на углях|1.6|7|0|Вьоса Османи
+Приднестровье|XT|E|01|Тирасполь|Плацинды — тонкие пироги с начинкой|0.4|7|0|Вадим Красносельский
+ДНР|XD|E|01|Донецк|Пирожки по-донбасски — с картошкой и жареным луком|4|8|0|Денис Пушилин
+ЛНР|XL|E|01|Луганск|Галушки — отварные клёцки со сметаной|2|8|0|Леонид Пасечник
+Северный Кипр|XC|E|00|Северная Никосия|Хелим — жареный сыр с мятой|0.38|6|0|Туфан Эрхюрман
+Абхазия|XA|A|01|Сухум|Абхазская аджика — острая паста с пряностями|0.24|7|0|Бадра Гунба
+Южная Осетия|XO|A|01|Цхинвал|Осетинские пироги — с сыром и свекольной ботвой|0.05|4|0|Алан Гаглоев
+Грузия|GE|A|11|Тбилиси|Хинкали — клёцки с мясом и бульоном|3.7|12|0|Михеил Кавелашвили
+Армения|AM|A|11|Ереван|Хоровац — шашлык на мангале|3|11|1|Ваагн Хачатурян
+Азербайджан|AZ|A|11|Баку|Дюшбара — мелкие пельмени в бульоне|10.2|66|1|Ильхам Алиев
+Афганистан|AF|A|11|Кабул|Кабули — плов с морковью и изюмом|42|34|1|Хайбатулла Ахундзада
+Бахрейн|BH|A|10|Манама|Мачбус — рис с мясом и специями|1.5|4|0|Хамад бин Иса Аль Халифа
+Бангладеш|BD|A|11|Дакка|Хилса — рыба в горчичном соусе|173|8|2|Тарик Рахман
+Бутан|BT|A|11|Тхимпху|Эма датши — острый перец с сыром|0.78|20|0|Лотай Церинг
+Бруней|BN|A|10|Бандар-Сери-Бегаван|Амбуят — липкая каша из саго|0.46|4|0|Хассанал Болкиах
+Камбоджа|KH|A|11|Пномпень|Амок — рыба на пару в кокосовом молоке|17|25|1|Хун Манет
+Китай|CN|A|11|Пекин|Утка по-пекински — хрустящая утка с блинчиками|1410|34|105|Си Цзиньпин
+Индия|IN|A|11|Нью-Дели|Бирьяни — рис с мясом и специями|1430|36|53|Нарендра Моди
+Индонезия|ID|A|10|Джакарта|Наси горенг — жареный рис|277|38|12|Прабово Субианто
+Иран|IR|A|11|Тегеран|Челоу кебаб — шашлык с рисом|89|31|8|Масуд Пезешкиан
+Ирак|IQ|A|11|Багдад|Масгуф — рыба, запечённая у костра|45|19|4|Абдул Латиф Рашид
+Израиль|IL|A|11|Иерусалим|Фалафель — жареные шарики из нута|9.8|6|1|Биньямин Нетаньяху
+Япония|JP|A|10|Токио|Суши — рис с рыбой и морепродуктами|124|47|12|Санаэ Такаити
+Иордания|JO|A|11|Амман|Мансаф — баранина с рисом в йогурте|11.3|12|1|Абдалла II
+Казахстан|KZ|A|11|Астана|Бешбармак — отварное мясо с лапшой|20|17|3|Касым-Жомарт Токаев
+Кувейт|KW|A|11|Эль-Кувейт|Мурабьян — креветки с пряным рисом|4.3|6|1|Мишаль аль-Ахмад ас-Сабах
+Киргизия|KG|A|11|Бишкек|Куурдак — жареное мясо с картофелем|7|9|1|Садыр Жапаров
+Лаос|LA|A|11|Вьентьян|Лаб — острый мясной салат|7.6|18|0|Тонглун Сисулит
+Ливан|LB|A|11|Бейрут|Кибби — котлеты из булгура и мяса|5.4|8|0|Жозеф Аун
+Малайзия|MY|A|11|Куала-Лумпур|Насилемак — рис в кокосовом молоке|34|13|2|Анвар Ибрагим
+Мальдивы|MV|A|10|Мале|Гарудия — рыбный бульон с рисом|0.52|21|0|Мохамед Муиззу
+Монголия|MN|A|11|Улан-Батор|Бууз — паровые пельмени с бараниной|3.5|22|1|Ухнагийн Хурэлсух
+Мьянма|MM|A|11|Нейпьидо|Мохинга — рыбный суп с лапшой|54|15|2|Мин Аун Хлайн
+Непал|NP|A|11|Катманду|Дал-бхат — чечевица с рисом|30|7|1|Рамчандра Паудел
+Северная Корея|KP|A|11|Пхеньян|Нэнмён — холодная гречневая лапша|26|13|2|Ким Чен Ын
+Оман|OM|A|11|Маскат|Шува — баранина, запечённая в земле|4.6|11|0|Хайсам бен Тарик
+Пакистан|PK|A|11|Исламабад|Нихари — медленно тушёная говядина|240|7|9|Шахбаз Шариф
+Палестина|PS|A|01|Рамалла|Маклюба — перевёрнутый рис с мясом и овощами|5.5|16|0|Махмуд Аббас
+Филиппины|PH|A|10|Манила|Адобо — мясо, тушёное в уксусе и соевом соусе|117|17|3|Фердинанд Маркос-младший
+Катар|QA|A|11|Доха|Тарид — хлеб в мясном рагу|2.7|8|1|Тамим бин Хамад Аль Тани
+Саудовская Аравия|SA|A|11|Эр-Рияд|Кабса — рис с мясом и пряностями|36|13|4|Король Салман
+Сингапур|SG|A|10|Сингапур|Чили-краб — краб в остром томатном соусе|5.9|5|1|Лоуренс Вонг
+Южная Корея|KR|A|11|Сеул|Кимчи — острая ферментированная капуста|51.7|17|8|Ли Чжэ Мён
+Шри-Ланка|LK|A|10|Шри-Джаяварденепура-Котте|Райс-энд-карри — рис с острым карри|22|9|0|Анура Дисанаяке
+Сирия|SY|A|11|Дамаск|Фаттех — нут с йогуртом и лепёшкой|24|14|3|Ахмед аш-Шараа
+Тайвань|TW|A|00|Тайбэй|Ниужоумянь — лапша с говядиной|23.4|22|4|Лай Циндэ
+Таджикистан|TJ|A|11|Душанбе|Кутаб — лепёшка с зеленью и мясом|10|5|0|Эмомали Рахмон
+Таиланд|TH|A|11|Бангкок|Том ям — кисло-острый суп с креветками|71|77|1|Анутин Чарнвиракул
+Тимор-Лешти|TL|A|10|Дили|Икан сабуку — рыба с тамариндом|1.4|13|0|Жозе Рамуш-Орта
+Турция|TR|A|11|Анкара|Искендер-кебаб — мясо на лепёшке с йогуртом|85|81|15|Реджеп Тайип Эрдоган
+Туркменистан|TM|A|11|Ашхабад|Дограма — мясо с накрошенным хлебом|6.5|5|0|Сердар Бердымухамедов
+ОАЭ|AE|A|11|Абу-Даби|Лукаймат — сладкие жареные шарики с сиропом|10|7|3|Мухаммед бен Заид Аль Нахайян
+Узбекистан|UZ|A|11|Ташкент|Плов — рис с мясом и морковью в казане|36|14|1|Шавкат Мирзиёев
+Вьетнам|VN|A|11|Ханой|Фо бо — суп с говядиной и рисовой лапшой|100|63|3|То Лам
+Йемен|YE|A|11|Сана|Сальта — острое мясное рагу с пеной хильбы|34|22|2|Рашад аль-Алими
+Алжир|DZ|F|11|Алжир|Кускус — паровая крупа с мясом и овощами|47|58|3|Абдельмаджид Теббун
+Ангола|AO|F|11|Луанда|Мойамба — курица в пальмовом масле|36|21|1|Жуан Лоренсу
+Бенин|BJ|F|11|Порто-Ново|Амиво — густая кукурузная каша с соусом|14|12|0|Патрис Талон
+Ботсвана|BW|F|11|Габороне|Сеswaa — тушёная измельчённая говядина|2.6|10|0|Дума Боко
+Буркина-Фасо|BF|F|11|Уагадугу|То — густая каша из проса|23|13|1|Ибрагим Траоре
+Бурунди|BI|F|11|Гитега|Икибундо — тушёная фасоль с бананами|13|18|0|Эварист Ндайишимие
+Кабо-Верде|CV|F|00|Прая|Качупа — кукурузное рагу с мясом|0.6|22|0|Жозе Мария Невиш
+Камерун|CM|F|11|Яунде|Ндоле — зелень с арахисом и креветками|28|10|2|Поль Бия
+Центральноафриканская Республика|CF|F|11|Банги|Гозо — густая каша из маниоки|5.6|20|0|Фостен-Арканж Туадера
+Чад|TD|F|11|Нджамена|Дараба — суп из окры|18|23|1|Махамат Идрисс Деби
+Коморы|KM|F|00|Морони|Пилау по-коморски — рис с пряностями и мясом|0.85|3|0|Азали Ассумани
+ДР Конго|CD|F|11|Киншаса|Фуфу — клёцки из маниоки|102|26|4|Феликс Чисекеди
+Республика Конго|CG|F|11|Браззавиль|Сака-сака — тушёные листья маниоки с рыбой|6.1|12|2|Дени Сассу-Нгессо
+Кот-д'Ивуар|CI|F|11|Ямусукро|Аттьеке — кускус из маниоки с рыбой|28|31|2|Алассан Уаттара
+Джибути|DJ|F|11|Джибути|Скуделех — рагу из мяса с пряностями|1.1|6|0|Исмаил Омар Гелле
+Египет|EG|F|11|Каир|Кошари — рис, чечевица и макароны|112|27|5|Абдель-Фаттах ас-Сиси
+Экваториальная Гвинея|GQ|F|11|Малабо|Пепе-суп — острый рыбный суп|1.7|8|0|Теодоро Обианг Нгема Мбасого
+Эритрея|ER|F|11|Асмэра|Цебхи — острое мясное рагу|3.7|6|0|Исайяс Афеворки
+Эсватини|SZ|F|11|Мбабане|Умбидво — тыквенная каша|1.2|4|0|Мсвати III
+Эфиопия|ET|F|11|Аддис-Абеба|Инджера с вотом — кислая лепёшка с рагу|126|12|2|Абий Ахмед
+Габон|GA|F|11|Либревиль|Нямбве — курица в соусе из пальмовых орехов|2.4|9|0|Брис Олигги Нгема
+Гамбия|GM|F|11|Банжул|Домода — арахисовое рагу|2.7|8|0|Адама Бэрроу
+Гана|GH|F|11|Аккра|Джолоф — острый рис с томатами|34|16|2|Джон Драмани Махама
+Гвинея|GN|F|11|Конакри|Саусу — соус из листьев картофеля|14|8|1|Мамади Думбуя
+Гвинея-Бисау|GW|F|11|Бисау|Каланга — густое рагу из окры|2.2|9|0|Орта Н'Тан
+Кения|KE|F|11|Найроби|Угали — плотная кукурузная каша|55|47|2|Уильям Руто
+Лесото|LS|F|11|Масеру|Папа и мороко — каша с тушёной зеленью|2.3|10|0|Самуэль Матекане
+Либерия|LR|F|11|Монровия|Пальмовый суп — с рыбой и рисом|5.4|15|1|Джозеф Бокай
+Ливия|LY|F|11|Триполи|Бази — пшеничная каша с соусом|7|22|2|Мухаммад аль-Менфи
+Мадагаскар|MG|F|00|Антананариву|Ромазава — мясной суп с зеленью|30|23|1|Майкл Рандрианирина
+Малави|MW|F|11|Лилонгве|Нсима — каша из кукурузной муки|20|28|0|Питер Мутарика
+Мали|ML|F|11|Бамако|Тигадеге — мясо в арахисовом соусе|23|19|1|Ассими Гоита
+Мавритания|MR|F|11|Нуакшот|Мешви — баранина на углях|4.9|15|1|Мохамед Ульд Газуани
+Маврикий|MU|F|00|Порт-Луи|Дал пури — лепёшка с чечевицей|1.3|9|0|Дхарамбир Гокхул
+Марокко|MA|F|11|Рабат|Тажин — тушёное мясо в глиняной посуде|37|12|5|Король Мухаммед VI
+Мозамбик|MZ|F|11|Мапуту|Пири-пири — курица с острым перцем|33|11|2|Даниэл Шапу
+Намибия|NA|F|11|Виндхук|Потйиекос — мясо в чугунном казане|2.6|14|0|Нетумбо Нанди-Ндайтва
+Нигер|NE|F|11|Ниамей|Фура — шарики из проса в молоке|27|8|1|Абдурахман Тчиани
+Нигерия|NG|F|11|Абуджа|Суя — шашлык с арахисовой пряностью|224|36|9|Бола Тинубу
+Руанда|RW|F|11|Кигали|Брошет — шашлык из козлятины|14|5|0|Поль Кагаме
+Сан-Томе и Принсипи|ST|F|00|Сан-Томе|Калулу — рыбное рагу с овощами|0.23|7|0|Карлуш Вила-Нова
+Сенегал|SN|F|11|Дакар|Тьебу-джен — рыба с рисом и овощами|18|14|1|Бассиру Диомай Фай
+Сейшелы|SC|F|00|Виктория|Карри из осьминога — в кокосовом молоке|0.1|27|0|Патрик Эрминни
+Сьерра-Леоне|SL|F|11|Фритаун|Плазас — тушёная зелень с рыбой|8.6|5|0|Жюльен Маада Био
+Сомали|SO|F|11|Могадишо|Канджеэро — тонкие губчатые лепёшки|18|18|1|Хасан Шейх Мохамуд
+ЮАР|ZA|F|11|Претория|Боботи — запеканка из фарша с яичной заливкой|61|9|4|Сирил Рамафоса
+Южный Судан|SS|F|11|Джуба|Кисра — тонкая кукурузная лепёшка|11|10|0|Сальва Киир
+Судан|SD|F|11|Хартум|Асида — густая пшеничная каша|49|18|3|Абдель Фаттах аль-Бурхан
+Танзания|TZ|F|11|Додома|Ньяма чома — жареное мясо на углях|67|31|1|Самия Сулуху Хасан
+Того|TG|F|11|Ломе|Акуме — кукурузное тесто с острым соусом|9|5|0|Фор Гнассингбе
+Тунис|TN|F|11|Тунис|Брик — хрустящий пирожок с яйцом|12.5|24|0|Каис Саид
+Уганда|UG|F|11|Кампала|Матоке — тушёные зелёные бананы|49|135|1|Йовери Мусевени
+Замбия|ZM|F|11|Лусака|Ифисаси — тушёная зелень с арахисом|20|10|1|Хакаинде Хичилема
+Зимбабве|ZW|F|11|Хараре|Садза — белая кукурузная каша|16|10|1|Эммерсон Мнангагва
+Западная Сахара|EH|F|01|Эль-Аюн|Хассания — верблюжье мясо с рисом|0.6|4|0|Брахим Гали
+Австралия|AU|O|11|Канберра|Мит-пай — пирог с мясной начинкой|27|8|5|Энтони Албани
+Фиджи|FJ|O|10|Сува|Кокода — рыба в лаймовом соке и кокосе|0.93|14|0|Ситивени Рабука
+Кирибати|KI|O|10|Южная Тарава|Бабай — варёный болотный таро|0.13|3|0|Таниета Маамау
+Маршалловы Острова|MH|O|10|Маджуро|Бвиро — паста из плодов хлебного дерева|0.04|24|0|Хильда Хайне
+Микронезия|FM|O|10|Паликир|Хлебный фрукт с кокосом — запечённый на углях|0.11|4|0|Весли Симина
+Науру|NR|O|10|Ярен|Ио — рыба в кокосовом молоке|0.012|14|0|Дэвид Адеанг
+Новая Зеландия|NZ|O|10|Веллингтон|Хаанги — мясо, приготовленное в земляной печи|5.3|16|0|Кристофер Люксон
+Палау|PW|O|10|Нгерулмуд|Тапиока в кокосе — сладкий десерт|0.018|16|0|Сурангел Уиппс-младший
+Папуа — Новая Гвинея|PG|O|10|Порт-Морсби|Муму — мясо и батат в земляной печи|10|22|0|Джеймс Марапе
+Самоа|WS|O|10|Апиа|Палусами — листья таро в кокосовых сливках|0.22|11|0|Ла'аули Леуатеа Полатаиво
+Соломоновы Острова|SB|O|10|Хониара|Пудинг из кассавы — с кокосом и орехами|0.74|10|0|Джеремайя Манеле
+Тонга|TO|O|10|Нукуалофа|Лу пулу — говядина в листьях таро|0.1|5|0|Король Тупоу VI
+Тувалу|TV|O|10|Фунафути|Пулака — болотный таро с кокосом|0.011|8|0|Феле́ти Тео
+Вануату|VU|O|10|Порт-Вила|Лаплап — пудинг из ямса и кокоса|0.33|6|0|Джотам Напат
+Антигуа и Барбуда|AG|N|10|Сент-Джонс|Дукуна — паровой сладкий пирог из батата|0.1|8|0|Гастон Браун
+Багамы|BS|N|10|Нассау|Конч-салат — свежий салат из моллюска|0.41|31|0|Филип Дэвис
+Барбадос|BB|N|10|Бриджтаун|Ку-ку с летучей рыбой — кукурузное пюре|0.28|11|0|Миа Моттли
+Белиз|BZ|N|11|Бельмопан|Рис с фасолью в кокосовом молоке|0.4|6|0|Джон Бриcеньо
+Канада|CA|N|11|Оттава|Путин — картофель фри с сыром и соусом|40|13|6|Марк Карни
+Коста-Рика|CR|N|11|Сан-Хосе|Гальо пинто — рис с чёрной фасолью|5.2|7|0|Лаура Фернандес
+Куба|CU|N|10|Гавана|Ропа вьеха — тушёная рваная говядина|11|15|1|Мигель Диас-Канель
+Доминика|DM|N|10|Розо|Каллалу — суп из листьев таро|0.07|10|0|Рузвельт Скеррит
+Доминиканская Республика|DO|N|10|Санто-Доминго|Ла бандера — рис, фасоль и мясо|11.3|31|1|Луис Абинадер
+Сальвадор|SV|N|11|Сан-Сальвадор|Пупусас — кукурузные лепёшки с начинкой|6.3|14|0|Найиб Букеле
+Гренада|GD|N|10|Сент-Джорджес|Ойл-даун — рагу с плодами хлебного дерева|0.12|7|0|Дикон Митчелл
+Гватемала|GT|N|11|Гватемала|Пепиан — густое мясное рагу с семечками|17.6|22|1|Бернардо Аревало
+Гаити|HT|N|10|Порт-о-Пренс|Гриот — жареная маринованная свинина|11.7|10|1|Аликс Дидье Фис-Эме
+Гондурас|HN|N|11|Тегусигальпа|Бальеады — лепёшки с фасолью и сыром|10.4|18|1|Насри Асфура
+Ямайка|JM|N|10|Кингстон|Акки с солёной рыбой — фрукт с треской|2.8|14|0|Эндрю Холнесс
+Мексика|MX|N|11|Мехико|Моле поблано — мясо в шоколадно-перечном соусе|129|32|12|Клаудия Шейнбаум
+Никарагуа|NI|N|11|Манагуа|Вигорон — юкка с капустным салатом и свининой|6.9|17|0|Даниэль Ортега
+Панама|PA|N|11|Панама|Санкочо — густой куриный суп|4.5|10|0|Хосе Рауль Мулино
+Сент-Китс и Невис|KN|N|10|Бастер|Солёная рыба с клёцками — стью|0.05|14|0|Террансе Дрю
+Сент-Люсия|LC|N|10|Кастри|Зелёные бананы с солёной рыбой|0.18|10|0|Филип Пьер
+Сент-Винсент и Гренадины|VC|N|10|Кингстаун|Жареные хлебные плоды с рыбой|0.11|6|0|Годвин Фрайди
+Тринидад и Тобаго|TT|N|10|Порт-оф-Спейн|Дабл — лепёшки с карри из нута|1.5|14|0|Камла Персад-Биссессар
+США|US|N|11|Вашингтон|Гамбургер — котлета в булке|335|50|10|Дональд Трамп
+Аргентина|AR|S|11|Буэнос-Айрес|Асадо — мясо на углях|46|24|3|Хавьер Милей
+Боливия|BO|S|11|Сукре|Сальтеньяс — сочные запечённые пирожки|12|9|3|Родриго Пас
+Бразилия|BR|S|11|Бразилиа|Фейжоада — фасоль с мясом и копчёностями|216|27|17|Луис Инасиу Лула да Силва
+Чили|CL|S|11|Сантьяго|Эмпанадас — пирожки с мясом|19.6|16|1|Хосе Антонио Каст
+Колумбия|CO|S|11|Богота|Аяко — картофельный суп с курицей|52|32|4|Густаво Петро
+Эквадор|EC|S|11|Кито|Себиче — маринованные морепродукты с лаймом|18|24|2|Даниэль Нобоа
+Гайана|GY|S|11|Джорджтаун|Пеппер-пот — острое мясное рагу|0.81|10|0|Ирфаан Али
+Парагвай|PY|S|11|Асунсьон|Сопа парагуайя — плотный кукурузный пирог|6.8|17|0|Сантьяго Пенья
+Перу|PE|S|11|Лима|Ломо сальтадо — жареная говядина с картофелем|34|25|1|Хосе Хери
+Суринам|SR|S|11|Парамарибо|Пом — запеканка из клубней и курицы|0.62|10|0|Джейкобус Сантокхи
+Уругвай|UY|S|11|Монтевидео|Чиво — сэндвич со стейком|3.4|19|1|Ямандю Орси
+Венесуэла|VE|S|11|Каракас|Пабельон криольо — мясо, рис и бобы|28|23|3|Делси Родригес
+Сомалиленд|XS|F|01|Харгейса|Ханид — баранина с рисом|5.7|6|0|Абдирахман Мохамед Абдуллахи`;
+
+/* Упрощённые векторные контуры (viewBox 100x100) */
+const MAPS={
+IT:"35,5 50,8 55,20 62,35 72,55 80,65 78,72 68,68 60,55 50,45 42,30 32,20",
+CL:"45,2 55,2 56,30 54,60 58,85 52,98 46,98 50,70 46,40",
+EG:"10,20 70,20 75,30 85,50 80,55 72,45 68,95 10,95",
+BR:"40,5 60,8 80,25 95,35 90,60 75,75 62,95 48,92 42,70 20,60 10,40 25,25",
+AU:"5,35 20,20 40,15 50,5 55,20 70,15 85,35 92,60 80,85 65,90 50,80 30,85 10,65",
+IN:"30,5 50,5 60,15 85,25 80,35 65,40 60,55 50,95 42,70 30,50 10,40 20,25",
+JP:"70,5 80,15 70,30 60,45 45,60 30,70 20,85 15,75 30,55 50,40 60,25",
+US:"5,20 40,15 70,15 95,20 90,40 95,50 85,60 75,90 60,70 40,75 30,60 5,45",
+RU:"5,40 20,25 50,15 80,10 98,20 95,40 70,45 50,50 30,60 10,55",
+
+CN:"20,20 40,10 65,15 80,10 95,25 85,40 80,55 60,70 40,75 25,60 10,45",
+CA:"5,50 15,30 40,20 60,25 80,15 95,30 85,50 70,60 50,80 30,70 20,60",
+FR:"30,10 55,5 70,25 85,40 75,65 55,80 45,95 30,85 20,60 5,45 15,25",
+ES:"10,25 35,15 80,15 92,35 85,60 70,80 45,90 25,75 5,60",
+GB:"50,5 65,15 55,30 65,45 60,60 70,75 50,95 30,90 40,75 25,65 45,55 40,35 35,20",
+NO:"40,5 60,5 75,15 60,30 50,45 45,65 30,85 15,95 20,75 30,55 35,30",
+FI:"40,5 60,10 55,30 65,50 55,70 45,90 30,80 25,55 35,30",
+MX:"5,10 40,15 55,35 65,50 85,70 95,85 75,85 60,65 45,55 30,45 15,25",
+AR:"40,5 70,15 60,30 50,45 55,60 45,75 50,85 35,98 28,80 32,45 30,20",
+TR:"5,40 25,30 50,25 75,20 95,30 90,45 60,55 35,60 10,55",
+MG:"50,5 60,20 65,50 60,80 45,95 35,70 40,40 45,20",
+CU:"5,60 30,50 60,40 90,25 95,35 70,50 40,65 10,70",
+VN:"45,5 65,10 55,25 60,40 70,55 60,75 50,95 40,85 45,65 40,45 35,25",
+PE:"35,5 55,15 70,35 85,50 75,60 60,75 40,90 15,60 10,45 25,30",
+KZ:"5,30 30,20 60,25 85,15 95,35 80,55 55,65 30,60 10,55",
+SA:"10,15 40,35 70,50 90,60 80,75 55,85 45,95 35,70 15,40",
+ZA:"5,50 20,30 50,25 75,30 90,40 85,60 70,80 45,95 25,85 10,70",
+LY:"10,30 40,20 65,25 90,25 90,70 55,95 35,95 10,60",
+DE:"40,5 65,10 70,30 65,55 70,75 55,95 35,90 25,65 30,45 25,25",
+PL:"10,25 40,10 75,10 90,30 85,60 65,85 25,80 15,50",
+UA:"10,40 30,20 60,20 90,25 95,40 70,50 55,75 30,65 15,55"
+};
+
+const DB=RAW.trim().split("\n").map(l=>{
+  const p=l.split("|"),f=p[5].split(" — ");
+  return{
+    name:p[0],code:p[1],continent:CONT[p[2]],
+    isUN:p[3][0]==="1",isMainland:p[3][1]==="1",
+    capital:p[4],food:{name:f[0],desc:f[1]||""},
+    population:+p[6],regionsCount:+p[7],millionCitiesCount:+p[8],leader:p[9],
+    mapSvg:MAPS[p[1]]?<svg class="map" viewBox="0 0 100 100"><polygon points="${MAPS[p[1]]}"/></svg>:null
+  };
+});
+
+/* ================= ФЛАГИ ================= */
+function stripes(cols,wts,w=30,h=20){let y=0,t=wts.reduce((a,b)=>a+b,0),s="";cols.forEach((c,i)=>{const hh=h*wts[i]/t;s+=<rect x="0" y="${y}" width="${w}" height="${hh+.1}" fill="${c}"/>;y+=hh});return s}
+const CUSTOM={
+ XD:()=>stripes(["#d6202a","#1d3f9e","#111"],[1,1,1]),
+ XL:()=>stripes(["#5bb5ee","#1d3f9e","#d6202a"],[1,1,1]),
+ XO:()=>stripes(["#fff","#d6202a","#f2c500"],[1,1,1]),
+ XS:()=>stripes(["#2e9d4a","#fff","#d6202a"],[1,1,1])+<circle cx="15" cy="10" r="2.4" fill="#111"/>,
+ XT:()=>stripes(["#d6202a","#1f9a3b","#d6202a"],[8,4,8])+<circle cx="4" cy="3.5" r="1.6" fill="#f2c500"/>,
+ XA:()=>stripes(["#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b"],[1,1,1,1,1,1,1])+<rect width="11" height="10" fill="#d6202a"/><circle cx="5.5" cy="5" r="2" fill="#fff"/>,
+ XC:()=><rect width="30" height="20" fill="#fff"/><rect y="2.5" width="30" height="2" fill="#d6202a"/><rect y="15.5" width="30" height="2" fill="#d6202a"/><circle cx="15" cy="10" r="4" fill="#d6202a"/><circle cx="16.3" cy="10" r="3.3" fill="#fff"/><circle cx="18" cy="10" r="1" fill="#d6202a"/>
+};
+let FLAGOK=true;
+(function(){try{const c=document.createElement("canvas");c.width=c.height=48;const x=c.getContext("2d");x.font="32px sans-serif";x.fillText("\u{1F1E9}\u{1F1EA}",0,36);const d=x.getImageData(0,0,48,48).data;let red=false;for(let i=0;i<d.length;i+=4){if(d[i]>180&&d[i+1]<60&&d[i+2]<60&&d[i+3]>200){red=true;break}}FLAGOK=red}catch(e){}})();
+function emoji(code){return String.fromCodePoint(...[...code].map(ch=>0x1F1E6+ch.charCodeAt(0)-65))}
+function flagHTML(c){
+  if(CUSTOM[c.code])return <div class="flag"><svg viewBox="0 0 30 20">${CUSTOM[c.code]()}</svg></div>;
+  if(FLAGOK)return <div class="fe">${emoji(c.code)}</div>;
+  return <div class="fb">${c.code}</div>;
+}
+
+/* ================= СОХРАНЕНИЯ ================= */
+const KEY="sllizgeo_v1";
+const DEF={coins:0,score:0,best:0,theme:"dark",themes:["dark"],hints:{fifty:1,skip:1},settings:{conts:ALLCONT.slice(),onlyUN:false,onlyMain:false,count:"max"}};
+
+function load(){
+  try{const d=JSON.parse(localStorage.getItem(KEY));
+    if(d)return Object.assign({},DEF,d,{settings:Object.assign({},DEF.settings,d.settings{}),hints:Object.assign({},DEF.hints,d.hints{})});
+  }catch(e){}
+  return JSON.parse(JSON.stringify(DEF));
+}
+let S=load();
+function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
+const $=id=>document.getElementById(id);
+function toast(t){const e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1600)}
+function upd(){$("hc").textContent=S.coins;$("hs").textContent=S.score;document.body.dataset.theme=S.theme}
+function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
+function pool(){const s=S.settings;return DB.filter(c=>s.conts.includes(c.continent)&&(!s.onlyUNc.isUN)&&(!s.onlyMainc.isMainland))}
+function fmtPop(m){if(m>=1)return "≈ "+(m>=10?Math.round(m):m)+" млн";return "≈ "+Math.round(m*1e6).toLocaleString("ru")+" чел."}
+
+/* ================= РЕЖИМЫ ================= */
+const MODES={
+ flag:{icon:"🏳️",title:"Угадай страну по флагу",q:(c)=>${flagHTML(c)}<div class="qs">Какой стране принадлежит этот флаг?</div>,o:(o)=>o.name,label:o=>o.name},
+ flagrev:{icon:"🎌",title:"Угадай флаг по стране",grid:true,q:(c)=><div class="qt">${c.name}</div><div class="qs">Выберите правильный флаг</div>,o:(o)=>flagHTML(o),label:o=>o.code},
+ capital:{icon:"🏛️",title:"Столицы",dir:true,
+   q:(c,d)=>d?<div class="qt">${c.name}</div><div class="qs">Какая столица у этой страны?</div>:<div class="qt">${c.capital}</div><div class="qs">Столица какой страны?</div>,
+   o:(o,d)=>d?o.capital:o.name,label:(o,d)=>d?o.capital:o.name},
+ food:{icon:"🍲",title:"Национальные блюда",q:(c)=><div class="qt">🍽️ ${c.food.name}</div><div class="qs">${c.food.desc}</div><div class="qs">Из какой страны это блюдо?</div>,o:o=>o.name,label:o=>o.name},
+ map:{icon:"🗺️",title:"Контуры карт",ok:c=>!!c.mapSvg,q:(c)=>${c.mapSvg}<div class="qs">Какая страна изображена? (упрощённый контур)</div>,o:o=>o.name,label:o=>o.name},
+ stats:{icon:"📊",title:"Население и Статистика",q:(c)=><div class="facts">👥 Население: <b>${fmtPop(c.population)}</b><br>🏘️ Областей/субъектов: <b>${c.regionsCount}</b><br>🏙️ Городов-миллионников: <b>${c.millionCitiesCount}</b></div><div class="qs">Что это за страна?</div>,o:o=>o.name,label:o=>o.name},
+ leader:{icon:"👤",title:"Лидеры и Президенты",q:(c)=><svg width="90" height="90" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--bg)" stroke="var(--acc)" stroke-width="3"/><circle cx="50" cy="38" r="16" fill="var(--acc)"/><path d="M18 88c4-22 20-30 32-30s28 8 32 30" fill="var(--acc)"/></svg><div class="qt">${c.leader}</div><div class="qs">Лидер какой страны?</div>,o:o=>o.name,label:o=>o.name}
+};
+let G=null;
+
+/* ================= МЕНЮ ================= */
+function showMenu(){
+  G=null;upd();
+  const p=pool();
+  $("view").innerHTML=<div class="menu"><h1>SllizGeo</h1><div class="sub">Доступно стран: ${p.length} из ${DB.length} · Рекорд раунда: ${S.best}</div>+
+   Object.keys(MODES).map(k=><button class="mode" data-m="${k}"><span class="ic">${MODES[k].icon}</span>${MODES[k].title}</button>).join("")+</div>;
+  document.querySelectorAll(".mode").forEach(b=>b.onclick=()=>startGame(b.dataset.m));
+}
+
+/* ================= ИГРА ================= */
+function startGame(key){
+  const m=MODES[key];
+  const p=pool().filter(c=>m.ok?m.ok(c):true);
+  if(p.length<1){toast("Нет стран по этим фильтрам (⚙️)");return}
+  const cnt=S.settings.count==="max"?p.length:Math.min(+S.settings.count,p.length);
+  G={key,m,qs:shuffle(p).slice(0,cnt),i:0,correct:0,coins:0,pts:0,streak:0,locked:false,used50:false};
+  nextQ();
+}
+function makeOpts(c,m,d){
+  const used=new Set([m.label(c,d)]);const res=[c];
+
+const add=list=>{for(const x of list){if(res.length>=4)break;if(x===c)continue;const l=m.label(x,d);if(used.has(l))continue;used.add(l);res.push(x)}};
+  add(shuffle(pool()));
+  if(res.length<4)add(shuffle(DB));
+  return shuffle(res);
+}
+function nextQ(){
+  if(G.i>=G.qs.length)return finish();
+  const m=G.m,c=G.qs[G.i];
+  G.dir=m.dir?Math.random()<.5:false;G.locked=false;G.used50=false;
+  G.cur=c;G.opts=makeOpts(c,m,G.dir);
+  const pct=Math.round(G.i/G.qs.length*100);
+  $("view").innerHTML=<div class="top"><button class="ib" id="quit">←</button><span>${G.i+1} / ${G.qs.length}</span><span>🔥 ${G.streak}</span></div>
+  <div class="bar"><i style="width:${pct}%"></i></div>
+  <div class="card q">${m.q(c,G.dir)}</div>
+  <div class="opts ${m.grid?"grid":""}">${G.opts.map((o,k)=><button class="opt" data-k="${k}">${m.o(o,G.dir)}</button>).join("")}</div>
+  <div class="hints"><button id="h50">50/50 (${S.hints.fifty})</button><button id="hskip">Пропуск (${S.hints.skip})</button></div>;
+  document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>answer(+b.dataset.k));
+  $("quit").onclick=()=>{if(confirm("Выйти из раунда? Прогресс раунда будет завершён."))finish()};
+  $("h50").onclick=useFifty;$("hskip").onclick=useSkip;
+}
+function useFifty(){
+  if(G.locked||G.used50)return;
+  if(S.hints.fifty<=0){toast("Купите 50/50 в магазине 🛒");return}
+  S.hints.fifty--;G.used50=true;save();
+  const wrong=shuffle(G.opts.map((o,k)=>k).filter(k=>G.opts[k]!==G.cur)).slice(0,2);
+  const bs=document.querySelectorAll(".opt");
+  wrong.forEach(k=>{bs[k].classList.add("hide");bs[k].disabled=true});
+  $("h50").textContent=50/50 (${S.hints.fifty});
+}
+function useSkip(){
+  if(G.locked)return;
+  if(S.hints.skip<=0){toast("Купите пропуск в магазине 🛒");return}
+  S.hints.skip--;save();G.i++;nextQ();
+}
+function answer(k){
+  if(G.locked)return;G.locked=true;
+  const bs=document.querySelectorAll(".opt");
+  const ok=G.opts[k]===G.cur;
+  bs.forEach((b,i)=>{if(G.opts[i]===G.cur)b.classList.add("ok")});
+  if(ok){
+    const coins=5+Math.min(G.streak,5),pts=10+G.streak*2;
+    G.streak++;G.correct++;G.coins+=coins;G.pts+=pts;S.coins+=coins;S.score+=pts;
+    toast(+${coins} 🪙  +${pts} ⭐);
+  }else{
+    bs[k].classList.add("bad");G.streak=0;
+    toast("Правильно: "+G.cur.name);
+  }
+  save();upd();
+  setTimeout(()=>{if(!G)return;G.i++;nextQ()},ok?900:1700);
+}
+function finish(){
+  const g=G;if(!g)return showMenu();
+  if(g.pts>S.best)S.best=g.pts;save();upd();
+  G=null;
+  $("view").innerHTML=<div class="card"><div class="big">🏁</div><h2>Раунд завершён</h2>
+  <div class="res">Режим: ${g.m.title}<br>Верных ответов: <b>${g.correct}</b> из ${g.qs.length}<br>Очки за раунд: <b>${g.pts}</b> ⭐<br>Монеты за раунд: <b>${g.coins}</b> 🪙</div></div>
+  <div class="hints"><button class="btn pri" id="again">Ещё раз</button><button class="btn" id="tomenu">В меню</button></div>;
+  $("again").onclick=()=>startGame(g.key);$("tomenu").onclick=showMenu;
+}
+
+/* ================= МОДАЛЬНЫЕ ОКНА ================= */
+function openModal(html){$("sheet").innerHTML=html;$("modal").classList.remove("hidden")}
+function closeModal(){$("modal").classList.add("hidden");if(!G)showMenu()}
+$("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
+
+function openSettings(){
+  const s=S.settings;
+  openModal(<h2>⚙️ Настройки</h2>
+  <div class="sec">Континенты</div>
+  ${ALLCONT.map((c,i)=><label class="row"><input type="checkbox" class="cc" value="${c}" ${s.conts.includes(c)?"checked":""}>${c}</label>`).join("")}
+  <div class="sec">Фильтры категорий</div>
+  <label class="row"><input type="checkbox" id="fUN" ${s.onlyUN?"checked":""}>Только страны ООН</label>
+  <label class="row"><input type="checkbox" id="fMain" ${s.onlyMain?"checked":""}>Только материковые страны</label>
+  <div class="sec">Вопросов в раунде</div>
+
+${["10","20","50","100","max"].map(v=><label class="row"><input type="radio" name="cnt" class="rc" value="${v}" ${String(s.count)===v?"checked":""}>${v==="max"?"Максимум":v}</label>).join("")}
+  <div class="small" id="avail"></div>
+  <div class="hints"><button class="btn pri" id="closeS">Готово</button></div>);
+  const refresh=()=>{
+    s.conts=[...document.querySelectorAll(".cc")].filter(x=>x.checked).map(x=>x.value);
+    s.onlyUN=$("fUN").checked;s.onlyMain=$("fMain").checked;
+    const r=document.querySelector(".rc:checked");s.count=r?r.value:"max";
+    save();
+    const n=pool().length;
+    const rounds=s.count==="max"?n:Math.min(+s.count,n);
+    $("avail").textContent=Доступно стран: ${n} из ${DB.length} · В раунде вопросов: ${rounds};
+  };
+  document.querySelectorAll(".cc,#fUN,#fMain,.rc").forEach(e=>e.onchange=refresh);
+  $("closeS").onclick=closeModal;refresh();
+}
+
+const SHOP=[
+ {id:"fifty",t:"💡 Подсказка 50/50",d:"Убирает 2 неверных ответа",price:30,type:"hint"},
+ {id:"skip",t:"⏭️ Пропуск вопроса",d:"Пропустить без штрафа",price:20,type:"hint"},
+ {id:"dark",t:"🌑 Тёмная тема",d:"Базовая",price:0,type:"theme"},
+ {id:"neon",t:"🌈 Неоновая тема",d:"Яркие цвета и свечение",price:150,type:"theme"},
+ {id:"light",t:"☀️ Светлая тема",d:"Для яркого дня",price:100,type:"theme"}
+];
+function openShop(){
+  openModal(<h2>🛒 Магазин</h2><div class="small" style="margin-bottom:10px">Ваши монеты: <b>${S.coins}</b> 🪙</div>+
+  SHOP.map(it=>{
+    let btn;
+    if(it.type==="hint"){btn=<button data-id="${it.id}">${it.price} 🪙</button>;}
+    else if(S.themes.includes(it.id)){btn=S.theme===it.id?<button class="off" disabled>Активна</button>:<button data-id="${it.id}" data-apply="1">Применить</button>;}
+    else btn=<button data-id="${it.id}">${it.price} 🪙</button>;
+    const own=it.type==="hint"? (есть: ${S.hints[it.id]}):"";
+    return <div class="shopi"><div><b>${it.t}</b>${own}<div class="small">${it.d}</div></div>${btn}</div>;
+  }).join("")+<div class="hints"><button class="btn pri" id="closeSh">Закрыть</button></div>`);
+  $("closeSh").onclick=closeModal;
+  document.querySelectorAll(".shopi button[data-id]").forEach(b=>b.onclick=()=>{
+    const it=SHOP.find(x=>x.id===b.dataset.id);
+    if(b.dataset.apply){S.theme=it.id;save();upd();openShop();return}
+    if(S.coins<it.price){toast("Не хватает монет 🪙");return}
+    S.coins-=it.price;
+    if(it.type==="hint")S.hints[it.id]++;else{S.themes.push(it.id);S.theme=it.id}
+    save();upd();toast("Куплено!");openShop();
+  });
+}
+$("bGear").onclick=openSettings;$("bShop").onclick=openShop;
+/* PWA-манифест без внешних файлов */
+try{const m={name:"SllizGeo",short_name:"SllizGeo",display:"standalone",background_color:"#121417",theme_color:"#121417",start_url:"."};
+const l=document.createElement("link");l.rel="manifest";l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:"application/manifest+json"}));document.head.appendChild(l)}catch(e){}
+
+upd();showMenu();
+</script>
+</body>
+</html>
