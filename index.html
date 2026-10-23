@@ -342,6 +342,7 @@
       object-fit: cover;
       border-radius: 16px;
       border: 2px solid var(--border);
+      background: var(--badge-bg);
       box-shadow: 0 4px 10px rgba(0,0,0,0.15);
     }
 
@@ -958,6 +959,9 @@
     answered: false
   };
 
+  // Таймер для предотвращения наложения экранов
+  let nextQuestionTimer = null;
+
   const MODES_CONFIG = {
     flag_to_country: {
       id: 'flag_to_country',
@@ -1029,7 +1033,6 @@
         settings.continents = [...ALLCONT];
         saveSettingsToStorage();
       } else {
-        // Оставляем только те, что реально есть в базе
         const validConts = settings.continents.filter(c => ALLCONT.includes(c));
         settings.continents = validConts.length > 0 ? validConts : [...ALLCONT];
         saveSettingsToStorage();
@@ -1063,7 +1066,6 @@
       return true;
     });
 
-    // Страховка от нулевой выборки
     if (list.length < 4) {
       list = [...DB];
     }
@@ -1072,6 +1074,7 @@
 
   // ЭКРАН ГЛАВНОГО МЕНЮ
   function renderMenu() {
+    clearTimeout(nextQuestionTimer);
     const view = document.getElementById('view');
     const available = getFilteredCountries();
 
@@ -1103,6 +1106,7 @@
 
   // ЗАПУСК ИГРОВОГО РАУНДА
   function startQuiz(modeId) {
+    clearTimeout(nextQuestionTimer);
     const pool = getFilteredCountries();
     if (pool.length < 4) {
       alert("Недостаточно стран для раунда. Проверьте настройки фильтров.");
@@ -1127,7 +1131,6 @@
 
   // ГЕНЕРАТОР ВОПРОСА
   function generateQuestion(modeId, country, allPool) {
-    // 3 дистрактора
     const others = allPool.filter(c => c.name !== country.name).sort(() => Math.random() - 0.5).slice(0, 3);
     const optionsRaw = [country, ...others].sort(() => Math.random() - 0.5);
 
@@ -1135,7 +1138,7 @@
       case 'flag_to_country':
         return {
           prompt: "Флаг какой страны изображен?",
-          mediaHtml: `<img src="${country.flagUrl}" class="flag-img" alt="Флаг" loading="lazy">`,
+          mediaHtml: `<img src="${country.flagUrl}" class="flag-img" alt="Флаг" loading="lazy" onerror="this.style.opacity='0.5'">`,
           correctAnswer: country.name,
           options: optionsRaw.map(c => ({ text: c.name, value: c.name }))
         };
@@ -1147,7 +1150,7 @@
           isFlagGrid: true,
           correctAnswer: country.code || country.name,
           options: optionsRaw.map(c => ({
-            html: `<img src="${c.flagUrl}" alt="Флаг" loading="lazy">`,
+            html: `<img src="${c.flagUrl}" alt="Флаг" loading="lazy" onerror="this.style.opacity='0.5'">`,
             value: c.code || c.name
           }))
         };
@@ -1175,7 +1178,7 @@
           prompt: `Национальным блюдом какой страны является это кулинарное творение?`,
           mediaHtml: `
             <div style="display:flex; flex-direction:column; align-items:center; gap:8px; width:100%;">
-              <img src="${country.food?.photoUrl || ''}" class="dish-img" alt="Блюдо" loading="lazy">
+              <img src="${country.food?.photoUrl || ''}" class="dish-img" alt="Блюдо" loading="lazy" onerror="this.style.opacity='0.5'">
               <div class="dish-title">«${country.food?.name || 'Блюдо'}»</div>
               <div class="dish-info-box">${country.food?.desc || 'Вкусное традиционное блюдо.'}</div>
             </div>
@@ -1212,7 +1215,7 @@
           prompt: `Лидером какого государства является этот человек?`,
           mediaHtml: `
             <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
-              <img src="${country.leader?.photoUrl || ''}" class="leader-img" alt="Лидер" loading="lazy">
+              <img src="${country.leader?.photoUrl || ''}" class="leader-img" alt="Лидер" loading="lazy" onerror="this.style.opacity='0.5'">
               <div style="font-weight:800; font-size:1.05rem; color:var(--text-main);">
                 ${country.leader?.name || 'Государственный деятель'}
               </div>
@@ -1229,15 +1232,16 @@
 
   // ОТРИСОВКА ВОПРОСА
   function renderQuestion() {
+    clearTimeout(nextQuestionTimer);
     const view = document.getElementById('view');
     const q = gameState.questions[gameState.currentIndex];
     const total = gameState.questions.length;
     const currentNum = gameState.currentIndex + 1;
-    const progressPercent = ((currentNum - 1) / total) * 100;
+    const progressPercent = (currentNum / total) * 100;
 
     gameState.answered = false;
 
-    let answersHtml = q.options.map((opt, idx) => {
+    let answersHtml = q.options.map((opt) => {
       const isGrid = q.isFlagGrid;
       const content = isGrid ? opt.html : escapeHtml(opt.text);
       const flagCls = isGrid ? 'flag-btn' : '';
@@ -1293,6 +1297,13 @@
     const isCorrect = chosenVal === q.correctAnswer;
 
     const allButtons = document.querySelectorAll('.btn-answer');
+    allButtons.forEach(b => b.disabled = true);
+
+    // Блокируем подсказки после выбора ответа
+    const hint50 = document.getElementById('btnHint50');
+    const hintSkip = document.getElementById('btnHintSkip');
+    if (hint50) hint50.disabled = true;
+    if (hintSkip) hintSkip.disabled = true;
 
     if (isCorrect) {
       btnEl.classList.add('correct');
@@ -1302,7 +1313,6 @@
       userData.points += 25;
     } else {
       btnEl.classList.add('wrong');
-      // Подсветить правильный
       allButtons.forEach(b => {
         if (b.getAttribute('data-val') === q.correctAnswer) {
           b.classList.add('correct');
@@ -1314,13 +1324,14 @@
     saveUserData();
     updateTopBar();
 
-    setTimeout(() => {
+    nextQuestionTimer = setTimeout(() => {
       advanceNextQuestion();
     }, 1100);
   }
 
   // СЛЕДУЮЩИЙ ВОПРОС ИЛИ РЕЗУЛЬТАТЫ
   function advanceNextQuestion() {
+    clearTimeout(nextQuestionTimer);
     gameState.currentIndex++;
     if (gameState.currentIndex < gameState.questions.length) {
       renderQuestion();
@@ -1341,9 +1352,11 @@
     userData.hint50--;
     saveUserData();
     document.getElementById('hint50Count').textContent = userData.hint50;
-    if (userData.hint50 <= 0) document.getElementById('btnHint50').disabled = true;
+    
+    // Блокируем кнопку 50/50 для текущего вопроса
+    document.getElementById('btnHint50').disabled = true;
 
-    // Скрыть ровно 2 неверных
+    // Скрыть ровно 2 неверных варианта
     wrongButtons.sort(() => Math.random() - 0.5).slice(0, 2).forEach(b => {
       b.classList.add('hidden-opt');
     });
@@ -1352,6 +1365,8 @@
   // ПОДСКАЗКА: ПРОПУСК ВОПРОСА
   function useHintSkip() {
     if (gameState.answered || userData.hintSkip <= 0) return;
+    clearTimeout(nextQuestionTimer);
+
     userData.hintSkip--;
     saveUserData();
     document.getElementById('hintSkipCount').textContent = userData.hintSkip;
@@ -1364,18 +1379,20 @@
   // ПОДТВЕРЖДЕНИЕ ВЫХОДА
   function confirmQuit() {
     if (confirm("Завершить раунд и вернуться в меню?")) {
+      clearTimeout(nextQuestionTimer);
+      gameState.questions = [];
       renderMenu();
     }
   }
 
   // ЭКРАН РЕЗУЛЬТАТОВ
   function renderResults() {
+    clearTimeout(nextQuestionTimer);
     const view = document.getElementById('view');
     const total = gameState.questions.length;
     const percent = Math.round((gameState.score / total) * 100);
 
-    // Бонус за идеальный раунд
-    if (gameState.score === total) {
+    if (gameState.score === total && total > 0) {
       userData.coins += 25;
       gameState.earnedCoins += 25;
       saveUserData();
@@ -1427,11 +1444,15 @@
     document.getElementById('btnOpenSettings').addEventListener('click', openSettings);
     document.getElementById('btnOpenShop').addEventListener('click', openShop);
 
-    // Закрытие при тапе по фону
     document.querySelectorAll('.modal-overlay').forEach(modal => {
       modal.addEventListener('click', (e) => {
         if (e.target === modal) closeModals();
       });
+    });
+
+    // Закрытие модальных окон по Escape
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModals();
     });
   }
 
@@ -1449,7 +1470,6 @@
   }
 
   function renderSettingsModalContent() {
-    // Тема
     document.querySelectorAll('#themeSelector .chip-check').forEach(chip => {
       chip.classList.toggle('active', chip.getAttribute('data-theme-val') === settings.theme);
       chip.onclick = () => {
@@ -1459,7 +1479,6 @@
       };
     });
 
-    // Вопросы
     document.querySelectorAll('#roundQuestionsSelector .chip-check').forEach(chip => {
       chip.classList.toggle('active', parseInt(chip.getAttribute('data-q-val')) === settings.roundQuestions);
       chip.onclick = () => {
@@ -1468,11 +1487,9 @@
       };
     });
 
-    // Чекбоксы
     document.getElementById('toggleUN').checked = settings.unOnly;
     document.getElementById('toggleMainland').checked = settings.mainlandOnly;
 
-    // Континенты
     const contBox = document.getElementById('continentsSelector');
     contBox.innerHTML = ALLCONT.map(cont => {
       const isAct = settings.continents.includes(cont);
@@ -1487,8 +1504,6 @@
     const mainlandVal = document.getElementById('toggleMainland').checked;
 
     const selectedConts = Array.from(document.querySelectorAll('#continentsSelector .chip-check.active')).map(el => el.getAttribute('data-cont'));
-
-    // Если отключили все континенты, возвращаем все
     const finalConts = selectedConts.length > 0 ? selectedConts : [...ALLCONT];
 
     settings.theme = activeTheme;
@@ -1501,13 +1516,12 @@
     applyTheme(settings.theme);
     closeModals();
 
-    // Если мы на главном экране — обновляем счетчик
     if (!gameState.questions.length || gameState.currentIndex >= gameState.questions.length) {
       renderMenu();
     }
   }
 
-  // МАГАЗИН: ПОКУПКА
+  // МАГАЗИН: ПОКУПКА С СИНХРОНИЗАЦИЕЙ С ИГРОЙ
   function buyItem(itemKey, count, cost) {
     if (userData.coins < cost) {
       alert("Недостаточно монет 🪙!");
@@ -1517,6 +1531,21 @@
     userData[itemKey] = (userData[itemKey] || 0) + count;
     saveUserData();
     updateTopBar();
+
+    // Синхронизация подсказок, если магазин открыт прямо во время игры
+    const count50El = document.getElementById('hint50Count');
+    const countSkipEl = document.getElementById('hintSkipCount');
+    const btn50 = document.getElementById('btnHint50');
+    const btnSkip = document.getElementById('btnHintSkip');
+
+    if (count50El) count50El.textContent = userData.hint50;
+    if (countSkipEl) countSkipEl.textContent = userData.hintSkip;
+
+    if (!gameState.answered) {
+      if (btn50 && userData.hint50 > 0) btn50.disabled = false;
+      if (btnSkip && userData.hintSkip > 0) btnSkip.disabled = false;
+    }
+
     alert(`Успешно куплено! Зачислено: +${count} шт.`);
   }
 
@@ -1579,7 +1608,6 @@
       .replace(/'/g, '&#039;');
   }
 
-  // Старт при загрузке DOM
   window.addEventListener('DOMContentLoaded', initApp);
 </script>
 </body>
