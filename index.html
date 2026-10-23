@@ -1,1 +1,273 @@
- 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <title>SllizGeo — Мобильная Гео-викторина</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+
+    <!-- ВЕРХНЯЯ ШАПКА -->
+    <header class="app-header">
+      <div class="logo" id="btn-logo">Slliz<span>Geo</span></div>
+      <div class="header-actions">
+        <button id="btn-open-stats" class="icon-btn" title="Статистика">📊</button>
+        <button id="btn-open-enc" class="icon-btn" title="Энциклопедия">📖</button>
+      </div>
+    </header>
+
+    <!-- ГЛАВНОЕ МЕНЮ / НАСТРОЙКИ -->
+    <main id="view-menu" class="view active">
+      <div class="hero-banner">
+        <h2>Проверь свои знания планеты</h2>
+        <p>Выбери режим, настрой параметры и бей рекорды</p>
+      </div>
+
+      <!-- ВЫБОР РЕЖИМА ИГРЫ -->
+      <section class="menu-section">
+        <h3 class="section-title">Режимы викторины</h3>
+        <div class="modes-grid">
+          <button class="mode-card" data-mode="flag_to_country">
+            <span class="mode-icon">🚩</span>
+            <div class="mode-info">
+              <h4>Флаг → Страна</h4>
+              <p>Угадай страну по ее флагу</p>
+            </div>
+          </button>
+
+          <button class="mode-card" data-mode="country_to_flag">
+            <span class="mode-icon">🌐</span>
+            <div class="mode-info">
+              <h4>Страна → Флаг</h4>
+              <p>Выбери верный флаг для страны</p>
+            </div>
+          </button>
+
+          <button class="mode-card" data-mode="capitals">
+            <span class="mode-icon">🏛️</span>
+            <div class="mode-info">
+              <h4>Столицы мира</h4>
+              <p>Проверь знание главных городов</p>
+            </div>
+          </button>
+
+          <button class="mode-card" data-mode="cuisines">
+            <span class="mode-icon">🍲</span>
+            <div class="mode-info">
+              <h4>Кухни мира</h4>
+              <p>Угадай родину блюда без спойлеров</p>
+            </div>
+          </button>
+
+          <button class="mode-card" data-mode="leaders">
+            <span class="mode-icon">👑</span>
+            <div class="mode-info">
+              <h4>Лидеры стран</h4>
+              <p>Президенты, монархи и премьеры</p>
+            </div>
+          </button>
+
+          <button class="mode-card" data-mode="territory">
+            <span class="mode-icon">🗺️</span>
+            <div class="mode-info">
+              <h4>Территория</h4>
+              <p>Силуэты, соседи и габариты</p>
+            </div>
+          </button>
+        </div>
+
+        <!-- Подрежим для Территории (появляется при выборе) -->
+        <div id="territory-sublevels" class="sub-levels hidden">
+          <label>Сложность режима «Территория»:</label>
+          <div class="segmented-control">
+            <button class="seg-btn active" data-sublevel="easy">Легкий (соседи)</button>
+            <button class="seg-btn" data-sublevel="medium">Средний (силуэт)</button>
+            <button class="seg-btn" data-sublevel="hard">Сложный (оси)</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ПАНЕЛЬ НАСТРОЕК -->
+      <section class="menu-section settings-card">
+        <h3 class="section-title">Настройки раунда</h3>
+
+        <div class="setting-item">
+          <div class="setting-label">
+            <span>Вопросов в раунде:</span>
+            <strong id="label-questions-count" class="accent-text">15</strong>
+          </div>
+          <input type="range" id="slider-questions" min="5" max="50" step="5" value="15">
+        </div>
+
+        <div class="setting-item">
+          <span class="setting-title">Фильтры пула стран:</span>
+          <label class="checkbox-container">
+            <input type="checkbox" id="filter-un-only">
+            <span class="checkmark"></span>
+            Только члены ООН (193 страны)
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="filter-mainland-only">
+            <span class="checkmark"></span>
+            Только материковые страны
+          </label>
+        </div>
+
+        <div class="setting-item">
+          <span class="setting-title">Таймеры (0 — выключен):</span>
+          <div class="timers-grid">
+            <div class="input-box">
+              <label for="timer-question">На 1 вопрос (сек):</label>
+              <input type="number" id="timer-question" min="0" max="60" value="10">
+            </div>
+            <div class="input-box">
+              <label for="timer-round">На весь раунд (сек):</label>
+              <input type="number" id="timer-round" min="0" max="600" value="0">
+            </div>
+          </div>
+        </div>
+
+        <button id="btn-start-game" class="btn btn-primary btn-block">🚀 Начать игру</button>
+      </section>
+    </main>
+
+    <!-- ИГРОВОЙ ЭКРАН -->
+    <main id="view-game" class="view">
+      <!-- Игровой HUD -->
+      <div class="game-hud">
+        <button id="btn-exit-game" class="btn-text">← В меню</button>
+        <div class="hud-center">
+          <span id="hud-question-counter">1 / 15</span>
+          <div class="progress-bar">
+            <div id="hud-progress-fill" class="progress-fill"></div>
+          </div>
+        </div>
+        <div class="hud-timers">
+          <span id="hud-q-timer" class="badge-timer hidden">⏱ 10s</span>
+          <span id="hud-stopwatch" class="badge-stopwatch">00:00</span>
+        </div>
+      </div>
+
+      <!-- Карточка вопроса -->
+      <div class="game-card">
+        <div class="question-header">
+          <span id="q-hint-category" class="question-badge">Категория</span>
+          <h3 id="q-text" class="question-title">Загрузка вопроса...</h3>
+        </div>
+
+        <!-- Контейнер медиа: флаг, блюдо, контур или Canvas габаритных осей -->
+        <div id="q-media-container" class="media-container">
+          <img id="q-image" src="" alt="Иллюстрация вопроса" class="hidden">
+          <canvas id="q-canvas-bbox" class="hidden" width="300" height="200"></canvas>
+          <div id="q-desc-box" class="desc-box hidden">
+            <p id="q-dish-desc"></p>
+          </div>
+        </div>
+
+        <!-- 4 варианта ответа -->
+        <div id="options-grid" class="options-grid"></div>
+      </div>
+    </main>
+
+    <!-- ЭКРАН РЕЗУЛЬТАТОВ -->
+    <main id="view-result" class="view">
+      <div class="result-card">
+        <div class="result-icon" id="res-badge">🏆</div>
+        <h2>Раунд завершен!</h2>
+        <div class="result-stats">
+          <div class="stat-box">
+            <span class="stat-num accent-text" id="res-score">0 / 0</span>
+            <span class="stat-desc">Верных ответов</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="res-percent">0%</span>
+            <span class="stat-desc">Точность</span>
+          </div>
+          <div class="stat-box">
+            <span class="stat-num" id="res-time">00:00</span>
+            <span class="stat-desc">Общее время</span>
+          </div>
+        </div>
+        <div class="result-buttons">
+          <button id="btn-replay" class="btn btn-primary btn-block">🔄 Сыграть снова</button>
+          <button id="btn-back-home" class="btn btn-secondary btn-block">🏠 Главное меню</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- ЭКРАН ЭНЦИКЛОПЕДИИ -->
+    <main id="view-encyclopedia" class="view">
+      <div class="subpage-header">
+        <button class="btn-text btn-back-menu">← Назад</button>
+        <h3>Энциклопедия стран</h3>
+      </div>
+      <div class="search-box">
+        <input type="text" id="enc-search" placeholder="Поиск по названию или столице...">
+      </div>
+      <div id="enc-countries-list" class="enc-list"></div>
+    </main>
+
+    <!-- МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ СТРАНЫ В ЭНЦИКЛОПЕДИИ -->
+    <div id="modal-country-detail" class="modal-overlay hidden">
+      <div class="modal-card">
+        <button id="btn-close-modal" class="modal-close">&times;</button>
+        <div id="modal-country-content"></div>
+      </div>
+    </div>
+
+    <!-- ЭКРАН СТАТИСТИКИ -->
+    <main id="view-stats" class="view">
+      <div class="subpage-header">
+        <button class="btn-text btn-back-menu">← Назад</button>
+        <h3>Статистика игрока</h3>
+      </div>
+      <div class="stats-overview">
+        <div class="stat-tile">
+          <h4 id="stat-total-games">0</h4>
+          <p>Сыграно раундов</p>
+        </div>
+        <div class="stat-tile">
+          <h4 id="stat-total-answered">0</h4>
+          <p>Отвечено вопросов</p>
+        </div>
+        <div class="stat-tile">
+          <h4 id="stat-accuracy" class="accent-text">0%</h4>
+          <p>Общая точность</p>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h4>Топ проблемных стран (для повторения):</h4>
+        <div id="stats-hardest-list" class="hardest-list"></div>
+      </div>
+
+      <button id="btn-reset-stats" class="btn btn-danger btn-block">Сбросить статистику</button>
+    </main>
+
+    <!-- ОВЕРЛЕЙ ПРЕДЗАГРУЗКИ / ЗАГРУЗКИ -->
+    <div id="preloader-overlay" class="modal-overlay hidden">
+      <div class="preloader-content">
+        <div class="spinner"></div>
+        <p id="preloader-label">Предзагрузка изображений...</p>
+      </div>
+    </div>
+
+    <!-- ДИАЛОГ ПОДТВЕРЖДЕНИЯ ВЫХОДА -->
+    <div id="modal-confirm-exit" class="modal-overlay hidden">
+      <div class="modal-confirm-card">
+        <h4>Покинуть раунд?</h4>
+        <p>Текущий прогресс раунда не будет сохранен.</p>
+        <div class="confirm-actions">
+          <button id="btn-confirm-yes" class="btn btn-danger">Выйти</button>
+          <button id="btn-confirm-no" class="btn btn-secondary">Отмена</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
