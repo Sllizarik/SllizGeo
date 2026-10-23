@@ -1,87 +1,108 @@
-[
-  {
-    "name": "Франция",
-    "code": "FR",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Париж",
-    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
-    "food": {
-      "name": "Рататуй",
-      "desc": "Традиционное овощное рагу из прованских трав",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Ratatouille_01.jpg/640px-Ratatouille_01.jpg"
-    },
-    "population": 68,
-    "regionsCount": 18,
-    "millionCitiesCount": 9,
-    "leader": {
-      "name": "Эмманюэль Макрон",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Emmanuel_Macron_July_2024_%28cropped%29.jpg/440px-Emmanuel_Macron_July_2024_%28cropped%29.jpg"
-    }
-  },
-  {
-    "name": "Япония",
-    "code": "JP",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": false,
-    "capital": "Токио",
-    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
-    "food": {
-      "name": "Суши",
-      "desc": "Традиционное блюдо из риса и свежих морепродуктов",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Sushi_platter.jpg/640px-Sushi_platter.jpg"
-    },
-    "population": 124,
-    "regionsCount": 47,
-    "millionCitiesCount": 12,
-    "leader": {
-      "name": "Санаэ Такаити",
-      "photoUrl": ""
-    }
-  },
-  {
-    "name": "Приднестровье",
-    "code": "XT",
-    "continent": "Европа",
-    "isUN": false,
-    "isMainland": true,
-    "capital": "Тирасполь",
-    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Transnistria.svg",
-    "food": {
-      "name": "Плацинды",
-      "desc": "Тонкие молдавские пироги с начинкой из сыра или зелени",
-      "photoUrl": ""
-    },
-    "population": 0.4,
-    "regionsCount": 7,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Вадим Красносельский",
-      "photoUrl": ""
-    }
-  },
-  {
-    "name": "Непал",
-    "code": "NP",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Катманду",
-    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg",
-    "food": {
-      "name": "Дал-бхат",
-      "desc": "Сет из чечевичного супа, варёного риса и пряностей",
-      "photoUrl": ""
-    },
-    "population": 30,
-    "regionsCount": 7,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Рамчандра Паудел",
-      "photoUrl": ""
-    }
-  }
-]
-
+[ { "name": "Германия", "code": "DE", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Берлин", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
+"food": { "name": "Карривурст", "desc": "Обжаренная до румяной корочки колбаска
+из мелко рубленного свиного фарша, нарезанная порционными кусочками и политая
+пряным томатным соусом с порошком смеси восточных специй.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/d/da/CurryWurst.jpg" },
+"population": 84.4, "regionsCount": 16, "millionCitiesCount": 4, "leader": {
+"name": "Франк-Вальтер Штайнмайер", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/4/47/Frank-Walter_Steinmeier_-2018%28cropped%29_2.jpg"
+} }, { "name": "Франция", "code": "FR", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Париж", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+"food": { "name": "Рататуй", "desc": "Многослойное овощное блюдо из тонко
+нарезанных кружочков кабачков, баклажанов и спелых помидоров, запеченных в
+духовке на подушке из лука и чеснока с добавлением оливкового масла и тимьяна.",
+"photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/1/15/Ratatouille_001.jpg" },
+"population": 68.2, "regionsCount": 18, "millionCitiesCount": 1, "leader": {
+"name": "Эмманюэль Макрон", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/4/45/Emmanuel_Macron_en_2018.jpg"
+} }, { "name": "Италия", "code": "IT", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Рим", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg", "food":
+{ "name": "Пицца Маргарита", "desc": "Круглая тонкая лепешка из выдержанного
+дрожжевого теста, запекаемая в дровяной печи с соусом из протертых томатов,
+расплавленным молодым сыром и листьями свежего базилика.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+}, "population": 58.9, "regionsCount": 20, "millionCitiesCount": 2, "leader": {
+"name": "Джорджа Мелони", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/8/85/Giorgia_Meloni_Official_2024_%28cropped%29_2.jpg"
+} }, { "name": "Испания", "code": "ES", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Мадрид", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg", "food":
+{ "name": "Паэлья", "desc": "Блюдо из круглозерного риса, томленного в плоской
+широкой сковороде на открытом огне с шафраном, оливковым маслом, сладким перцем,
+стручковой фасолью и морепродуктами до образования хрустящей нижней корочки.",
+"photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/1/12/Paella_de_marisco_01.jpg"
+}, "population": 48.6, "regionsCount": 17, "millionCitiesCount": 2, "leader": {
+"name": "Педро Санчес", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/4/47/Pedro_S%C3%A1nchez.jpg" }
+}, { "name": "Польша", "code": "PL", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Варшава", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg",
+"food": { "name": "Бигос", "desc": "Густое горячее блюдо из смеси тушеной
+квашеной и свежей капусты с добавлением нескольких сортов отварного и копченого
+мяса, сушеных лесных грибов, лаврового листа и чернослива.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/8/86/Bigos_hunter_stew.jpg" },
+"population": 37.6, "regionsCount": 16, "millionCitiesCount": 1, "leader": {
+"name": "Анджей Дуда", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/e/e4/Andrzej_Duda_Official_Portrait.jpg"
+} }, { "name": "Австрия", "code": "AT", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Вена", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_Austria.svg",
+"food": { "name": "Шницель", "desc": "Очень тонко отбитый пласт нежной телятины,
+запанированный в муке, яйце и мелких сухарях, а затем обжаренный в раскаленном
+жире до волнообразной золотистой корочки. Сервируется с долькой лимона.",
+"photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/c/c6/Wiener_Schnitzel%21.jpg" },
+"population": 9.1, "regionsCount": 9, "millionCitiesCount": 1, "leader": {
+"name": "Александер Ван дер Беллен", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/3/36/Bundespr%C3%A4sident_Alexander_Van_der_Bellen_%28cropped%29.jpg"
+} }, { "name": "Португалия", "code": "PT", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Лиссабон", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/5/5c/Flag_of_Portugal.svg",
+"food": { "name": "Паштел-де-ната", "desc": "Миниатюрные корзинки из слоеного
+теста, наполненные густым заварным кремом на основе яичных желтков, молока и
+корицы, запеченные при очень высокой температуре до появления характерных
+карамельных подпалин.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/1/16/Pastel_de_nata_%2818616473070%29.jpg"
+}, "population": 10.5, "regionsCount": 18, "millionCitiesCount": 0, "leader": {
+"name": "Марселу Ребелу ди Соуза", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/6/61/Marcelo_Rebelo_de_Sousa_em_2018.jpg"
+} }, { "name": "Нидерланды", "code": "NL", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Амстердам", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/2/20/Flag_of_the_Netherlands.svg",
+"food": { "name": "Стамппот", "desc": "Пюре из размятого отварного картофеля и
+измельченных листьев свежей кудрявой капусты со сливочным маслом и молоком,
+подаваемое с целой подкопченной полукруглой колбасой и густой мясной подливой.",
+"photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/5/50/Boerenkool_met_worst.jpg"
+}, "population": 17.9, "regionsCount": 12, "millionCitiesCount": 0, "leader": {
+"name": "Дик Схоф", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/2/2c/Directeur-generaal_AIVD_Dick_Schoof.jpg"
+} }, { "name": "Швейцария", "code": "CH", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Берн", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/f/f3/Flag_of_Switzerland.svg",
+"food": { "name": "Сырное фондю", "desc": "Горячая расплавленная смесь зрелых
+твердых и полутвердых сортов сыра с сухим белым вином, крахмалом, чесноком и
+мускатным орехом, подогреваемая на горелке прямо на столе и употребляемая путем
+обмакивания кусочков белого хлеба.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/d/d8/Swiss_fondue.jpg" },
+"population": 8.9, "regionsCount": 26, "millionCitiesCount": 0, "leader": {
+"name": "Виола Амерд", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/7/77/Viola_Amherd_%282024%2C_cropped%29.jpg"
+} }, { "name": "Швеция", "code": "SE", "continent": "Европа", "isUN": true,
+"isMainland": true, "capital": "Стокгольм", "flagUrl":
+"https://upload.wikimedia.org/wikipedia/commons/4/4c/Flag_of_Sweden.svg",
+"food": { "name": "Кёттбуллар", "desc": "Небольшие обжаренные шарики из
+смешанного говяжьего и свиного фарша с добавлением панировочных сухарей, сливок
+и лука, которые подаются с бархатистым соусом на бульоне, гладким картофельным
+пюре и терпким брусничным вареньем.", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/9/90/Kottbullar_with_sauce.jpg"
+}, "population": 10.5, "regionsCount": 21, "millionCitiesCount": 0, "leader": {
+"name": "Ульф Кристерссон", "photoUrl":
+"https://upload.wikimedia.org/wikipedia/commons/e/e3/Ulf_Kristersson_%28cropped%29.jpg"
+} } ]
