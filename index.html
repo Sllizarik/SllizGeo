@@ -75,7 +75,6 @@ label.row input{width:20px;height:20px;accent-color:var(--acc)}
 
 <script>
 /* ================= БАЗА ДАННЫХ ================= */
-/* Формат строки: название|код|континент|ООН,материк|столица|блюдо — описание|население(млн)|областей|миллионников|лидер */
 const CONT={E:"Европа",A:"Азия",F:"Африка",O:"Австралия и Океания",S:"Южная Америка",N:"Северная Америка"};
 const ALLCONT=Object.values(CONT);
 const RAW=`Албания|AL|E|11|Тирана|Тавё кози — запечённая баранина с йогуртом|2.4|12|0|Эди Рама
@@ -108,7 +107,7 @@ const RAW=`Албания|AL|E|11|Тирана|Тавё кози — запеч�
 Нидерланды|NL|E|11|Амстердам|Стампот — картофельное пюре с овощами и колбасой|17.9|12|3|Дик Схоф
 Северная Македония|MK|E|11|Скопье|Тавче гравче — запечённая фасоль|1.8|80|0|Гордана Силяновска-Давкова
 Норвегия|NO|E|11|Осло|Фаликол — баранина с капустой|5.5|15|0|Йонас Гар Стёре
-Польша|PL|E|11|Варшава|Бигос — туш��ная капуста с мясом|37.6|16|1|Кароль Навроцкий
+Польша|PL|E|11|Варшава|Бигос — тушёная капуста с мясом|37.6|16|1|Кароль Навроцкий
 Португалия|PT|E|10|Лиссабон|Бакальяу — блюда из вяленой трески|10.3|18|0|Антониу Жозе Сегуру
 Румыния|RO|E|11|Бухарест|Сармале — голубцы в виноградных листьях|19|41|1|Никушор Дан
 Россия|RU|E|11|Москва|Пельмени — тесто с мясной начинкой|146|89|16|Владимир Путин
@@ -284,7 +283,6 @@ const RAW=`Албания|AL|E|11|Тирана|Тавё кози — запеч�
 Венесуэла|VE|S|11|Каракас|Пабельон криольо — мясо, рис и бобы|28|23|3|Делси Родригес
 Сомалиленд|XS|F|01|Харгейса|Ханид — баранина с рисом|5.7|6|0|Абдирахман Мохамед Абдуллахи`;
 
-/* Упрощённые векторные контуры (viewBox 100x100) */
 const MAPS={
 IT:"35,5 50,8 55,20 62,35 72,55 80,65 78,72 68,68 60,55 50,45 42,30 32,20",
 CL:"45,2 55,2 56,30 54,60 58,85 52,98 46,98 50,70 46,40",
@@ -295,7 +293,6 @@ IN:"30,5 50,5 60,15 85,25 80,35 65,40 60,55 50,95 42,70 30,50 10,40 20,25",
 JP:"70,5 80,15 70,30 60,45 45,60 30,70 20,85 15,75 30,55 50,40 60,25",
 US:"5,20 40,15 70,15 95,20 90,40 95,50 85,60 75,90 60,70 40,75 30,60 5,45",
 RU:"5,40 20,25 50,15 80,10 98,20 95,40 70,45 50,50 30,60 10,55",
-
 CN:"20,20 40,10 65,15 80,10 95,25 85,40 80,55 60,70 40,75 25,60 10,45",
 CA:"5,50 15,30 40,20 60,25 80,15 95,30 85,50 70,60 50,80 30,70 20,60",
 FR:"30,10 55,5 70,25 85,40 75,65 55,80 45,95 30,85 20,60 5,45 15,25",
@@ -326,37 +323,35 @@ const DB=RAW.trim().split("\n").map(l=>{
     isUN:p[3][0]==="1",isMainland:p[3][1]==="1",
     capital:p[4],food:{name:f[0],desc:f[1]||""},
     population:+p[6],regionsCount:+p[7],millionCitiesCount:+p[8],leader:p[9],
-    mapSvg:MAPS[p[1]]?<svg class="map" viewBox="0 0 100 100"><polygon points="${MAPS[p[1]]}"/></svg>:null
+    mapSvg:MAPS[p[1]]?`<svg class="map" viewBox="0 0 100 100"><polygon points="${MAPS[p[1]]}"/></svg>`:null
   };
 });
 
-/* ================= ФЛАГИ ================= */
-function stripes(cols,wts,w=30,h=20){let y=0,t=wts.reduce((a,b)=>a+b,0),s="";cols.forEach((c,i)=>{const hh=h*wts[i]/t;s+=<rect x="0" y="${y}" width="${w}" height="${hh+.1}" fill="${c}"/>;y+=hh});return s}
+function stripes(cols,wts,w=30,h=20){let y=0,t=wts.reduce((a,b)=>a+b,0),s="";cols.forEach((c,i)=>{const hh=h*wts[i]/t;s+=`<rect x="0" y="${y}" width="${w}" height="${hh+.1}" fill="${c}"/>`;y+=hh});return s}
 const CUSTOM={
  XD:()=>stripes(["#d6202a","#1d3f9e","#111"],[1,1,1]),
  XL:()=>stripes(["#5bb5ee","#1d3f9e","#d6202a"],[1,1,1]),
  XO:()=>stripes(["#fff","#d6202a","#f2c500"],[1,1,1]),
- XS:()=>stripes(["#2e9d4a","#fff","#d6202a"],[1,1,1])+<circle cx="15" cy="10" r="2.4" fill="#111"/>,
- XT:()=>stripes(["#d6202a","#1f9a3b","#d6202a"],[8,4,8])+<circle cx="4" cy="3.5" r="1.6" fill="#f2c500"/>,
- XA:()=>stripes(["#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b"],[1,1,1,1,1,1,1])+<rect width="11" height="10" fill="#d6202a"/><circle cx="5.5" cy="5" r="2" fill="#fff"/>,
- XC:()=><rect width="30" height="20" fill="#fff"/><rect y="2.5" width="30" height="2" fill="#d6202a"/><rect y="15.5" width="30" height="2" fill="#d6202a"/><circle cx="15" cy="10" r="4" fill="#d6202a"/><circle cx="16.3" cy="10" r="3.3" fill="#fff"/><circle cx="18" cy="10" r="1" fill="#d6202a"/>
+ XS:()=>stripes(["#2e9d4a","#fff","#d6202a"],[1,1,1])+`<circle cx="15" cy="10" r="2.4" fill="#111"/>`,
+ XT:()=>stripes(["#d6202a","#1f9a3b","#d6202a"],[8,4,8])+`<circle cx="4" cy="3.5" r="1.6" fill="#f2c500"/>`,
+ XA:()=>stripes(["#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b","#fff","#1f9a3b"],[1,1,1,1,1,1,1])+`<rect width="11" height="10" fill="#d6202a"/><circle cx="5.5" cy="5" r="2" fill="#fff"/>`,
+ XC:()=>`<rect width="30" height="20" fill="#fff"/><rect y="2.5" width="30" height="2" fill="#d6202a"/><rect y="15.5" width="30" height="2" fill="#d6202a"/><circle cx="15" cy="10" r="4" fill="#d6202a"/><circle cx="16.3" cy="10" r="3.3" fill="#fff"/><circle cx="18" cy="10" r="1" fill="#d6202a"/>`
 };
 let FLAGOK=true;
 (function(){try{const c=document.createElement("canvas");c.width=c.height=48;const x=c.getContext("2d");x.font="32px sans-serif";x.fillText("\u{1F1E9}\u{1F1EA}",0,36);const d=x.getImageData(0,0,48,48).data;let red=false;for(let i=0;i<d.length;i+=4){if(d[i]>180&&d[i+1]<60&&d[i+2]<60&&d[i+3]>200){red=true;break}}FLAGOK=red}catch(e){}})();
 function emoji(code){return String.fromCodePoint(...[...code].map(ch=>0x1F1E6+ch.charCodeAt(0)-65))}
 function flagHTML(c){
-  if(CUSTOM[c.code])return <div class="flag"><svg viewBox="0 0 30 20">${CUSTOM[c.code]()}</svg></div>;
-  if(FLAGOK)return <div class="fe">${emoji(c.code)}</div>;
-  return <div class="fb">${c.code}</div>;
+  if(CUSTOM[c.code])return `<div class="flag"><svg viewBox="0 0 30 20">${CUSTOM[c.code]()}</svg></div>`;
+  if(FLAGOK)return `<div class="fe">${emoji(c.code)}</div>`;
+  return `<div class="fb">${c.code}</div>`;
 }
 
-/* ================= СОХРАНЕНИЯ ================= */
 const KEY="sllizgeo_v1";
 const DEF={coins:0,score:0,best:0,theme:"dark",themes:["dark"],hints:{fifty:1,skip:1},settings:{conts:ALLCONT.slice(),onlyUN:false,onlyMain:false,count:"max"}};
 
 function load(){
   try{const d=JSON.parse(localStorage.getItem(KEY));
-    if(d)return Object.assign({},DEF,d,{settings:Object.assign({},DEF.settings,d.settings{}),hints:Object.assign({},DEF.hints,d.hints{})});
+    if(d)return Object.assign({},DEF,d,{settings:Object.assign({},DEF.settings,d.settings||{}),hints:Object.assign({},DEF.hints,d.hints||{})});
   }catch(e){}
   return JSON.parse(JSON.stringify(DEF));
 }
@@ -366,33 +361,28 @@ const $=id=>document.getElementById(id);
 function toast(t){const e=$("toast");e.textContent=t;e.classList.add("show");setTimeout(()=>e.classList.remove("show"),1600)}
 function upd(){$("hc").textContent=S.coins;$("hs").textContent=S.score;document.body.dataset.theme=S.theme}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
-function pool(){const s=S.settings;return DB.filter(c=>s.conts.includes(c.continent)&&(!s.onlyUNc.isUN)&&(!s.onlyMainc.isMainland))}
+function pool(){const s=S.settings;return DB.filter(c=>s.conts.includes(c.continent)&&(!s.onlyUN||c.isUN)&&(!s.onlyMain||c.isMainland))}
 function fmtPop(m){if(m>=1)return "≈ "+(m>=10?Math.round(m):m)+" млн";return "≈ "+Math.round(m*1e6).toLocaleString("ru")+" чел."}
 
-/* ================= РЕЖИМЫ ================= */
 const MODES={
- flag:{icon:"🏳️",title:"Угадай страну по флагу",q:(c)=>${flagHTML(c)}<div class="qs">Какой стране принадлежит этот флаг?</div>,o:(o)=>o.name,label:o=>o.name},
- flagrev:{icon:"🎌",title:"Угадай флаг по стране",grid:true,q:(c)=><div class="qt">${c.name}</div><div class="qs">Выберите правильный флаг</div>,o:(o)=>flagHTML(o),label:o=>o.code},
- capital:{icon:"🏛️",title:"Столицы",dir:true,
-   q:(c,d)=>d?<div class="qt">${c.name}</div><div class="qs">Какая столица у этой страны?</div>:<div class="qt">${c.capital}</div><div class="qs">Столица какой страны?</div>,
-   o:(o,d)=>d?o.capital:o.name,label:(o,d)=>d?o.capital:o.name},
- food:{icon:"🍲",title:"Национальные блюда",q:(c)=><div class="qt">🍽️ ${c.food.name}</div><div class="qs">${c.food.desc}</div><div class="qs">Из какой страны это блюдо?</div>,o:o=>o.name,label:o=>o.name},
- map:{icon:"🗺️",title:"Контуры карт",ok:c=>!!c.mapSvg,q:(c)=>${c.mapSvg}<div class="qs">Какая страна изображена? (упрощённый контур)</div>,o:o=>o.name,label:o=>o.name},
- stats:{icon:"📊",title:"Население и Статистика",q:(c)=><div class="facts">👥 Население: <b>${fmtPop(c.population)}</b><br>🏘️ Областей/субъектов: <b>${c.regionsCount}</b><br>🏙️ Городов-миллионников: <b>${c.millionCitiesCount}</b></div><div class="qs">Что это за страна?</div>,o:o=>o.name,label:o=>o.name},
- leader:{icon:"👤",title:"Лидеры и Президенты",q:(c)=><svg width="90" height="90" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--bg)" stroke="var(--acc)" stroke-width="3"/><circle cx="50" cy="38" r="16" fill="var(--acc)"/><path d="M18 88c4-22 20-30 32-30s28 8 32 30" fill="var(--acc)"/></svg><div class="qt">${c.leader}</div><div class="qs">Лидер какой страны?</div>,o:o=>o.name,label:o=>o.name}
+ flag:{icon:"🏳️",title:"Угадай страну по флагу",q:(c)=>`${flagHTML(c)}<div class="qs">Какой стране принадлежит этот флаг?</div>`,o:(o)=>o.name,label:o=>o.name},
+ flagrev:{icon:"🎌",title:"Угадай флаг по стране",grid:true,q:(c)=>`<div class="qt">${c.name}</div><div class="qs">Выберите правильный флаг</div>`,o:(o)=>flagHTML(o),label:o=>o.code},
+ capital:{icon:"🏛️",title:"Столицы",dir:true,q:(c,d)=>d?`<div class="qt">${c.name}</div><div class="qs">Какая столица у этой страны?</div>`:`<div class="qt">${c.capital}</div><div class="qs">Столица какой страны?</div>`,o:(o,d)=>d?o.capital:o.name,label:(o,d)=>d?o.capital:o.name},
+ food:{icon:"🍲",title:"Национальные блюда",q:(c)=>`<div class="qt">🍽️ ${c.food.name}</div><div class="qs">${c.food.desc}</div><div class="qs">Из какой страны это блюдо?</div>`,o:o=>o.name,label:o=>o.name},
+ map:{icon:"🗺️",title:"Контуры карт",ok:c=>!!c.mapSvg,q:(c)=>`${c.mapSvg}<div class="qs">Какая страна изображена? (упрощённый контур)</div>`,o:o=>o.name,label:o=>o.name},
+ stats:{icon:"📊",title:"Население и Статистика",q:(c)=>`<div class="facts">👥 Население: <b>${fmtPop(c.population)}</b><br>🏘️ Областей/субъектов: <b>${c.regionsCount}</b><br>🏙️ Городов-миллионников: <b>${c.millionCitiesCount}</b></div><div class="qs">Что это за страна?</div>`,o:o=>o.name,label:o=>o.name},
+ leader:{icon:"👤",title:"Лидеры и Президенты",q:(c)=>`<svg width="90" height="90" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="var(--bg)" stroke="var(--acc)" stroke-width="3"/><circle cx="50" cy="38" r="16" fill="var(--acc)"/><path d="M18 88c4-22 20-30 32-30s28 8 32 30" fill="var(--acc)"/></svg><div class="qt">${c.leader}</div><div class="qs">Лидер какой страны?</div>`,o:o=>o.name,label:o=>o.name}
 };
 let G=null;
 
-/* ================= МЕНЮ ================= */
 function showMenu(){
   G=null;upd();
   const p=pool();
-  $("view").innerHTML=<div class="menu"><h1>SllizGeo</h1><div class="sub">Доступно стран: ${p.length} из ${DB.length} · Рекорд раунда: ${S.best}</div>+
-   Object.keys(MODES).map(k=><button class="mode" data-m="${k}"><span class="ic">${MODES[k].icon}</span>${MODES[k].title}</button>).join("")+</div>;
+  $("view").innerHTML=`<div class="menu"><h1>SllizGeo</h1><div class="sub">Доступно стран: ${p.length} из ${DB.length} · Рекорд раунда: ${S.best}</div>`+
+   Object.keys(MODES).map(k=>`<button class="mode" data-m="${k}"><span class="ic">${MODES[k].icon}</span>${MODES[k].title}</button>`).join("")+`</div>`;
   document.querySelectorAll(".mode").forEach(b=>b.onclick=()=>startGame(b.dataset.m));
 }
 
-/* ================= ИГРА ================= */
 function startGame(key){
   const m=MODES[key];
   const p=pool().filter(c=>m.ok?m.ok(c):true);
@@ -403,8 +393,7 @@ function startGame(key){
 }
 function makeOpts(c,m,d){
   const used=new Set([m.label(c,d)]);const res=[c];
-
-const add=list=>{for(const x of list){if(res.length>=4)break;if(x===c)continue;const l=m.label(x,d);if(used.has(l))continue;used.add(l);res.push(x)}};
+  const add=list=>{for(const x of list){if(res.length>=4)break;if(x===c)continue;const l=m.label(x,d);if(used.has(l))continue;used.add(l);res.push(x)}};
   add(shuffle(pool()));
   if(res.length<4)add(shuffle(DB));
   return shuffle(res);
@@ -415,11 +404,11 @@ function nextQ(){
   G.dir=m.dir?Math.random()<.5:false;G.locked=false;G.used50=false;
   G.cur=c;G.opts=makeOpts(c,m,G.dir);
   const pct=Math.round(G.i/G.qs.length*100);
-  $("view").innerHTML=<div class="top"><button class="ib" id="quit">←</button><span>${G.i+1} / ${G.qs.length}</span><span>🔥 ${G.streak}</span></div>
-  <div class="bar"><i style="width:${pct}%"></i></div>
-  <div class="card q">${m.q(c,G.dir)}</div>
-  <div class="opts ${m.grid?"grid":""}">${G.opts.map((o,k)=><button class="opt" data-k="${k}">${m.o(o,G.dir)}</button>).join("")}</div>
-  <div class="hints"><button id="h50">50/50 (${S.hints.fifty})</button><button id="hskip">Пропуск (${S.hints.skip})</button></div>;
+  $("view").innerHTML=`<div class="top"><button class="ib" id="quit">←</button><span>${G.i+1} / ${G.qs.length}</span><span>🔥 ${G.streak}</span></div>`+
+  `<div class="bar"><i style="width:${pct}%"></i></div>`+
+  `<div class="card q">${m.q(c,G.dir)}</div>`+
+  `<div class="opts ${m.grid?"grid":""}">${G.opts.map((o,k)=>`<button class="opt" data-k="${k}">${m.o(o,G.dir)}</button>`).join("")}</div>`+
+  `<div class="hints"><button id="h50">50/50 (${S.hints.fifty})</button><button id="hskip">Пропуск (${S.hints.skip})</button></div>`;
   document.querySelectorAll(".opt").forEach(b=>b.onclick=()=>answer(+b.dataset.k));
   $("quit").onclick=()=>{if(confirm("Выйти из раунда? Прогресс раунда будет завершён."))finish()};
   $("h50").onclick=useFifty;$("hskip").onclick=useSkip;
@@ -431,7 +420,7 @@ function useFifty(){
   const wrong=shuffle(G.opts.map((o,k)=>k).filter(k=>G.opts[k]!==G.cur)).slice(0,2);
   const bs=document.querySelectorAll(".opt");
   wrong.forEach(k=>{bs[k].classList.add("hide");bs[k].disabled=true});
-  $("h50").textContent=50/50 (${S.hints.fifty});
+  $("h50").textContent=`50/50 (${S.hints.fifty})`;
 }
 function useSkip(){
   if(G.locked)return;
@@ -446,7 +435,7 @@ function answer(k){
   if(ok){
     const coins=5+Math.min(G.streak,5),pts=10+G.streak*2;
     G.streak++;G.correct++;G.coins+=coins;G.pts+=pts;S.coins+=coins;S.score+=pts;
-    toast(+${coins} 🪙  +${pts} ⭐);
+    toast(`+${coins} 🪙  +${pts} ⭐`);
   }else{
     bs[k].classList.add("bad");G.streak=0;
     toast("Правильно: "+G.cur.name);
@@ -458,30 +447,28 @@ function finish(){
   const g=G;if(!g)return showMenu();
   if(g.pts>S.best)S.best=g.pts;save();upd();
   G=null;
-  $("view").innerHTML=<div class="card"><div class="big">🏁</div><h2>Раунд завершён</h2>
-  <div class="res">Режим: ${g.m.title}<br>Верных ответов: <b>${g.correct}</b> из ${g.qs.length}<br>Очки за раунд: <b>${g.pts}</b> ⭐<br>Монеты за раунд: <b>${g.coins}</b> 🪙</div></div>
-  <div class="hints"><button class="btn pri" id="again">Ещё раз</button><button class="btn" id="tomenu">В меню</button></div>;
+  $("view").innerHTML=`<div class="card"><div class="big">🏁</div><h2>Раунд завершён</h2>`+
+  `<div class="res">Режим: ${g.m.title}<br>Верных ответов: <b>${g.correct}</b> из ${g.qs.length}<br>Очки за раунд: <b>${g.pts}</b> ⭐<br>Монеты за раунд: <b>${g.coins}</b> 🪙</div></div>`+
+  `<div class="hints"><button class="btn pri" id="again">Ещё раз</button><button class="btn" id="tomenu">В меню</button></div>`;
   $("again").onclick=()=>startGame(g.key);$("tomenu").onclick=showMenu;
 }
 
-/* ================= МОДАЛЬНЫЕ ОКНА ================= */
 function openModal(html){$("sheet").innerHTML=html;$("modal").classList.remove("hidden")}
 function closeModal(){$("modal").classList.add("hidden");if(!G)showMenu()}
 $("modal").addEventListener("click",e=>{if(e.target.id==="modal")closeModal()});
 
 function openSettings(){
   const s=S.settings;
-  openModal(<h2>⚙️ Настройки</h2>
-  <div class="sec">Континенты</div>
-  ${ALLCONT.map((c,i)=><label class="row"><input type="checkbox" class="cc" value="${c}" ${s.conts.includes(c)?"checked":""}>${c}</label>`).join("")}
-  <div class="sec">Фильтры категорий</div>
-  <label class="row"><input type="checkbox" id="fUN" ${s.onlyUN?"checked":""}>Только страны ООН</label>
-  <label class="row"><input type="checkbox" id="fMain" ${s.onlyMain?"checked":""}>Только материковые страны</label>
-  <div class="sec">Вопросов в раунде</div>
-
-${["10","20","50","100","max"].map(v=><label class="row"><input type="radio" name="cnt" class="rc" value="${v}" ${String(s.count)===v?"checked":""}>${v==="max"?"Максимум":v}</label>).join("")}
-  <div class="small" id="avail"></div>
-  <div class="hints"><button class="btn pri" id="closeS">Готово</button></div>);
+  openModal(`<h2>⚙️ Настройки</h2>`+
+  `<div class="sec">Континенты</div>`+
+  ALLCONT.map((c,i)=>`<label class="row"><input type="checkbox" class="cc" value="${c}" ${s.conts.includes(c)?"checked":""}>${c}</label>`).join("")+
+  `<div class="sec">Фильтры категорий</div>`+
+  `<label class="row"><input type="checkbox" id="fUN" ${s.onlyUN?"checked":""}>Только страны ООН</label>`+
+  `<label class="row"><input type="checkbox" id="fMain" ${s.onlyMain?"checked":""}>Только материковые страны</label>`+
+  `<div class="sec">Вопросов в раунде</div>`+
+  ["10","20","50","100","max"].map(v=>`<label class="row"><input type="radio" name="cnt" class="rc" value="${v}" ${String(s.count)===v?"checked":""}>${v==="max"?"Максимум":v}</label>`).join("")+
+  `<div class="small" id="avail"></div>`+
+  `<div class="hints"><button class="btn pri" id="closeS">Готово</button></div>`);
   const refresh=()=>{
     s.conts=[...document.querySelectorAll(".cc")].filter(x=>x.checked).map(x=>x.value);
     s.onlyUN=$("fUN").checked;s.onlyMain=$("fMain").checked;
@@ -489,7 +476,7 @@ ${["10","20","50","100","max"].map(v=><label class="row"><input type="radio" nam
     save();
     const n=pool().length;
     const rounds=s.count==="max"?n:Math.min(+s.count,n);
-    $("avail").textContent=Доступно стран: ${n} из ${DB.length} · В раунде вопросов: ${rounds};
+    $("avail").textContent=`Доступно стран: ${n} из ${DB.length} · В раунде вопросов: ${rounds}`;
   };
   document.querySelectorAll(".cc,#fUN,#fMain,.rc").forEach(e=>e.onchange=refresh);
   $("closeS").onclick=closeModal;refresh();
@@ -503,15 +490,15 @@ const SHOP=[
  {id:"light",t:"☀️ Светлая тема",d:"Для яркого дня",price:100,type:"theme"}
 ];
 function openShop(){
-  openModal(<h2>🛒 Магазин</h2><div class="small" style="margin-bottom:10px">Ваши монеты: <b>${S.coins}</b> 🪙</div>+
+  openModal(`<h2>🛒 Магазин</h2><div class="small" style="margin-bottom:10px">Ваши монеты: <b>${S.coins}</b> 🪙</div>`+
   SHOP.map(it=>{
     let btn;
-    if(it.type==="hint"){btn=<button data-id="${it.id}">${it.price} 🪙</button>;}
-    else if(S.themes.includes(it.id)){btn=S.theme===it.id?<button class="off" disabled>Активна</button>:<button data-id="${it.id}" data-apply="1">Применить</button>;}
-    else btn=<button data-id="${it.id}">${it.price} 🪙</button>;
-    const own=it.type==="hint"? (есть: ${S.hints[it.id]}):"";
-    return <div class="shopi"><div><b>${it.t}</b>${own}<div class="small">${it.d}</div></div>${btn}</div>;
-  }).join("")+<div class="hints"><button class="btn pri" id="closeSh">Закрыть</button></div>`);
+    if(it.type==="hint"){btn=`<button data-id="${it.id}">${it.price} 🪙</button>`;}
+    else if(S.themes.includes(it.id)){btn=S.theme===it.id?`<button class="off" disabled>Активна</button>`:`<button data-id="${it.id}" data-apply="1">Применить</button>`;}
+    else btn=`<button data-id="${it.id}">${it.price} 🪙</button>`;
+    const own=it.type==="hint"? ` (есть: ${S.hints[it.id]})`:"";
+    return `<div class="shopi"><div><b>${it.t}</b>${own}<div class="small">${it.d}</div></div>${btn}</div>`;
+  }).join("")+`<div class="hints"><button class="btn pri" id="closeSh">Закрыть</button></div>`);
   $("closeSh").onclick=closeModal;
   document.querySelectorAll(".shopi button[data-id]").forEach(b=>b.onclick=()=>{
     const it=SHOP.find(x=>x.id===b.dataset.id);
@@ -523,7 +510,7 @@ function openShop(){
   });
 }
 $("bGear").onclick=openSettings;$("bShop").onclick=openShop;
-/* PWA-манифест без внешних файлов */
+
 try{const m={name:"SllizGeo",short_name:"SllizGeo",display:"standalone",background_color:"#121417",theme_color:"#121417",start_url:"."};
 const l=document.createElement("link");l.rel="manifest";l.href=URL.createObjectURL(new Blob([JSON.stringify(m)],{type:"application/manifest+json"}));document.head.appendChild(l)}catch(e){}
 
