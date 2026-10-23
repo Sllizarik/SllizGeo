@@ -3,269 +3,249 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-  <title>SllizGeo — Мобильная Гео-викторина</title>
+  <title>SllizGeo — Географическая викторина</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="app" class="app-container">
+  <div id="app">
+    <!-- ГЛАВНОЕ МЕНЮ -->
+    <section id="screen-menu" class="screen active">
+      <header class="app-header">
+        <h1 class="logo">Slliz<span class="accent">Geo</span></h1>
+        <p class="subtitle">Мобильная географическая арена</p>
+      </header>
 
-    <!-- ВЕРХНЯЯ ШАПКА -->
-    <header class="app-header">
-      <div class="logo" id="btn-logo">Slliz<span>Geo</span></div>
-      <div class="header-actions">
-        <button id="btn-open-stats" class="icon-btn" title="Статистика">📊</button>
-        <button id="btn-open-enc" class="icon-btn" title="Энциклопедия">📖</button>
-      </div>
-    </header>
-
-    <!-- ГЛАВНОЕ МЕНЮ / НАСТРОЙКИ -->
-    <main id="view-menu" class="view active">
-      <div class="hero-banner">
-        <h2>Проверь свои знания планеты</h2>
-        <p>Выбери режим, настрой параметры и бей рекорды</p>
-      </div>
-
-      <!-- ВЫБОР РЕЖИМА ИГРЫ -->
-      <section class="menu-section">
-        <h3 class="section-title">Режимы викторины</h3>
-        <div class="modes-grid">
-          <button class="mode-card" data-mode="flag_to_country">
-            <span class="mode-icon">🚩</span>
-            <div class="mode-info">
-              <h4>Флаг → Страна</h4>
-              <p>Угадай страну по ее флагу</p>
-            </div>
-          </button>
-
-          <button class="mode-card" data-mode="country_to_flag">
-            <span class="mode-icon">🌐</span>
-            <div class="mode-info">
-              <h4>Страна → Флаг</h4>
-              <p>Выбери верный флаг для страны</p>
-            </div>
-          </button>
-
-          <button class="mode-card" data-mode="capitals">
-            <span class="mode-icon">🏛️</span>
-            <div class="mode-info">
-              <h4>Столицы мира</h4>
-              <p>Проверь знание главных городов</p>
-            </div>
-          </button>
-
-          <button class="mode-card" data-mode="cuisines">
-            <span class="mode-icon">🍲</span>
-            <div class="mode-info">
-              <h4>Кухни мира</h4>
-              <p>Угадай родину блюда без спойлеров</p>
-            </div>
-          </button>
-
-          <button class="mode-card" data-mode="leaders">
-            <span class="mode-icon">👑</span>
-            <div class="mode-info">
-              <h4>Лидеры стран</h4>
-              <p>Президенты, монархи и премьеры</p>
-            </div>
-          </button>
-
-          <button class="mode-card" data-mode="territory">
-            <span class="mode-icon">🗺️</span>
-            <div class="mode-info">
-              <h4>Территория</h4>
-              <p>Силуэты, соседи и габариты</p>
-            </div>
-          </button>
-        </div>
-
-        <!-- Подрежим для Территории (появляется при выборе) -->
-        <div id="territory-sublevels" class="sub-levels hidden">
-          <label>Сложность режима «Территория»:</label>
-          <div class="segmented-control">
-            <button class="seg-btn active" data-sublevel="easy">Легкий (соседи)</button>
-            <button class="seg-btn" data-sublevel="medium">Средний (силуэт)</button>
-            <button class="seg-btn" data-sublevel="hard">Сложный (оси)</button>
+      <div class="modes-grid">
+        <button class="mode-card" data-mode="flag_to_country">
+          <span class="mode-icon">🚩</span>
+          <div class="mode-info">
+            <span class="mode-title">Флаг → Страна</span>
+            <span class="mode-desc">Определите страну по ее флагу</span>
           </div>
-        </div>
-      </section>
+        </button>
 
-      <!-- ПАНЕЛЬ НАСТРОЕК -->
-      <section class="menu-section settings-card">
-        <h3 class="section-title">Настройки раунда</h3>
+        <button class="mode-card" data-mode="country_to_flag">
+          <span class="mode-icon">🌐</span>
+          <div class="mode-info">
+            <span class="mode-title">Страна → Флаг</span>
+            <span class="mode-desc">Найдите верный флаг для названия</span>
+          </div>
+        </button>
+
+        <button class="mode-card" data-mode="capitals">
+          <span class="mode-icon">🏛️</span>
+          <div class="mode-info">
+            <span class="mode-title">Столицы мира</span>
+            <span class="mode-desc">Тест на знание главных городов</span>
+          </div>
+        </button>
+
+        <button class="mode-card" data-mode="cuisine">
+          <span class="mode-icon">🍲</span>
+          <div class="mode-info">
+            <span class="mode-title">Кухни мира</span>
+            <span class="mode-desc">Определите родину блюда без подсказок</span>
+          </div>
+        </button>
+
+        <button class="mode-card" data-mode="leaders">
+          <span class="mode-icon">👤</span>
+          <div class="mode-info">
+            <span class="mode-title">Лидеры стран</span>
+            <span class="mode-desc">Главы государств и правительств</span>
+          </div>
+        </button>
+
+        <button class="mode-card" data-mode="territory">
+          <span class="mode-icon">🗺️</span>
+          <div class="mode-info">
+            <span class="mode-title">Территория</span>
+            <span class="mode-desc">Контуры, силуэты и габаритные оси</span>
+          </div>
+        </button>
+      </div>
+
+      <nav class="bottom-nav">
+        <button id="btn-open-settings" class="nav-btn">⚙️ Настройки</button>
+        <button id="btn-open-stats" class="nav-btn">📊 Статистика</button>
+        <button id="btn-open-encyclopedia" class="nav-btn">📖 Энциклопедия</button>
+      </nav>
+    </section>
+
+    <!-- ЭКРАН НАСТРОЕК -->
+    <div id="modal-settings" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Настройки раунда</h2>
+          <button class="close-btn" data-close="modal-settings">&times;</button>
+        </div>
 
         <div class="setting-item">
           <div class="setting-label">
             <span>Вопросов в раунде:</span>
-            <strong id="label-questions-count" class="accent-text">15</strong>
+            <strong id="slider-val" class="accent">15</strong>
           </div>
-          <input type="range" id="slider-questions" min="5" max="50" step="5" value="15">
+          <input type="range" id="setting-questions-count" min="5" max="40" step="5" value="15">
         </div>
 
-        <div class="setting-item">
-          <span class="setting-title">Фильтры пула стран:</span>
-          <label class="checkbox-container">
-            <input type="checkbox" id="filter-un-only">
-            <span class="checkmark"></span>
-            Только члены ООН (193 страны)
-          </label>
-          <label class="checkbox-container">
-            <input type="checkbox" id="filter-mainland-only">
-            <span class="checkmark"></span>
-            Только материковые страны
-          </label>
+        <div class="setting-group-title">Фильтрация пула стран</div>
+        <label class="checkbox-label">
+          <input type="checkbox" id="setting-un-only">
+          <span class="custom-checkbox"></span>
+          <span>Только члены ООН (193 государства)</span>
+        </label>
+        <label class="checkbox-label">
+          <input type="checkbox" id="setting-mainland-only">
+          <span class="custom-checkbox"></span>
+          <span>Только материковые страны</span>
+        </label>
+
+        <div class="setting-group-title">Сложность режима «Территория»</div>
+        <div class="radio-toggle">
+          <label><input type="radio" name="setting-territory-lvl" value="easy" checked><span>Легкий</span></label>
+          <label><input type="radio" name="setting-territory-lvl" value="medium"><span>Средний</span></label>
+          <label><input type="radio" name="setting-territory-lvl" value="hard"><span>Сложный</span></label>
         </div>
 
-        <div class="setting-item">
-          <span class="setting-title">Таймеры (0 — выключен):</span>
-          <div class="timers-grid">
-            <div class="input-box">
-              <label for="timer-question">На 1 вопрос (сек):</label>
-              <input type="number" id="timer-question" min="0" max="60" value="10">
-            </div>
-            <div class="input-box">
-              <label for="timer-round">На весь раунд (сек):</label>
-              <input type="number" id="timer-round" min="0" max="600" value="0">
-            </div>
-          </div>
+        <div class="setting-group-title">Таймеры и контроль времени</div>
+        <div class="setting-item-inline">
+          <span>Таймер на вопрос (сек, 0 — откл.):</span>
+          <input type="number" id="setting-timer-question" min="0" max="60" value="10">
+        </div>
+        <div class="setting-item-inline">
+          <span>Лимит на раунд (сек, 0 — откл.):</span>
+          <input type="number" id="setting-timer-round" min="0" max="600" value="0">
         </div>
 
-        <button id="btn-start-game" class="btn btn-primary btn-block">🚀 Начать игру</button>
-      </section>
-    </main>
+        <button class="primary-btn" data-close="modal-settings">Сохранить</button>
+      </div>
+    </div>
 
-    <!-- ИГРОВОЙ ЭКРАН -->
-    <main id="view-game" class="view">
-      <!-- Игровой HUD -->
-      <div class="game-hud">
-        <button id="btn-exit-game" class="btn-text">← В меню</button>
-        <div class="hud-center">
-          <span id="hud-question-counter">1 / 15</span>
-          <div class="progress-bar">
-            <div id="hud-progress-fill" class="progress-fill"></div>
-          </div>
-        </div>
-        <div class="hud-timers">
-          <span id="hud-q-timer" class="badge-timer hidden">⏱ 10s</span>
-          <span id="hud-stopwatch" class="badge-stopwatch">00:00</span>
+    <!-- ЭКРАН ПРЕДЗАГРУЗКИ КЭША КАРТИНОК -->
+    <section id="screen-preloader" class="screen">
+      <div class="loader-box">
+        <div class="spinner"></div>
+        <h3 id="loader-status">Подготовка раунда...</h3>
+        <div class="progress-bar-bg">
+          <div id="loader-progress" class="progress-bar-fill"></div>
         </div>
       </div>
+    </section>
 
-      <!-- Карточка вопроса -->
-      <div class="game-card">
-        <div class="question-header">
-          <span id="q-hint-category" class="question-badge">Категория</span>
-          <h3 id="q-text" class="question-title">Загрузка вопроса...</h3>
-        </div>
-
-        <!-- Контейнер медиа: флаг, блюдо, контур или Canvas габаритных осей -->
-        <div id="q-media-container" class="media-container">
-          <img id="q-image" src="" alt="Иллюстрация вопроса" class="hidden">
-          <canvas id="q-canvas-bbox" class="hidden" width="300" height="200"></canvas>
-          <div id="q-desc-box" class="desc-box hidden">
-            <p id="q-dish-desc"></p>
+    <!-- ЭКРАН ИГРЫ -->
+    <section id="screen-game" class="screen">
+      <div class="game-top-bar">
+        <button id="btn-game-exit" class="icon-btn" title="В меню">✕</button>
+        <div class="game-meta">
+          <span id="game-progress-text" class="accent">1 / 15</span>
+          <div class="timers-display">
+            <span id="question-timer-badge" class="timer-badge">⏳ 10</span>
+            <span id="round-timer-badge" class="timer-badge">⏱️ 00:00</span>
           </div>
         </div>
-
-        <!-- 4 варианта ответа -->
-        <div id="options-grid" class="options-grid"></div>
+        <div class="score-badge">Счет: <strong id="game-score">0</strong></div>
       </div>
-    </main>
 
-    <!-- ЭКРАН РЕЗУЛЬТАТОВ -->
-    <main id="view-result" class="view">
+      <div class="question-container">
+        <!-- Контент динамически генерируется в script.js -->
+        <div id="question-media-wrapper"></div>
+        <h2 id="question-title">Загрузка...</h2>
+        <p id="question-subtitle"></p>
+      </div>
+
+      <div id="answers-grid" class="answers-grid">
+        <!-- 4 кнопки ответов формируются скриптом -->
+      </div>
+    </section>
+
+    <!-- ЭКРАН ИТОГОВ РАУНДА -->
+    <section id="screen-result" class="screen">
       <div class="result-card">
-        <div class="result-icon" id="res-badge">🏆</div>
+        <div class="result-icon" id="result-emoji">🏆</div>
         <h2>Раунд завершен!</h2>
         <div class="result-stats">
-          <div class="stat-box">
-            <span class="stat-num accent-text" id="res-score">0 / 0</span>
-            <span class="stat-desc">Верных ответов</span>
+          <div class="res-stat-item">
+            <span>Правильных ответов:</span>
+            <strong id="res-score" class="accent">0 / 0</strong>
           </div>
-          <div class="stat-box">
-            <span class="stat-num" id="res-percent">0%</span>
-            <span class="stat-desc">Точность</span>
+          <div class="res-stat-item">
+            <span>Точность:</span>
+            <strong id="res-accuracy">0%</strong>
           </div>
-          <div class="stat-box">
-            <span class="stat-num" id="res-time">00:00</span>
-            <span class="stat-desc">Общее время</span>
+          <div class="res-stat-item">
+            <span>Общее время:</span>
+            <strong id="res-time">00:00</strong>
           </div>
         </div>
-        <div class="result-buttons">
-          <button id="btn-replay" class="btn btn-primary btn-block">🔄 Сыграть снова</button>
-          <button id="btn-back-home" class="btn btn-secondary btn-block">🏠 Главное меню</button>
+
+        <div class="result-actions">
+          <button id="btn-replay" class="primary-btn">Сыграть еще раз</button>
+          <button id="btn-result-menu" class="secondary-btn">Главное меню</button>
         </div>
       </div>
-    </main>
+    </section>
 
     <!-- ЭКРАН ЭНЦИКЛОПЕДИИ -->
-    <main id="view-encyclopedia" class="view">
-      <div class="subpage-header">
-        <button class="btn-text btn-back-menu">← Назад</button>
-        <h3>Энциклопедия стран</h3>
+    <section id="screen-encyclopedia" class="screen">
+      <div class="screen-header">
+        <button class="back-btn" data-back="screen-menu">← Меню</button>
+        <h2>Энциклопедия</h2>
       </div>
       <div class="search-box">
-        <input type="text" id="enc-search" placeholder="Поиск по названию или столице...">
+        <input type="text" id="enc-search-input" placeholder="Поиск по странам и столицам...">
       </div>
-      <div id="enc-countries-list" class="enc-list"></div>
-    </main>
+      <div id="enc-list" class="enc-list"></div>
+    </section>
 
-    <!-- МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ СТРАНЫ В ЭНЦИКЛОПЕДИИ -->
-    <div id="modal-country-detail" class="modal-overlay hidden">
-      <div class="modal-card">
-        <button id="btn-close-modal" class="modal-close">&times;</button>
-        <div id="modal-country-content"></div>
+    <!-- МОДАЛЬНОЕ ОКНО ДЕТАЛЕЙ СТРАНЫ -->
+    <div id="modal-country-detail" class="modal">
+      <div class="modal-content modal-detail-content">
+        <button class="close-btn detail-close-btn" data-close="modal-country-detail">&times;</button>
+        <div id="country-detail-body"></div>
       </div>
     </div>
 
     <!-- ЭКРАН СТАТИСТИКИ -->
-    <main id="view-stats" class="view">
-      <div class="subpage-header">
-        <button class="btn-text btn-back-menu">← Назад</button>
-        <h3>Статистика игрока</h3>
+    <section id="screen-stats" class="screen">
+      <div class="screen-header">
+        <button class="back-btn" data-back="screen-menu">← Меню</button>
+        <h2>Статистика игрока</h2>
       </div>
+
       <div class="stats-overview">
-        <div class="stat-tile">
-          <h4 id="stat-total-games">0</h4>
-          <p>Сыграно раундов</p>
+        <div class="stat-box">
+          <span class="stat-num" id="stat-total-answers">0</span>
+          <span class="stat-name">Всего ответов</span>
         </div>
-        <div class="stat-tile">
-          <h4 id="stat-total-answered">0</h4>
-          <p>Отвечено вопросов</p>
+        <div class="stat-box">
+          <span class="stat-num accent" id="stat-overall-acc">0%</span>
+          <span class="stat-name">Общая точность</span>
         </div>
-        <div class="stat-tile">
-          <h4 id="stat-accuracy" class="accent-text">0%</h4>
-          <p>Общая точность</p>
+        <div class="stat-box">
+          <span class="stat-num" id="stat-known-countries">0</span>
+          <span class="stat-name">Стран изучено</span>
         </div>
       </div>
 
-      <div class="stats-section">
-        <h4>Топ проблемных стран (для повторения):</h4>
-        <div id="stats-hardest-list" class="hardest-list"></div>
+      <div class="stats-section-title">Сложные страны (частые ошибки)</div>
+      <div id="troubled-countries-list" class="troubled-list">
+        <p class="muted">Пока нет накопленных ошибок. Отличная работа!</p>
       </div>
 
-      <button id="btn-reset-stats" class="btn btn-danger btn-block">Сбросить статистику</button>
-    </main>
+      <button id="btn-reset-stats" class="danger-btn">Сбросить статистику</button>
+    </section>
 
-    <!-- ОВЕРЛЕЙ ПРЕДЗАГРУЗКИ / ЗАГРУЗКИ -->
-    <div id="preloader-overlay" class="modal-overlay hidden">
-      <div class="preloader-content">
-        <div class="spinner"></div>
-        <p id="preloader-label">Предзагрузка изображений...</p>
-      </div>
-    </div>
-
-    <!-- ДИАЛОГ ПОДТВЕРЖДЕНИЯ ВЫХОДА -->
-    <div id="modal-confirm-exit" class="modal-overlay hidden">
-      <div class="modal-confirm-card">
-        <h4>Покинуть раунд?</h4>
-        <p>Текущий прогресс раунда не будет сохранен.</p>
-        <div class="confirm-actions">
-          <button id="btn-confirm-yes" class="btn btn-danger">Выйти</button>
-          <button id="btn-confirm-no" class="btn btn-secondary">Отмена</button>
+    <!-- МОДАЛЬНОЕ ОКНО ПОДТВЕРЖДЕНИЯ ВЫХОДА -->
+    <div id="modal-confirm-exit" class="modal">
+      <div class="modal-content text-center">
+        <h3>Завершить раунд?</h3>
+        <p class="muted">Текущий прогресс раунда будет аннулирован.</p>
+        <div class="modal-actions-row">
+          <button id="btn-exit-cancel" class="secondary-btn">Продолжить</button>
+          <button id="btn-exit-confirm" class="danger-btn">Выйти</button>
         </div>
       </div>
     </div>
-
   </div>
 
   <script src="script.js"></script>
