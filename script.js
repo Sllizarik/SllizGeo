@@ -1,29 +1,30 @@
 /**
  * SllizGeo — Мобильная географическая веб-игра
- * Архитектура: Vanilla JS, LocalStorage адаптивность, предзагрузка картинок.
+ * Обновленный игровой движок script.js с поддержкой медиа-полей,
+ * SVG-осевых линий BBOX и расширенной статистики базы данных.
  */
 
-// Список островных государств для фильтра «Только материковые страны»
+// Коды островных государств для фильтра «Только материковые страны»
 const ISLAND_CODES = new Set([
-  "GB", "IE", "IS", "MT", "CY", "CY-NC", "JP", "PH", "ID", "LK", "MV", "TW", 
-  "SG", "BH", "MG", "MU", "KM", "SC", "CV", "ST", "CU", "DO", "HT", "JM", 
-  "TT", "BS", "BB", "LC", "GD", "VC", "AG", "DM", "KN", "AU", "NZ", "FJ", 
+  "GB", "IE", "IS", "MT", "CY", "CY-NC", "JP", "PH", "ID", "LK", "MV", "TW",
+  "SG", "BH", "MG", "MU", "KM", "SC", "CV", "ST", "CU", "DO", "HT", "JM",
+  "TT", "BS", "BB", "LC", "GD", "VC", "AG", "DM", "KN", "AU", "NZ", "FJ",
   "PG", "SB", "VU", "WS", "TO", "FM", "PW", "MH", "KI", "NR", "TV"
 ]);
 
-// Непризнанные / частично признанные территории (не члены ООН)
+// Территории, не входящие в 193 официальных государства-члена ООН
 const NON_UN_CODES = new Set(["XK", "CY-NC", "TW", "PS", "EH", "VA"]);
 
-// СОСТОЯНИЕ ПРИЛОЖЕНИЯ
+// Глобальное состояние игры
 const state = {
   countries: [],
   settings: {
     questionsCount: 15,
     unOnly: false,
     mainlandOnly: false,
-    territoryLevel: "easy", // easy, medium, hard
-    questionTimer: 10,      // сек (0 — выкл)
-    roundTimer: 0          // сек (0 — выкл)
+    territoryLevel: "easy", // easy | medium | hard
+    questionTimer: 10,      // секунд (0 = отключен)
+    roundTimer: 0          // секунд (0 = отключен)
   },
   game: {
     mode: null,
@@ -37,10 +38,10 @@ const state = {
     qTimeLeft: 0,
     rTimeSpent: 0
   },
-  stats: {} // { countryId: { correct: 0, wrong: 0 } }
+  stats: {} // { [countryId]: { correct: 0, wrong: 0 } }
 };
 
-// ИНИЦИАЛИЗАЦИЯ
+// Запуск при загрузке документа
 document.addEventListener("DOMContentLoaded", async () => {
   loadStoredStats();
   initSettingsListeners();
@@ -52,17 +53,17 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function loadDatabase() {
   try {
     const res = await fetch("data.json");
-    if (!res.ok) throw new Error(`HTTP error: ${res.status}`);
+    if (!res.ok) throw new Error(`HTTP Error ${res.status}`);
     state.countries = await res.json();
     renderEncyclopedia();
     updateStatsScreen();
   } catch (err) {
-    alert("Ошибка загрузки data.json. Убедитесь, что файл сгенерирован и находится в одной папке с веб-игрой.");
-    console.error(err);
+    console.error("Ошибка загрузки data.json:", err);
+    alert("Не удалось загрузить data.json. Убедитесь, что файл сгенерирован и лежит в корне сайта.");
   }
 }
 
-// 2. ХРАНИЛИЩЕ И УМНАЯ СЛОЖНОСТЬ
+// 2. ХРАНИЛИЩЕ И УМНАЯ АДАПТИВНАЯ СЛОЖНОСТЬ
 function loadStoredStats() {
   const saved = localStorage.getItem("sllizgeo_stats");
   state.stats = saved ? JSON.parse(saved) : {};
@@ -80,14 +81,16 @@ function recordAnswerStat(countryId, isCorrect) {
   localStorage.setItem("sllizgeo_stats", JSON.stringify(state.stats));
 }
 
-// 3. ПРЕДЗАГРУЗКА ИЗОБРАЖЕНИЙ В ОЗУ
-function preloadImages(urlList, onProgress) {
+// 3. ПРЕДЗАГРУЗКА ИЗОБРАЖЕНИЙ В КЭШ ПАМЯТИ
+function preloadImages(urls, onProgress) {
   return new Promise((resolve) => {
-    if (!urlList.length) return resolve();
-    let loaded = 0;
-    const total = urlList.length;
+    const validUrls = urls.filter(u => typeof u === "string" && u.trim().length > 0);
+    if (!validUrls.length) return resolve();
 
-    urlList.forEach((url) => {
+    let loaded = 0;
+    const total = validUrls.length;
+
+    validUrls.forEach((url) => {
       const img = new Image();
       img.onload = img.onerror = () => {
         loaded++;
@@ -99,10 +102,15 @@ function preloadImages(urlList, onProgress) {
   });
 }
 
-// 4. ГЕНЕРАТОР РАУНДА И АДАПТИВНАЯ ВЫБОРКА
+// 4. ФИЛЬТРАЦИЯ ПУЛА И ВЫБОР ВОПРОСОВ (ИНТЕРВАЛЬНЫЙ АЛГОРИТМ)
+function getCountryIso(country) {
+  if (!country.flag) return "";
+  return country.flag.split("/").pop().replace(".png", "").replace(".svg", "").toUpperCase();
+}
+
 function buildFilteredPool() {
   return state.countries.filter(c => {
-    const iso = c.flag.split("/").pop().replace(".png", "").toUpperCase();
+    const iso = getCountryIso(c);
     if (state.settings.unOnly && NON_UN_CODES.has(iso)) return false;
     if (state.settings.mainlandOnly && ISLAND_CODES.has(iso)) return false;
     return true;
@@ -110,12 +118,11 @@ function buildFilteredPool() {
 }
 
 function selectAdaptiveQuestions(pool, count) {
-  // Вычисляем веса: страны с большим числом ошибок имеют повышенный вес
   const weighted = pool.map(c => {
     const st = state.stats[c.id] || { correct: 0, wrong: 0 };
-    // Базовый вес = 1. Каждая ошибка дает +2 к шансу выпадения
-    const weight = 1 + (st.wrong * 2) - Math.min(st.correct * 0.3, 0.8);
-    return { country: c, weight: Math.max(0.2, weight) };
+    // Страны с ошибками выпадают чаще
+    const weight = 1 + (st.wrong * 2.5) - Math.min(st.correct * 0.4, 0.9);
+    return { country: c, weight: Math.max(0.15, weight) };
   });
 
   const selected = [];
@@ -123,7 +130,10 @@ function selectAdaptiveQuestions(pool, count) {
   const targetCount = Math.min(count, pool.length);
 
   while (selected.length < targetCount) {
-    const totalWeight = weighted.reduce((acc, item) => acc + (chosenIds.has(item.country.id) ? 0 : item.weight), 0);
+    const totalWeight = weighted.reduce(
+      (sum, item) => sum + (chosenIds.has(item.country.id) ? 0 : item.weight), 
+      0
+    );
     let rand = Math.random() * totalWeight;
 
     for (const item of weighted) {
@@ -140,13 +150,80 @@ function selectAdaptiveQuestions(pool, count) {
   return selected;
 }
 
-// 5. ЗАПУСК ИГРОВОГО РАУНДА
+// 5. ГРАФИЧЕСКИЕ ОСИ ПО BBOX (СЛОЖНЫЙ РЕЖИМ ТЕРРИТОРИИ)
+function renderBBoxAxesSvg(bbox) {
+  const north = bbox.north ?? bbox.max_lat ?? 0;
+  const south = bbox.south ?? bbox.min_lat ?? 0;
+  const west = bbox.west ?? bbox.min_lon ?? 0;
+  const east = bbox.east ?? bbox.max_lon ?? 0;
+
+  let dLat = Math.abs(north - south);
+  if (dLat < 0.1) dLat = 0.1;
+
+  let dLon = east >= west ? (east - west) : (360 - west + east);
+  if (dLon < 0.1) dLon = 0.1;
+
+  // Учет искажения пропорций проекции Меркатора в зависимости от широты
+  const midLatRad = ((north + south) / 2) * (Math.PI / 180);
+  const cosLat = Math.max(0.2, Math.cos(midLatRad));
+  const aspectRatio = (dLon * cosLat) / dLat;
+
+  const maxW = 200;
+  const maxH = 100;
+  let boxW, boxH;
+
+  if (aspectRatio > maxW / maxH) {
+    boxW = maxW;
+    boxH = Math.max(26, Math.min(maxH, maxW / aspectRatio));
+  } else {
+    boxH = maxH;
+    boxW = Math.max(26, Math.min(maxW, maxH * aspectRatio));
+  }
+
+  const cx = 140;
+  const cy = 75;
+  const x1 = cx - boxW / 2;
+  const y1 = cy - boxH / 2;
+  const x2 = cx + boxW / 2;
+  const y2 = cy + boxH / 2;
+
+  return `
+    <div style="width:100%; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+      <svg viewBox="0 0 280 150" width="100%" height="150" style="overflow:visible;">
+        <!-- Фоновая габаритная рамка -->
+        <rect x="${x1}" y="${y1}" width="${boxW}" height="${boxH}"
+              fill="rgba(34, 197, 94, 0.06)" stroke="#22c55e" stroke-width="1.5" stroke-dasharray="4,4" rx="4"/>
+        
+        <!-- Вертикальная меридиональная ось (Север — Юг) -->
+        <line x1="${cx}" y1="${y1}" x2="${cx}" y2="${y2}" stroke="#22c55e" stroke-width="1.8"/>
+        <line x1="${cx - 5}" y1="${y1}" x2="${cx + 5}" y2="${y1}" stroke="#22c55e" stroke-width="2"/>
+        <line x1="${cx - 5}" y1="${y2}" x2="${cx + 5}" y2="${y2}" stroke="#22c55e" stroke-width="2"/>
+
+        <!-- Горизонтальная широтная ось (Запад — Восток) -->
+        <line x1="${x1}" y1="${cy}" x2="${x2}" y2="${cy}" stroke="#22c55e" stroke-width="1.8"/>
+        <line x1="${x1}" y1="${cy - 5}" x2="${x1}" y2="${cy + 5}" stroke="#22c55e" stroke-width="2"/>
+        <line x1="${x2}" y1="${cy - 5}" x2="${x2}" y2="${cy + 5}" stroke="#22c55e" stroke-width="2"/>
+
+        <!-- Центральный маркер пересечения осей -->
+        <circle cx="${cx}" cy="${cy}" r="3" fill="#22c55e"/>
+
+        <!-- Координатные подписи -->
+        <text x="${cx}" y="${y1 - 6}" fill="#9ca3af" font-size="9" text-anchor="middle" font-family="monospace">С: ${north.toFixed(1)}°</text>
+        <text x="${cx}" y="${y2 + 13}" fill="#9ca3af" font-size="9" text-anchor="middle" font-family="monospace">Ю: ${south.toFixed(1)}°</text>
+        <text x="${x1 - 6}" y="${cy + 3}" fill="#9ca3af" font-size="9" text-anchor="end" font-family="monospace">З: ${west.toFixed(1)}°</text>
+        <text x="${x2 + 6}" y="${cy + 3}" fill="#9ca3af" font-size="9" text-anchor="start" font-family="monospace">В: ${east.toFixed(1)}°</text>
+      </svg>
+    </div>
+  `;
+}
+
+// 6. ЗАПУСК ИГРОВОГО РАУНДА
 async function startRound(mode) {
   state.game.mode = mode;
   const pool = buildFilteredPool();
 
   if (pool.length < 4) {
-    alert("Слишком жесткие фильтры! В пуле осталось меньше 4 стран.");
+    alert("Слишком строгие фильтры! В пуле должно быть минимум 4 страны.");
     return;
   }
 
@@ -155,15 +232,22 @@ async function startRound(mode) {
   state.game.score = 0;
   state.game.rTimeSpent = 0;
 
-  // Формируем список картинок для предзагрузки в зависимости от режима
+  // Определение списка картинок для предварительной загрузки
   const urlsToPreload = [];
   state.game.queue.forEach(c => {
-    if (mode === "flag_to_country" || mode === "country_to_flag") urlsToPreload.push(c.flag);
-    if (mode === "cuisine") urlsToPreload.push(c.dish_image);
-    if (mode === "territory" && state.settings.territoryLevel !== "hard") urlsToPreload.push(c.contour_data);
+    if (mode === "flag_to_country") urlsToPreload.push(c.flag);
+    if (mode === "cuisine" && c.dish_image) urlsToPreload.push(c.dish_image);
+    if (mode === "leaders" && c.leader_image) urlsToPreload.push(c.leader_image);
+    if (mode === "territory" && state.settings.territoryLevel !== "hard" && c.contour_data) {
+      urlsToPreload.push(c.contour_data);
+    }
   });
 
-  // Переход на экран загрузки
+  if (mode === "country_to_flag") {
+    pool.forEach(c => { if (c.flag) urlsToPreload.push(c.flag); });
+  }
+
+  // Экран предзагрузки
   switchScreen("screen-preloader");
   const pBar = document.getElementById("loader-progress");
   const pStatus = document.getElementById("loader-status");
@@ -171,16 +255,15 @@ async function startRound(mode) {
   await preloadImages(urlsToPreload, (loaded, total) => {
     const pct = Math.round((loaded / total) * 100);
     pBar.style.width = pct + "%";
-    pStatus.innerText = `Кэширование медиа: ${pct}%`;
+    pStatus.innerText = `Подготовка ресурсов: ${pct}%`;
   });
 
-  // Запуск игры
   switchScreen("screen-game");
   startRoundStopwatch();
   nextQuestion();
 }
 
-// 6. ТАЙМЕРЫ
+// 7. СИСТЕМА ТАЙМЕРОВ
 function startRoundStopwatch() {
   clearInterval(state.game.rTimerInterval);
   state.game.rTimerInterval = setInterval(() => {
@@ -210,12 +293,12 @@ function resetQuestionTimer() {
 
     if (state.game.qTimeLeft <= 0) {
       clearInterval(state.game.qTimerInterval);
-      handleTimeout();
+      handleAnswer(false, null);
     }
   }, 1000);
 }
 
-// 7. ПОКАЗ ВОПРОСА
+// 8. РЕНДЕР ВОПРОСА
 function nextQuestion() {
   if (state.game.currentIndex >= state.game.queue.length) {
     finishRound();
@@ -226,11 +309,9 @@ function nextQuestion() {
   const target = state.game.queue[state.game.currentIndex];
   state.game.currentQuestion = target;
 
-  // Обновление шапки
   document.getElementById("game-progress-text").innerText = `${state.game.currentIndex + 1} / ${state.game.queue.length}`;
   document.getElementById("game-score").innerText = state.game.score;
 
-  // Подготовка 4 вариантов (1 правильный + 3 случайных дистрактора)
   const pool = buildFilteredPool();
   const distractors = pool
     .filter(c => c.id !== target.id)
@@ -256,27 +337,37 @@ function renderQuestionContent(target, options) {
 
   if (mode === "flag_to_country") {
     media.innerHTML = `<img src="${target.flag}" class="question-img" alt="Флаг">`;
-    title.innerText = "Флаг какой страны представлен?";
+    title.innerText = "Флаг какой страны показан?";
     renderTextOptions(options, target);
   } 
   else if (mode === "country_to_flag") {
     title.innerText = target.name;
-    subtitle.innerText = "Выберите флаг этого государства";
+    subtitle.innerText = "Выберите верный флаг этого государства";
     grid.classList.add("flags-mode");
     renderFlagOptions(options, target);
   } 
   else if (mode === "capitals") {
     title.innerText = target.capital;
-    subtitle.innerText = "Столицей какой страны является этот город?";
+    subtitle.innerText = "Столицей какого государства является этот город?";
     renderTextOptions(options, target);
   } 
   else if (mode === "cuisine") {
-    media.innerHTML = `<img src="${target.dish_image}" class="question-img" alt="Блюдо">`;
+    if (target.dish_image) {
+      media.innerHTML = `<img src="${target.dish_image}" class="question-img" alt="${target.dish}">`;
+    }
     title.innerText = target.dish;
-    subtitle.innerText = target.dish_desc;
+    subtitle.innerText = target.dish_desc || "Традиционное национальное блюдо";
     renderTextOptions(options, target);
   } 
   else if (mode === "leaders") {
+    if (target.leader_image) {
+      media.innerHTML = `
+        <img src="${target.leader_image}" 
+             class="question-img portrait-img" 
+             alt="${target.leader_name}"
+             style="width: 120px; height: 120px; object-fit: cover; border-radius: 50%; border: 3px solid var(--accent); box-shadow: 0 4px 16px rgba(0,0,0,0.5);">
+      `;
+    }
     title.innerText = target.leader_name;
     subtitle.innerText = `${target.leader_title} какого государства?`;
     renderTextOptions(options, target);
@@ -284,23 +375,16 @@ function renderQuestionContent(target, options) {
   else if (mode === "territory") {
     const lvl = state.settings.territoryLevel;
     if (lvl === "easy") {
-      media.innerHTML = `<img src="${target.contour_data}" class="question-img" alt="Контур">`;
-      title.innerText = "Узнайте силуэт территории";
-      subtitle.innerText = `Регион: ${target.region_group.replace("_", " ")} | Площадь: ${target.territory_sq_km.toLocaleString()} кв. км`;
+      media.innerHTML = `<img src="${target.contour_data}" class="question-img" alt="Контур территории">`;
+      title.innerText = "Определите территорию";
+      subtitle.innerText = `Регион: ${target.region} | Площадь: ${Number(target.territory_sq_km).toLocaleString()} кв. км`;
     } else if (lvl === "medium") {
-      media.innerHTML = `<img src="${target.contour_data}" class="question-img" style="filter: brightness(0) invert(1);" alt="Силуэт">`;
-      title.innerText = "Чей это изолированный контур?";
+      media.innerHTML = `<img src="${target.contour_data}" class="question-img" style="filter: brightness(0) invert(1);" alt="Силуэт территории">`;
+      title.innerText = "Чей это изолированный силуэт?";
     } else if (lvl === "hard") {
-      const b = target.bbox;
-      media.innerHTML = `
-        <div class="bbox-canvas-card">
-          <div class="bbox-axis-row"><span>Север: ${b.max_lat}°</span><span>Восток: ${b.max_lon}°</span></div>
-          <div style="text-align:center; color:#fff; font-size:1.1rem; font-weight:800;">[ Геометрический BBOX ]</div>
-          <div class="bbox-axis-row"><span>Юг: ${b.min_lat}°</span><span>Запад: ${b.min_lon}°</span></div>
-        </div>
-      `;
-      title.innerText = "Определите страну по координатным осям";
-      subtitle.innerText = `Континент: ${target.continent}`;
+      media.innerHTML = renderBBoxAxesSvg(target.bbox);
+      title.innerText = "Габаритные оси и пропорции территории";
+      subtitle.innerText = `Макрорегион: ${target.region} (${target.continent})`;
     }
     renderTextOptions(options, target);
   }
@@ -330,7 +414,7 @@ function renderFlagOptions(options, target) {
   });
 }
 
-// 8. ОБРАБОТКА ОТВЕТОВ
+// 9. ОБРАБОТКА ВЫБОРА ОТВЕТА
 function handleAnswer(isCorrect, clickedBtn) {
   if (state.game.isAnswered) return;
   state.game.isAnswered = true;
@@ -347,8 +431,9 @@ function handleAnswer(isCorrect, clickedBtn) {
     highlightCorrectOption();
   }
 
-  // Блокировка всех кнопок
-  document.querySelectorAll(".answer-btn").forEach(b => b.disabled = true);
+  document.querySelectorAll(".answer-btn").forEach(b => {
+    b.disabled = true;
+  });
 
   setTimeout(() => {
     state.game.currentIndex++;
@@ -356,21 +441,16 @@ function handleAnswer(isCorrect, clickedBtn) {
   }, 1200);
 }
 
-function handleTimeout() {
-  handleAnswer(false, null);
-}
-
 function highlightCorrectOption() {
   const target = state.game.currentQuestion;
-  const buttons = document.querySelectorAll(".answer-btn");
-  buttons.forEach(b => {
+  document.querySelectorAll(".answer-btn").forEach(b => {
     if (b.innerText === target.name || (b.querySelector("img") && b.querySelector("img").src === target.flag)) {
       b.classList.add("correct");
     }
   });
 }
 
-// 9. ИТОГИ РАУНДА
+// 10. ИТОГИ РАУНДА
 function finishRound() {
   clearInterval(state.game.qTimerInterval);
   clearInterval(state.game.rTimerInterval);
@@ -395,15 +475,26 @@ function finishRound() {
   switchScreen("screen-result");
 }
 
-// 10. ЭКРАН ЭНЦИКЛОПЕДИИ
+// 11. ЭНЦИКЛОПЕДИЯ И ЖИВОЙ ПОИСК
 function renderEncyclopedia(filter = "") {
   const list = document.getElementById("enc-list");
+  if (!list) return;
   list.innerHTML = "";
 
-  const q = filter.trim().toLowerCase();
-  const filtered = state.countries.filter(c => 
-    c.name.toLowerCase().includes(q) || c.capital.toLowerCase().includes(q)
-  );
+  const query = filter.trim().toLowerCase();
+  const filtered = state.countries.filter(c => {
+    if (!query) return true;
+    const matchName = c.name.toLowerCase().includes(query);
+    const matchCap = c.capital && c.capital.toLowerCase().includes(query);
+    const matchReg = c.region && c.region.toLowerCase().includes(query);
+    const matchCities = Array.isArray(c.major_cities) && c.major_cities.some(city => city.toLowerCase().includes(query));
+    return matchName || matchCap || matchReg || matchCities;
+  });
+
+  if (!filtered.length) {
+    list.innerHTML = '<p class="muted" style="text-align:center; padding:20px;">Ничего не найдено</p>';
+    return;
+  }
 
   filtered.forEach(c => {
     const item = document.createElement("div");
@@ -412,7 +503,7 @@ function renderEncyclopedia(filter = "") {
       <img src="${c.flag}" alt="${c.name}">
       <div class="enc-item-info">
         <span class="enc-item-name">${c.name}</span>
-        <span class="enc-item-sub">Столица: ${c.capital}</span>
+        <span class="enc-item-sub">Столица: ${c.capital} | ${c.region || c.continent}</span>
       </div>
     `;
     item.onclick = () => openCountryDetail(c);
@@ -422,22 +513,45 @@ function renderEncyclopedia(filter = "") {
 
 function openCountryDetail(c) {
   const body = document.getElementById("country-detail-body");
+  const citiesStr = Array.isArray(c.major_cities) && c.major_cities.length ? c.major_cities.join(", ") : "Данные уточняются";
+  const popStr = c.population ? `${Number(c.population).toLocaleString()} чел.` : "Нет данных";
+  const areaStr = c.territory_sq_km ? `${Number(c.territory_sq_km).toLocaleString()} кв. км` : "Нет данных";
+
   body.innerHTML = `
     <img src="${c.flag}" class="detail-flag" alt="${c.name}">
     <h2 style="margin-bottom:12px; font-weight:800;">${c.name}</h2>
+    
     <div class="detail-row"><span>Столица:</span><strong>${c.capital}</strong></div>
-    <div class="detail-row"><span>Континент:</span><strong>${c.continent}</strong></div>
-    <div class="detail-row"><span>Площадь:</span><strong>${c.territory_sq_km.toLocaleString()} кв. км</strong></div>
-    <div class="detail-row"><span>Лидер:</span><strong>${c.leader_title} ${c.leader_name}</strong></div>
-    <div class="detail-row"><span>Традиционное блюдо:</span><strong class="accent">${c.dish}</strong></div>
-    <p style="font-size:0.85rem; color:var(--text-muted); margin:10px 0;">${c.dish_desc}</p>
-    <img src="${c.dish_image}" class="detail-dish-img" alt="${c.dish}">
+    <div class="detail-row"><span>Континент / Регион:</span><strong>${c.continent} (${c.region || "—"})</strong></div>
+    <div class="detail-row"><span>Население:</span><strong class="accent">${popStr}</strong></div>
+    <div class="detail-row"><span>Территория:</span><strong>${areaStr}</strong></div>
+    <div class="detail-row"><span>Крупные города:</span><strong>${citiesStr}</strong></div>
+
+    <div style="margin-top:16px; border-top:1px solid var(--border); padding-top:12px;">
+      <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">Руководство страны</span>
+      <div style="display:flex; align-items:center; gap:12px; margin-top:8px;">
+        ${c.leader_image ? `<img src="${c.leader_image}" style="width:50px; height:50px; border-radius:50%; object-fit:cover; border:2px solid var(--accent);">` : ""}
+        <div>
+          <div style="font-weight:700;">${c.leader_name || "—"}</div>
+          <div style="font-size:0.8rem; color:var(--text-muted);">${c.leader_title || "Глава государства"}</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:16px; border-top:1px solid var(--border); padding-top:12px;">
+      <span style="font-size:0.85rem; color:var(--text-muted); text-transform:uppercase;">Национальная кухня</span>
+      <div style="font-weight:700; color:var(--accent); margin-top:6px;">${c.dish || "Традиционное блюдо"}</div>
+      <p style="font-size:0.85rem; color:var(--text-muted); margin:4px 0 10px;">${c.dish_desc || ""}</p>
+      ${c.dish_image ? `<img src="${c.dish_image}" class="detail-dish-img" alt="${c.dish}">` : ""}
+    </div>
   `;
+
   document.getElementById("modal-country-detail").classList.add("active");
 }
 
-// 11. ЭКРАН СТАТИСТИКИ
+// 12. ОБНОВЛЕНИЕ ЭКРАНА СТАТИСТИКИ
 function updateStatsScreen() {
+  // Игровая статистика пользователя
   let totalAns = 0;
   let totalCorr = 0;
   const troubled = [];
@@ -464,54 +578,110 @@ function updateStatsScreen() {
   tList.innerHTML = "";
 
   if (!troubled.length) {
-    tList.innerHTML = '<p class="muted">Ошибок пока не зафиксировано. Продолжайте тренировки!</p>';
-    return;
+    tList.innerHTML = '<p class="muted">Ошибок пока нет. Отличный результат!</p>';
+  } else {
+    troubled.sort((a, b) => b.wrong - a.wrong).slice(0, 8).forEach(item => {
+      const row = document.createElement("div");
+      row.className = "troubled-item";
+      row.innerHTML = `
+        <span>${item.country.name}</span>
+        <span style="color:var(--danger)">${item.wrong} ош. (${item.rate}%)</span>
+      `;
+      tList.appendChild(row);
+    });
   }
 
-  troubled.sort((a, b) => b.wrong - a.wrong).slice(0, 10).forEach(item => {
-    const row = document.createElement("div");
-    row.className = "troubled-item";
-    row.innerHTML = `
-      <span>${item.country.name}</span>
-      <span style="color:var(--danger)">Ошибок: ${item.wrong} (${item.rate}%)</span>
-    `;
-    tList.appendChild(row);
-  });
+  // Расчет географических агрегатов из data.json
+  renderDatabaseAggregates();
 }
 
-// 12. НАВИГАЦИЯ И СЛУШАТЕЛИ
+function renderDatabaseAggregates() {
+  const statsScreen = document.getElementById("screen-stats");
+  let dbBlock = document.getElementById("db-analytics-block");
+
+  if (!dbBlock) {
+    dbBlock = document.createElement("div");
+    dbBlock.id = "db-analytics-block";
+    dbBlock.style.marginTop = "20px";
+    dbBlock.style.borderTop = "1px solid var(--border)";
+    dbBlock.style.paddingTop = "14px";
+    
+    // Вставка перед кнопкой сброса
+    const resetBtn = document.getElementById("btn-reset-stats");
+    statsScreen.insertBefore(dbBlock, resetBtn);
+  }
+
+  if (!state.countries.length) return;
+
+  const totalPop = state.countries.reduce((acc, c) => acc + (c.population || 0), 0);
+  const regionsSet = new Set(state.countries.map(c => c.region).filter(Boolean));
+  let totalCities = 0;
+  state.countries.forEach(c => {
+    if (Array.isArray(c.major_cities)) totalCities += c.major_cities.length;
+  });
+
+  dbBlock.innerHTML = `
+    <div class="stats-section-title">Географический справочник (data.json)</div>
+    <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:8px; margin-bottom:14px;">
+      <div class="stat-box">
+        <span class="stat-num" style="font-size:1.05rem;">${(totalPop / 1e9).toFixed(2)} млрд</span>
+        <span class="stat-name">Население</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" style="font-size:1.05rem;">${regionsSet.size}</span>
+        <span class="stat-name">Регионов</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-num" style="font-size:1.05rem;">${totalCities}</span>
+        <span class="stat-name">Городов в базе</span>
+      </div>
+    </div>
+  `;
+}
+
+// 13. НАВИГАЦИЯ И СОБЫТИЯ
 function switchScreen(screenId) {
   document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
-  document.getElementById(screenId).classList.add("active");
+  const target = document.getElementById(screenId);
+  if (target) target.classList.add("active");
 }
 
 function initNavigation() {
-  // Выбор режима игры
   document.querySelectorAll(".mode-card").forEach(btn => {
     btn.onclick = () => startRound(btn.dataset.mode);
   });
 
-  // Кнопки нижнего меню
-  document.getElementById("btn-open-settings").onclick = () => document.getElementById("modal-settings").classList.add("active");
-  document.getElementById("btn-open-stats").onclick = () => switchScreen("screen-stats");
-  document.getElementById("btn-open-encyclopedia").onclick = () => switchScreen("screen-encyclopedia");
+  document.getElementById("btn-open-settings").onclick = () => {
+    document.getElementById("modal-settings").classList.add("active");
+  };
+  document.getElementById("btn-open-stats").onclick = () => {
+    updateStatsScreen();
+    switchScreen("screen-stats");
+  };
+  document.getElementById("btn-open-encyclopedia").onclick = () => {
+    renderEncyclopedia();
+    switchScreen("screen-encyclopedia");
+  };
 
-  // Кнопки «Назад»
   document.querySelectorAll("[data-back]").forEach(btn => {
     btn.onclick = () => switchScreen(btn.dataset.back);
   });
 
-  // Закрытие модальных окон
   document.querySelectorAll("[data-close]").forEach(btn => {
-    btn.onclick = () => document.getElementById(btn.dataset.close).classList.remove("active");
+    btn.onclick = () => {
+      const modalId = btn.dataset.close;
+      const modal = document.getElementById(modalId);
+      if (modal) modal.classList.remove("active");
+    };
   });
 
-  // Поиск в энциклопедии
-  document.getElementById("enc-search-input").oninput = (e) => {
-    renderEncyclopedia(e.target.value);
-  };
+  // Живой поиск в энциклопедии
+  const searchInput = document.getElementById("enc-search-input");
+  if (searchInput) {
+    searchInput.oninput = (e) => renderEncyclopedia(e.target.value);
+  }
 
-  // Выход из игры с подтверждением
+  // Завершение раунда с подтверждением
   document.getElementById("btn-game-exit").onclick = () => {
     document.getElementById("modal-confirm-exit").classList.add("active");
   };
@@ -525,7 +695,7 @@ function initNavigation() {
     switchScreen("screen-menu");
   };
 
-  // Кнопки экрана результатов
+  // Кнопки после раунда
   document.getElementById("btn-replay").onclick = () => startRound(state.game.mode);
   document.getElementById("btn-result-menu").onclick = () => switchScreen("screen-menu");
 
@@ -542,18 +712,22 @@ function initNavigation() {
 function initSettingsListeners() {
   const slider = document.getElementById("setting-questions-count");
   const sVal = document.getElementById("slider-val");
-  slider.oninput = (e) => {
-    state.settings.questionsCount = parseInt(e.target.value);
-    sVal.innerText = e.target.value;
-  };
+  if (slider && sVal) {
+    slider.oninput = (e) => {
+      state.settings.questionsCount = parseInt(e.target.value);
+      sVal.innerText = e.target.value;
+    };
+  }
 
-  document.getElementById("setting-un-only").onchange = (e) => {
-    state.settings.unOnly = e.target.checked;
-  };
+  const unCheck = document.getElementById("setting-un-only");
+  if (unCheck) {
+    unCheck.onchange = (e) => { state.settings.unOnly = e.target.checked; };
+  }
 
-  document.getElementById("setting-mainland-only").onchange = (e) => {
-    state.settings.mainlandOnly = e.target.checked;
-  };
+  const mainlandCheck = document.getElementById("setting-mainland-only");
+  if (mainlandCheck) {
+    mainlandCheck.onchange = (e) => { state.settings.mainlandOnly = e.target.checked; };
+  }
 
   document.querySelectorAll("input[name='setting-territory-lvl']").forEach(radio => {
     radio.onchange = (e) => {
@@ -561,11 +735,17 @@ function initSettingsListeners() {
     };
   });
 
-  document.getElementById("setting-timer-question").onchange = (e) => {
-    state.settings.questionTimer = Math.max(0, parseInt(e.target.value) || 0);
-  };
+  const qTimerInput = document.getElementById("setting-timer-question");
+  if (qTimerInput) {
+    qTimerInput.onchange = (e) => {
+      state.settings.questionTimer = Math.max(0, parseInt(e.target.value) || 0);
+    };
+  }
 
-  document.getElementById("setting-timer-round").onchange = (e) => {
-    state.settings.roundTimer = Math.max(0, parseInt(e.target.value) || 0);
-  };
+  const rTimerInput = document.getElementById("setting-timer-round");
+  if (rTimerInput) {
+    rTimerInput.onchange = (e) => {
+      state.settings.roundTimer = Math.max(0, parseInt(e.target.value) || 0);
+    };
+  }
 }
