@@ -6,7 +6,7 @@
     "isUN": true,
     "isMainland": true,
     "capital": "Париж",
-    "flagUrl": "https://flagcdn.com/fr.svg",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
     "food": {
       "name": "Рататуй",
       "desc": "Традиционное овощное рагу из прованских трав",
@@ -27,7 +27,7 @@
     "isUN": true,
     "isMainland": false,
     "capital": "Токио",
-    "flagUrl": "https://flagcdn.com/jp.svg",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
     "food": {
       "name": "Суши",
       "desc": "Традиционное блюдо из риса и свежих морепродуктов",
@@ -48,7 +48,7 @@
     "isUN": false,
     "isMainland": true,
     "capital": "Тирасполь",
-    "flagUrl": "https://flagcdn.com/pm.svg",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/1/10/Flag_of_Transnistria.svg",
     "food": {
       "name": "Плацинды",
       "desc": "Тонкие молдавские пироги с начинкой из сыра или зелени",
@@ -69,7 +69,7 @@
     "isUN": true,
     "isMainland": true,
     "capital": "Катманду",
-    "flagUrl": "https://flagcdn.com/np.svg",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Flag_of_Nepal.svg",
     "food": {
       "name": "Дал-бхат",
       "desc": "Сет из чечевичного супа, варёного риса и пряностей",
@@ -84,3 +84,4 @@
     }
   }
 ]
+
