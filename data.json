@@ -1,4 +1,3 @@
-
 [
   {
     "id": 1,
@@ -30,10 +29,10 @@
     },
     "dish": "Пельмени",
     "dish_desc": "Отварные изделия из пресного теста с начинкой из рубленого мясного фарша со специями.",
-    "dish_image": "https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/df/Pelmeni_Russian.jpg/330px-Pelmeni_Russian.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Президент",
     "leader_name": "Владимир Путин",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Vladimir_Putin_2024.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/Putin_V_2026_08_10.png/330px-Putin_V_2026_08_10.png?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 2,
@@ -65,10 +64,10 @@
     },
     "dish": "Карривурст",
     "dish_desc": "Обжаренная свиная сарделька под пикантным соусом на томатной основе с порошком карри.",
-    "dish_image": "https://images.unsplash.com/photo-1625944525539-7435f2122394?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2d/Currywurst-1.jpg/330px-Currywurst-1.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Федеральный канцлер",
     "leader_name": "Олаф Шольц",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Olaf_Scholz_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c9/Olaf_Scholz_and_Gustavo_Petro_in_New_York_2024_%28cropped%29.jpg/330px-Olaf_Scholz_and_Gustavo_Petro_in_New_York_2024_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 3,
@@ -138,7 +137,7 @@
     "dish_image": "https://images.unsplash.com/photo-1526234362-e3e38f4c4a7a?auto=format&fit=crop&w=600&q=80",
     "leader_title": "Премьер-министр",
     "leader_name": "Кир Стармер",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Keir_Starmer_2024.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg/330px-Prime_Minister_Keir_Starmer_Portrait_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 5,
@@ -170,10 +169,10 @@
     },
     "dish": "Пицца Маргарита",
     "dish_desc": "Классическая лепешка с томатной пассатой, нежной моцареллой и свежими листьями базилика.",
-    "dish_image": "https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c8/Pizza_Margherita_stu_spivack.jpg/330px-Pizza_Margherita_stu_spivack.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Джорджа Мелони",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Giorgia_Meloni_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/96/Giorgia_Meloni_Official_2024_%28cropped%29.jpg/330px-Giorgia_Meloni_Official_2024_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 6,
@@ -205,7 +204,7 @@
     },
     "dish": "Паэлья",
     "dish_desc": "Рис с золотистым шафраном, овощами, птицей и дарами моря, приготовленный на плоской сковороде.",
-    "dish_image": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d5/Cooking_a_paella.jpg/330px-Cooking_a_paella.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Педро Санчес",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Pedro_Sanchez_2023.jpg?width=400"
@@ -240,10 +239,10 @@
     },
     "dish": "Борщ",
     "dish_desc": "Наваристый суп на основе свеклы и капусты со сметаной, зеленью и чесночными булочками.",
-    "dish_image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Borscht_with_bread.jpg/330px-Borscht_with_bread.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Президент",
     "leader_name": "Владимир Зеленский",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Volodymyr_Zelenskyy_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6f/%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%2831-12-2023%29.jpg/330px-%D0%92%D0%BB%D0%B0%D0%B4%D0%B8%D0%BC%D0%B8%D1%80_%D0%97%D0%B5%D0%BB%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B9_%2831-12-2023%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 8,
@@ -278,7 +277,7 @@
     "dish_image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "leader_title": "Президент",
     "leader_name": "Анджей Дуда",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Andrzej_Duda_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bd/President_of_Poland_Andrzej_Duda_Full_Resolution_%28cropped%29.jpg/330px-President_of_Poland_Andrzej_Duda_Full_Resolution_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 9,
@@ -310,10 +309,10 @@
     },
     "dish": "Стамппот",
     "dish_desc": "Пюре из картофеля с листовой капустой, подаваемое с сочной копченой колбаской и подливкой.",
-    "dish_image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d0/Stamppot-01_%2811993497346%29.jpg/330px-Stamppot-01_%2811993497346%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Дик Схоф",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Dick_Schoof_2024.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4c/Dick_Schoof_2024.jpg/330px-Dick_Schoof_2024.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 10,
@@ -345,7 +344,7 @@
     },
     "dish": "Вафли",
     "dish_desc": "Пышная горячая выпечка с глубоким рельефом, жемчужным карамельным сахаром и шоколадом.",
-    "dish_image": "https://images.unsplash.com/photo-1562376552-0d160a2f238d?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/67/Belgische_waffeln.jpg/330px-Belgische_waffeln.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Александр Де Кроо",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Alexander_De_Croo_2023.jpg?width=400"
@@ -380,10 +379,10 @@
     },
     "dish": "Мусака",
     "dish_desc": "Слоистая запеканка из баклажанов, сочного фарша с корицей под нежной корочкой соуса бешамель.",
-    "dish_image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Mousakas.jpg/330px-Mousakas.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Кириакос Мицотакис",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Kyriakos_Mitsotakis_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/1b/Kyriakos_MITSOTAKIS_in_Informal_leaders%27_meeting_-_June_2024_%28cropped%29.jpg/330px-Kyriakos_MITSOTAKIS_in_Informal_leaders%27_meeting_-_June_2024_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 12,
@@ -415,7 +414,7 @@
     },
     "dish": "Бакальяу",
     "dish_desc": "Сушеная соленая треска, запеченная слоями с тонкими ломтиками картофеля, луком и оливками.",
-    "dish_image": "https://images.unsplash.com/photo-1534080564583-6be75777b70a?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/ce/Klippfisk.jpg/330px-Klippfisk.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Луиш Монтенегру",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Luis_Montenegro_2024.jpg?width=400"
@@ -520,7 +519,7 @@
     },
     "dish": "Утка по-пекински",
     "dish_desc": "Запеченная птица с тонкой хрустящей карамельной кожей, паровыми блинчиками и соусом хойсин.",
-    "dish_image": "https://images.unsplash.com/photo-1525755662779-96add075c786?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Peking_Duck_3.jpg/330px-Peking_Duck_3.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Председатель",
     "leader_name": "Си Цзиньпин",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Xi_Jinping_2023.jpg?width=400"
@@ -590,7 +589,7 @@
     },
     "dish": "Рамен",
     "dish_desc": "Глубокая чаша с плотным бульоном, пшеничной лапшой, нежным мясом и маринованным яйцом.",
-    "dish_image": "https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f0/Shoyu_ramen%2C_at_Kasukabe_Station_%282014.05.05%29_2.jpg/330px-Shoyu_ramen%2C_at_Kasukabe_Station_%282014.05.05%29_2.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Сигэру Исиба",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Shigeru_Ishiba_2024.jpg?width=400"
@@ -625,7 +624,7 @@
     },
     "dish": "Кимчи",
     "dish_desc": "Острая ферментированная пекинская капуста со жгучим красным перцем, чесноком и имбирем.",
-    "dish_image": "https://images.unsplash.com/photo-1583224964974-bc750d01d53d?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Gimchi.jpg/330px-Gimchi.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Президент",
     "leader_name": "Юн Сок Ёль",
     "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Yoon_Suk_Yeol_2023.jpg?width=400"
@@ -1118,7 +1117,7 @@
     "dish_image": "https://images.unsplash.com/photo-1551504734-b4a4285b045b?auto=format&fit=crop&w=600&q=80",
     "leader_title": "Президент",
     "leader_name": "Клаудия Шейнбаум",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Claudia_Sheinbaum_2024.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-283.jpg/330px-Claudia_Sheinbaum_Argentina_v_Spain_19_July_2026-283.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 33,
@@ -1150,10 +1149,10 @@
     },
     "dish": "Путин",
     "dish_desc": "Хрустящий картофель фри с рассольными сырными кусочками под горячей мясной подливкой.",
-    "dish_image": "https://images.unsplash.com/photo-1586190848861-10a48430a38f?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/6c/Poutine.JPG/330px-Poutine.JPG?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Премьер-министр",
     "leader_name": "Джастин Трюдо",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Justin_Trudeau_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f3/Justin_Trudeau_at_the_European_Commission_-_2025.jpg/330px-Justin_Trudeau_at_the_European_Commission_-_2025.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 34,
@@ -1185,10 +1184,10 @@
     },
     "dish": "Асадо",
     "dish_desc": "Мясное ассорти из отборных кусков говядины, приготовленное на раскаленной решетке гриля.",
-    "dish_image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
+    "dish_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/12/Argentinean_asado.jpg/330px-Argentinean_asado.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
     "leader_title": "Президент",
     "leader_name": "Хавьер Милей",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Javier_Milei_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Javier_Milei_in_pull-aside_meeting_at_the_United_Nations_Headquarters_%283x4_cropped%29.jpg/330px-Javier_Milei_in_pull-aside_meeting_at_the_United_Nations_Headquarters_%283x4_cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 35,
@@ -1223,7 +1222,7 @@
     "dish_image": "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?auto=format&fit=crop&w=600&q=80",
     "leader_title": "Премьер-министр",
     "leader_name": "Энтони Албаниз",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Anthony_Albanese_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ad/Anthony_Albanese_portrait_%28cropped%29.jpg/330px-Anthony_Albanese_portrait_%28cropped%29.jpg?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   },
   {
     "id": 36,
@@ -1258,6 +1257,6 @@
     "dish_image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80",
     "leader_title": "Премьер-министр",
     "leader_name": "Кристофер Лаксон",
-    "leader_image": "https://commons.wikimedia.org/wiki/Special:FilePath/Christopher_Luxon_2023.jpg?width=400"
+    "leader_image": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/ed/LUXON%2C_Christopher_-_Botany_%28cropped%29.png/330px-LUXON%2C_Christopher_-_Botany_%28cropped%29.png?utm_source=ru.wikipedia.org&utm_campaign=api&utm_content=thumbnail"
   }
 ]
