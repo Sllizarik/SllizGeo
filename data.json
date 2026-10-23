@@ -1,2690 +1,23 @@
 [
   {
-    "name": "Сент-Люсия",
-    "code": "LC",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кастри",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Saint%20Lucia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сент-Люсия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.17,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сент-Китс и Невис",
-    "code": "KN",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бастер",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Saint%20Kitts%20and%20Nevis.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сент-Китс и Невис)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.05,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ямайка",
-    "code": "JM",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кингстон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Jamaica.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ямайка)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.7,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гренада",
-    "code": "GD",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сент-Джорджес",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Grenada.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гренада)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.11,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гватемала",
-    "code": "GT",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Гватемала",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Guatemala.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гватемала)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 17.26,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Багамские Острова",
-    "code": "BS",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нассау",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Bahamas.svg",
-    "food": {
-      "name": "Традиционное блюдо (Багамские Острова)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.4,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Антигуа и Барбуда",
-    "code": "AG",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сент-Джонс",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Antigua%20and%20Barbuda.svg",
-    "food": {
-      "name": "Традиционное блюдо (Антигуа и Барбуда)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.1,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гондурас",
-    "code": "HN",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тегусигальпа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Honduras%20%281949%E2%80%932022%2C%202026%E2%80%93present%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гондурас)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 8.3,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Доминика",
-    "code": "DM",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Розо",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Dominica.svg",
-    "food": {
-      "name": "Традиционное блюдо (Доминика)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.07,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Доминиканская Республика",
-    "code": "DO",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Санто-Доминго",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Dominican%20Republic.svg",
-    "food": {
-      "name": "Традиционное блюдо (Доминиканская Республика)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.76,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гаити",
-    "code": "HT",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порт-о-Пренс",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Haiti.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гаити)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.98,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сальвадор",
-    "code": "SV",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сан-Сальвадор",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20El%20Salvador.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сальвадор)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Иран",
-    "code": "IR",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тегеран",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Iran.svg",
-    "food": {
-      "name": "Традиционное блюдо (Иран)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 92.42,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ирак",
-    "code": "IQ",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Багдад",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Iraq.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ирак)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 38.27,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Коста-Рика",
-    "code": "CR",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сан-Хосе",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Costa%20Rica.svg",
-    "food": {
-      "name": "Традиционное блюдо (Коста-Рика)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.27,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Израиль",
-    "code": "IL",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Иерусалим",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Israel.svg",
-    "food": {
-      "name": "Традиционное блюдо (Израиль)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.84,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Панама",
-    "code": "PA",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Панама",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Panama.svg",
-    "food": {
-      "name": "Традиционное блюдо (Панама)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 4.57,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Йемен",
-    "code": "YE",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сана",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Yemen.svg",
-    "food": {
-      "name": "Традиционное блюдо (Йемен)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 28.25,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Иордания",
-    "code": "JO",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Амман",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Jordan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Иордания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.43,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Никарагуа",
-    "code": "NI",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Манагуа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nicaragua.svg",
-    "food": {
-      "name": "Традиционное блюдо (Никарагуа)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.14,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кыргызстан",
-    "code": "KG",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бишкек",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kyrgyzstan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кыргызстан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 7.28,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кувейт",
-    "code": "KW",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Эль-Кувейт",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kuwait.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кувейт)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 4.46,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Лаос",
-    "code": "LA",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Вьентьян",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Laos.svg",
-    "food": {
-      "name": "Традиционное блюдо (Лаос)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.86,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ливан",
-    "code": "LB",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бейрут",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Lebanon.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ливан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.1,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мальдивы",
-    "code": "MV",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Мале",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Maldives.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мальдивы)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.44,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Малайзия",
-    "code": "MY",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Куала-Лумпур",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Malaysia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Малайзия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 34.23,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мьянма",
-    "code": "MM",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нейпьидо",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Myanmar.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мьянма)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 53.37,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Непал",
-    "code": "NP",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Катманду",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nepal.svg",
-    "food": {
-      "name": "Традиционное блюдо (Непал)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 29.16,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Оман",
-    "code": "OM",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Маскат",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Oman.svg",
-    "food": {
-      "name": "Традиционное блюдо (Оман)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 4.83,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Пакистан",
-    "code": "PK",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Исламабад",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Pakistan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Пакистан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 223.77,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Катар",
-    "code": "QA",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Доха",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Qatar.svg",
-    "food": {
-      "name": "Традиционное блюдо (Катар)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.64,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Саудовская Аравия",
-    "code": "SA",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Эр-Рияд",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Saudi%20Arabia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Саудовская Аравия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 33.0,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Шри-Ланка",
-    "code": "LK",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Коломбо",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Sri%20Lanka.svg",
-    "food": {
-      "name": "Традиционное блюдо (Шри-Ланка)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 21.44,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сирия",
-    "code": "SY",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Дамаск",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Syria%20%282025-%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сирия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 23.87,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Таджикистан",
-    "code": "TJ",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Душанбе",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tajikistan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Таджикистан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.5,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Китайская Республика (Тайвань)",
-    "code": "TW",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тайбэй",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Republic%20of%20China.svg",
-    "food": {
-      "name": "Традиционное блюдо (Китайская Республика (Тайвань))",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 23.26,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Таиланд",
-    "code": "TH",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бангкок",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Thailand.svg",
-    "food": {
-      "name": "Традиционное блюдо (Таиланд)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 66.19,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Туркменистан",
-    "code": "TM",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ашхабад",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Turkmenistan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Туркменистан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.12,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Объединённые Арабские Эмираты",
-    "code": "AE",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Абу-Даби",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20Arab%20Emirates.svg",
-    "food": {
-      "name": "Традиционное блюдо (Объединённые Арабские Эмираты)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.89,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Вьетнам",
-    "code": "VN",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ханой",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Vietnam.svg",
-    "food": {
-      "name": "Традиционное блюдо (Вьетнам)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 96.21,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Республика Корея",
-    "code": "KR",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сеул",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20South%20Korea.svg",
-    "food": {
-      "name": "Традиционное блюдо (Республика Корея)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 51.47,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Афганистан",
-    "code": "AF",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кабул",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Taliban.svg",
-    "food": {
-      "name": "Традиционное блюдо (Афганистан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 41.45,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бангладеш",
-    "code": "BD",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Дакка",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bangladesh.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бангладеш)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 171.47,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мали",
-    "code": "ML",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бамако",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mali.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мали)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 22.4,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ангола",
-    "code": "AO",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Луанда",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Angola.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ангола)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 36.75,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бутан",
-    "code": "BT",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тхимпху",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bhutan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бутан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.79,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бруней",
-    "code": "BN",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бандар-Сери-Бегаван",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Brunei.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бруней)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.46,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Танзания",
-    "code": "TZ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Додома",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tanzania.svg",
-    "food": {
-      "name": "Традиционное блюдо (Танзания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 57.31,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Филиппины",
-    "code": "PH",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Манила",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Philippines.svg",
-    "food": {
-      "name": "Традиционное блюдо (Филиппины)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 112.73,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Центральноафриканская Республика",
-    "code": "CF",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Банги",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Central%20African%20Republic.svg",
-    "food": {
-      "name": "Традиционное блюдо (Центральноафриканская Республика)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.15,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Того",
-    "code": "TG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ломе",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Togo%20%283-2%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Того)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 7.8,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Тунис",
-    "code": "TN",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тунис",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tunisia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Тунис)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 11.57,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Замбия",
-    "code": "ZM",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Лусака",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Zambia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Замбия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 19.61,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Зимбабве",
-    "code": "ZW",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Хараре",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Zimbabwe.svg",
-    "food": {
-      "name": "Традиционное блюдо (Зимбабве)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 15.18,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Южный Судан",
-    "code": "SS",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Джуба",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20South%20Sudan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Южный Судан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 12.58,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бенин",
-    "code": "BJ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порто-Ново",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Benin.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бенин)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 14.11,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ботсвана",
-    "code": "BW",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Габороне",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Botswana.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ботсвана)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.48,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Буркина-Фасо",
-    "code": "BF",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Уагадугу",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Burkina%20Faso.svg",
-    "food": {
-      "name": "Традиционное блюдо (Буркина-Фасо)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 23.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бурунди",
-    "code": "BI",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Гитега",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Burundi.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бурунди)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 13.69,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Коморы",
-    "code": "KM",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Морони",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Comoros.svg",
-    "food": {
-      "name": "Традиционное блюдо (Коморы)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.9,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Республика Конго",
-    "code": "CG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Браззавиль",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Republic%20of%20the%20Congo.svg",
-    "food": {
-      "name": "Традиционное блюдо (Республика Конго)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.14,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Демократическая Республика Конго",
-    "code": "CD",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Киншаса",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Democratic%20Republic%20of%20the%20Congo.svg",
-    "food": {
-      "name": "Традиционное блюдо (Демократическая Республика Конго)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 105.79,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Джибути",
-    "code": "DJ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Джибути",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Djibouti.svg",
-    "food": {
-      "name": "Традиционное блюдо (Джибути)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.15,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Экваториальная Гвинея",
-    "code": "GQ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сьюдад-де-ла-Пас",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Equatorial%20Guinea.svg",
-    "food": {
-      "name": "Традиционное блюдо (Экваториальная Гвинея)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.85,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Эритрея",
-    "code": "ER",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Асмэра",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Eritrea.svg",
-    "food": {
-      "name": "Традиционное блюдо (Эритрея)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.5,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Габон",
-    "code": "GA",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Либревиль",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Gabon.svg",
-    "food": {
-      "name": "Традиционное блюдо (Габон)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гамбия",
-    "code": "GM",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Банжул",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20The%20Gambia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гамбия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.64,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гвинея",
-    "code": "GN",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Конакри",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Guinea.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гвинея)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 17.52,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гвинея-Бисау",
-    "code": "GW",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бисау",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Guinea-Bissau.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гвинея-Бисау)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.86,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кот-д’Ивуар",
-    "code": "CI",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ямусукро",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20C%C3%B4te%20d%27Ivoire.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кот-д’Ивуар)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 31.17,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Камерун",
-    "code": "CM",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Яунде",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Cameroon.svg",
-    "food": {
-      "name": "Традиционное блюдо (Камерун)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 28.37,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кабо-Верде",
-    "code": "CV",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Прая",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Cape%20Verde%20%2810-17%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кабо-Верде)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.56,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Лесото",
-    "code": "LS",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Масеру",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Lesotho.svg",
-    "food": {
-      "name": "Традиционное блюдо (Лесото)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.01,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Либерия",
-    "code": "LR",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Монровия",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Liberia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Либерия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.21,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ливия",
-    "code": "LY",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Триполи",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Libya.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ливия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 7.38,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мадагаскар",
-    "code": "MG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Антананариву",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Madagascar.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мадагаскар)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 31.96,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Малави",
-    "code": "MW",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Лилонгве",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Malawi.svg",
-    "food": {
-      "name": "Традиционное блюдо (Малави)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 17.56,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мавритания",
-    "code": "MR",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нуакшот",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mauritania.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мавритания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 4.74,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Маврикий",
-    "code": "MU",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порт-Луи",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mauritius.svg",
-    "food": {
-      "name": "Традиционное блюдо (Маврикий)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.26,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Марокко",
-    "code": "MA",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Рабат",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Morocco.svg",
-    "food": {
-      "name": "Традиционное блюдо (Марокко)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 36.83,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мозамбик",
-    "code": "MZ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Мапуту",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mozambique.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мозамбик)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 29.67,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Намибия",
-    "code": "NA",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Виндхук",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Namibia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Намибия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.53,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Нигер",
-    "code": "NE",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ниамей",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Niger.svg",
-    "food": {
-      "name": "Традиционное блюдо (Нигер)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 21.48,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Нигерия",
-    "code": "NG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Абуджа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nigeria.svg",
-    "food": {
-      "name": "Традиционное блюдо (Нигерия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 211.4,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Уганда",
-    "code": "UG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кампала",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uganda.svg",
-    "food": {
-      "name": "Традиционное блюдо (Уганда)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 47.12,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Руанда",
-    "code": "RW",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кигали",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Rwanda.svg",
-    "food": {
-      "name": "Традиционное блюдо (Руанда)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 14.57,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сан-Томе и Принсипи",
-    "code": "ST",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сан-Томе",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20S%C3%A3o%20Tom%C3%A9%20and%20Pr%C3%ADncipe.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сан-Томе и Принсипи)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.2,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сенегал",
-    "code": "SN",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Дакар",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Senegal.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сенегал)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 16.88,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сейшельские Острова",
-    "code": "SC",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Виктория",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Seychelles.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сейшельские Острова)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.12,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сьерра-Леоне",
-    "code": "SL",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Фритаун",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Sierra%20Leone.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сьерра-Леоне)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 7.56,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сомали",
-    "code": "SO",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Могадишо",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Somalia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сомали)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 11.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Судан",
-    "code": "SD",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Хартум",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Sudan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Судан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 40.53,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Эсватини",
-    "code": "SZ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Мбабане",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Eswatini.svg",
-    "food": {
-      "name": "Традиционное блюдо (Эсватини)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.23,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Королевство Нидерландов",
-    "code": "NL",
+    "name": "Германия",
+    "code": "DE",
     "continent": "Европа",
     "isUN": true,
     "isMainland": true,
-    "capital": "Амстердам",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Netherlands.svg",
-    "food": {
-      "name": "Традиционное блюдо (Королевство Нидерландов)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 17.1,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
+    "capital": "Берлин",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Flag_of_Germany.svg",
+    "population": 84.4,
+    "regionsCount": 16,
+    "millionCitiesCount": 4,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Тринидад и Тобаго",
-    "code": "TT",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порт-оф-Спейн",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Trinidad%20and%20Tobago.svg",
-    "food": {
-      "name": "Традиционное блюдо (Тринидад и Тобаго)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
+      "name": "Франк-Вальтер Штайнмайер",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Frank-Walter_Steinmeier_-_2018_%28cropped%29_2.jpg"
     },
-    "population": 1.37,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сент-Винсент и Гренадины",
-    "code": "VC",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кингстаун",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Saint%20Vincent%20and%20the%20Grenadines.svg",
     "food": {
-      "name": "Традиционное блюдо (Сент-Винсент и Гренадины)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.11,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Венесуэла",
-    "code": "VE",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Каракас",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Venezuela.svg",
-    "food": {
-      "name": "Традиционное блюдо (Венесуэла)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 31.25,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Суринам",
-    "code": "SR",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Парамарибо",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Suriname.svg",
-    "food": {
-      "name": "Традиционное блюдо (Суринам)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.56,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Парагвай",
-    "code": "PY",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Асунсьон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Paraguay.svg",
-    "food": {
-      "name": "Традиционное блюдо (Парагвай)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.81,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гайана",
-    "code": "GY",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Джорджтаун",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Guyana.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гайана)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.88,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Эквадор",
-    "code": "EC",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кито",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ecuador.svg",
-    "food": {
-      "name": "Традиционное блюдо (Эквадор)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 16.94,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Колумбия",
-    "code": "CO",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Богота",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Colombia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Колумбия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 52.32,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Боливия",
-    "code": "BO",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ла-Пас",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bolivia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Боливия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 12.24,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Канада",
-    "code": "CA",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Оттава",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Canada%20%28Pantone%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Канада)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 36.99,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Япония",
-    "code": "JP",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Токио",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Japan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Япония)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 123.8,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Норвегия",
-    "code": "NO",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Осло",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Norway.svg",
-    "food": {
-      "name": "Традиционное блюдо (Норвегия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.63,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Ирландия",
-    "code": "IE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Дублин",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ireland.svg",
-    "food": {
-      "name": "Традиционное блюдо (Ирландия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.15,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Венгрия",
-    "code": "HU",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Будапешт",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Hungary.svg",
-    "food": {
-      "name": "Традиционное блюдо (Венгрия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.6,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Испания",
-    "code": "ES",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Мадрид",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Spain.svg",
-    "food": {
-      "name": "Традиционное блюдо (Испания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 48.59,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "США",
-    "code": "US",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Вашингтон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20States%20%28DDD-F-416E%20specifications%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (США)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 340.11,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бельгия",
-    "code": "BE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Брюссель",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Belgium.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бельгия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 11.83,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Люксембург",
-    "code": "LU",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Люксембург",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Luxembourg.svg",
-    "food": {
-      "name": "Традиционное блюдо (Люксембург)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.69,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Финляндия",
-    "code": "FI",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Хельсинки",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Finland.svg",
-    "food": {
-      "name": "Традиционное блюдо (Финляндия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.65,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Швеция",
-    "code": "SE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Стокгольм",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Sweden.svg",
-    "food": {
-      "name": "Традиционное блюдо (Швеция)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.61,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Польша",
-    "code": "PL",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Варшава",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Poland.svg",
-    "food": {
-      "name": "Традиционное блюдо (Польша)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 37.56,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Литва",
-    "code": "LT",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Вильнюс",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Lithuania.svg",
-    "food": {
-      "name": "Традиционное блюдо (Литва)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.86,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Италия",
-    "code": "IT",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Рим",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Italy.svg",
-    "food": {
-      "name": "Традиционное блюдо (Италия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 58.85,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Швейцария",
-    "code": "CH",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Берн",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Switzerland.svg",
-    "food": {
-      "name": "Традиционное блюдо (Швейцария)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.1,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Австрия",
-    "code": "AT",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Вена",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Austria.svg",
-    "food": {
-      "name": "Традиционное блюдо (Австрия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 8.98,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Греция",
-    "code": "GR",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Афины",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Greece.svg",
-    "food": {
-      "name": "Традиционное блюдо (Греция)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.48,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Турция",
-    "code": "TR",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Анкара",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Turkey.svg",
-    "food": {
-      "name": "Традиционное блюдо (Турция)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 85.37,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Португалия",
-    "code": "PT",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Лиссабон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Portugal%20%28official%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Португалия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.35,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Уругвай",
-    "code": "UY",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Монтевидео",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uruguay.svg",
-    "food": {
-      "name": "Традиционное блюдо (Уругвай)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.44,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Египет",
-    "code": "EG",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Каир",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Egypt.svg",
-    "food": {
-      "name": "Традиционное блюдо (Египет)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 114.54,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мексика",
-    "code": "MX",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Мехико",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mexico.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мексика)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 132.27,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кения",
-    "code": "KE",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Найроби",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kenya.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кения)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 48.47,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Эфиопия",
-    "code": "ET",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Аддис-Абеба",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ethiopia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Эфиопия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 128.69,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Гана",
-    "code": "GH",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Аккра",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ghana.svg",
-    "food": {
-      "name": "Традиционное блюдо (Гана)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 32.83,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Карривурст",
+      "desc": "Обжаренная до румяной корочки колбаска из рубленного свиного фарша, нарезанная кусочками и политая пряным томатным соусом с добавлением специй карри.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/da/CurryWurst.jpg"
     }
   },
   {
@@ -2694,18 +27,60 @@
     "isUN": true,
     "isMainland": true,
     "capital": "Париж",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20France.svg",
-    "food": {
-      "name": "Традиционное блюдо (Франция)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 68.61,
-    "regionsCount": 10,
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg",
+    "population": 68.2,
+    "regionsCount": 18,
     "millionCitiesCount": 1,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Эмманюэль Макрон",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/45/Emmanuel_Macron_en_2018.jpg"
+    },
+    "food": {
+      "name": "Рататуй",
+      "desc": "Запеченное овощное рагу из выложенных спиралью тонких кружочков кабачков, баклажанов и спелых томатов с чесноком, оливковым маслом и тимьяном.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/Ratatouille_001.jpg"
+    }
+  },
+  {
+    "name": "Италия",
+    "code": "IT",
+    "continent": "Европа",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Рим",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+    "population": 58.9,
+    "regionsCount": 20,
+    "millionCitiesCount": 2,
+    "leader": {
+      "name": "Джорджа Мелони",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/85/Giorgia_Meloni_Official_2024_%28cropped%29_2.jpg"
+    },
+    "food": {
+      "name": "Пицца Маргарита",
+      "desc": "Круглая тонкая лепешка из дрожжевого теста, запеченная с соусом из протертых томатов, расплавленным молодым белым сыром и свежими листьями базилика.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a3/Eq_it-na_pizza-margherita_sep2005_sml.jpg"
+    }
+  },
+  {
+    "name": "Испания",
+    "code": "ES",
+    "continent": "Европа",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Мадрид",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Flag_of_Spain.svg",
+    "population": 48.6,
+    "regionsCount": 17,
+    "millionCitiesCount": 2,
+    "leader": {
+      "name": "Педро Санчес",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/47/Pedro_S%C3%A1nchez.jpg"
+    },
+    "food": {
+      "name": "Паэлья",
+      "desc": "Томленый в неглубокой широкой сковороде круглозерный рис ярко-желтого цвета с добавлением креветок, мидий, кальмаров, сладкого перца и шафрана.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Paella_de_marisco_01.jpg"
     }
   },
   {
@@ -2713,20 +88,62 @@
     "code": "GB",
     "continent": "Европа",
     "isUN": true,
-    "isMainland": true,
+    "isMainland": false,
     "capital": "Лондон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20United%20Kingdom%20%283-5%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Великобритания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg",
+    "population": 67.7,
+    "regionsCount": 4,
+    "millionCitiesCount": 2,
+    "leader": {
+      "name": "Кир Стармер",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Keir_Starmer_official_portrait_2024.jpg"
     },
-    "population": 67.33,
-    "regionsCount": 10,
+    "food": {
+      "name": "Фиш энд чипс",
+      "desc": "Крупное филе белой рыбы в хрустящем воздушном кляре, обжаренное во фритюре и поданное с толстыми брусочками жареного картофеля и зеленым горошком.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Fish_and_chips_blackpool.jpg"
+    }
+  },
+  {
+    "name": "Польша",
+    "code": "PL",
+    "continent": "Европа",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Варшава",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/1/12/Flag_of_Poland.svg",
+    "population": 37.6,
+    "regionsCount": 16,
     "millionCitiesCount": 1,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Анджей Дуда",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e4/Andrzej_Duda_Official_Portrait.jpg"
+    },
+    "food": {
+      "name": "Бигос",
+      "desc": "Густое горячее рагу длительного тушения из смеси квашеной и свежей капусты с несколькими сортами рубленого мяса, копчеными колбасками и лесными грибами.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Bigos_hunter_stew.jpg"
+    }
+  },
+  {
+    "name": "Япония",
+    "code": "JP",
+    "continent": "Азия",
+    "isUN": true,
+    "isMainland": false,
+    "capital": "Токио",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Flag_of_Japan.svg",
+    "population": 124.5,
+    "regionsCount": 47,
+    "millionCitiesCount": 12,
+    "leader": {
+      "name": "Сигэру Исиба",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Shigeru_Ishiba_20241001.jpg"
+    },
+    "food": {
+      "name": "Рамэн",
+      "desc": "Наваристый согревающий мясной бульон с длинной пшеничной лапшой, ломтиками томленой свинины, маринованным яйцом с жидким желтком, нори и зеленым луком.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/d/dc/Shoyu_Ramen.jpg"
     }
   },
   {
@@ -2736,1026 +153,18 @@
     "isUN": true,
     "isMainland": true,
     "capital": "Пекин",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20People%27s%20Republic%20of%20China.svg",
-    "food": {
-      "name": "Традиционное блюдо (Китай)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1404.89,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Flag_of_the_People%27s_Republic_of_China.svg",
+    "population": 1409.7,
+    "regionsCount": 34,
+    "millionCitiesCount": 105,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бразилия",
-    "code": "BR",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бразилиа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Brazil.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бразилия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
+      "name": "Си Цзиньпин",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/32/Xi_Jinping_2019.jpg"
     },
-    "population": 214.21,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Россия",
-    "code": "RU",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Москва",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Russia.svg",
     "food": {
-      "name": "Традиционное блюдо (Россия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 146.12,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Германия",
-    "code": "DE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Берлин",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Germany.svg",
-    "food": {
-      "name": "Традиционное блюдо (Германия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 83.47,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Беларусь",
-    "code": "BY",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Минск",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Belarus.svg",
-    "food": {
-      "name": "Традиционное блюдо (Беларусь)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 9.06,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Исландия",
-    "code": "IS",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Рейкьявик",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Iceland.svg",
-    "food": {
-      "name": "Традиционное блюдо (Исландия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.36,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Эстония",
-    "code": "EE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Таллин",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Estonia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Эстония)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.37,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Латвия",
-    "code": "LV",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Рига",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Latvia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Латвия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.85,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Украина",
-    "code": "UA",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Киев",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Ukraine.svg",
-    "food": {
-      "name": "Традиционное блюдо (Украина)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 41.17,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Чехия",
-    "code": "CZ",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Прага",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Czech%20Republic.svg",
-    "food": {
-      "name": "Традиционное блюдо (Чехия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.91,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Словакия",
-    "code": "SK",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Братислава",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Slovakia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Словакия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.41,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Словения",
-    "code": "SI",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Любляна",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Slovenia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Словения)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.07,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Молдова",
-    "code": "MD",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Кишинёв",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Moldova.svg",
-    "food": {
-      "name": "Традиционное блюдо (Молдова)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.41,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Румыния",
-    "code": "RO",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бухарест",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Romania.svg",
-    "food": {
-      "name": "Традиционное блюдо (Румыния)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 19.05,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Болгария",
-    "code": "BG",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "София",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bulgaria.svg",
-    "food": {
-      "name": "Традиционное блюдо (Болгария)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.42,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Северная Македония",
-    "code": "MK",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Скопье",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20North%20Macedonia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Северная Македония)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.84,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Албания",
-    "code": "AL",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тирана",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Albania.svg",
-    "food": {
-      "name": "Традиционное блюдо (Албания)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.81,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Хорватия",
-    "code": "HR",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Загреб",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Croatia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Хорватия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.87,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Босния и Герцеговина",
-    "code": "BA",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сараево",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bosnia%20and%20Herzegovina.svg",
-    "food": {
-      "name": "Традиционное блюдо (Босния и Герцеговина)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.82,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Азербайджан",
-    "code": "AZ",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Баку",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Azerbaijan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Азербайджан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.18,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Андорра",
-    "code": "AD",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Андорра-ла-Велья",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Andorra.svg",
-    "food": {
-      "name": "Традиционное блюдо (Андорра)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.09,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кипр",
-    "code": "CY",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Никосия",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Cyprus.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кипр)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.34,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Грузия",
-    "code": "GE",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Тбилиси",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Georgia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Грузия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.93,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Казахстан",
-    "code": "KZ",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Астана",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kazakhstan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Казахстан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 20.14,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Мальта",
-    "code": "MT",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Валлетта",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Malta.svg",
-    "food": {
-      "name": "Традиционное блюдо (Мальта)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.55,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Монако",
-    "code": "MC",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Монако",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Monaco.svg",
-    "food": {
-      "name": "Традиционное блюдо (Монако)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.04,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Черногория",
-    "code": "ME",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Подгорица",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Montenegro.svg",
-    "food": {
-      "name": "Традиционное блюдо (Черногория)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.62,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сан-Марино",
-    "code": "SM",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сан-Марино",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20San%20Marino.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сан-Марино)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Куба",
-    "code": "CU",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Гавана",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Cuba.svg",
-    "food": {
-      "name": "Традиционное блюдо (Куба)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 10.99,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Белиз",
-    "code": "BZ",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бельмопан",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Belize.svg",
-    "food": {
-      "name": "Традиционное блюдо (Белиз)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.41,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Барбадос",
-    "code": "BB",
-    "continent": "Северная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Бриджтаун",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Barbados.svg",
-    "food": {
-      "name": "Традиционное блюдо (Барбадос)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.3,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Индонезия",
-    "code": "ID",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Джакарта",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Indonesia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Индонезия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 275.44,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "ЮАР",
-    "code": "ZA",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Претория",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20South%20Africa.svg",
-    "food": {
-      "name": "Традиционное блюдо (ЮАР)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 62.03,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Алжир",
-    "code": "DZ",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Алжир",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Algeria.svg",
-    "food": {
-      "name": "Традиционное блюдо (Алжир)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 46.16,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Узбекистан",
-    "code": "UZ",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ташкент",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Uzbekistan.svg",
-    "food": {
-      "name": "Традиционное блюдо (Узбекистан)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 34.92,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Чили",
-    "code": "CL",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сантьяго",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Chile.svg",
-    "food": {
-      "name": "Традиционное блюдо (Чили)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 19.46,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сингапур",
-    "code": "SG",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Сингапур",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Singapore.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сингапур)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.87,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Лихтенштейн",
-    "code": "LI",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Вадуц",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Liechtenstein.svg",
-    "food": {
-      "name": "Традиционное блюдо (Лихтенштейн)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.04,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Бахрейн",
-    "code": "BH",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Манама",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Bahrain.svg",
-    "food": {
-      "name": "Традиционное блюдо (Бахрейн)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.57,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Армения",
-    "code": "AM",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ереван",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Armenia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Армения)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 2.93,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Сербия",
-    "code": "RS",
-    "continent": "Европа",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Белград",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Serbia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Сербия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 6.61,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Австралия",
-    "code": "AU",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Канберра",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Australia%20%28converted%29.svg",
-    "food": {
-      "name": "Традиционное блюдо (Австралия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 27.61,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Аргентина",
-    "code": "AR",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Буэнос-Айрес",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Argentina.svg",
-    "food": {
-      "name": "Традиционное блюдо (Аргентина)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 47.33,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Перу",
-    "code": "PE",
-    "continent": "Южная Америка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Лима",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Peru.svg",
-    "food": {
-      "name": "Традиционное блюдо (Перу)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 34.16,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "КНДР",
-    "code": "KP",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Пхеньян",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20North%20Korea.svg",
-    "food": {
-      "name": "Традиционное блюдо (КНДР)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 26.42,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Камбоджа",
-    "code": "KH",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Пномпень",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Cambodia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Камбоджа)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 17.42,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Восточный Тимор",
-    "code": "TL",
-    "continent": "Азия",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Дили",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20East%20Timor.svg",
-    "food": {
-      "name": "Традиционное блюдо (Восточный Тимор)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1.4,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Чад",
-    "code": "TD",
-    "continent": "Африка",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нджамена",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Chad.svg",
-    "food": {
-      "name": "Традиционное блюдо (Чад)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 19.32,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Новая Зеландия",
-    "code": "NZ",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Веллингтон",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20New%20Zealand.svg",
-    "food": {
-      "name": "Традиционное блюдо (Новая Зеландия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 5.31,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Утка по-пекински",
+      "desc": "Птица, запеченная целиком в подвесном виде до темно-янтарной хрустящей корочки, подаваемая тончайшими ломтиками с мини-блинчиками, огурцом и соусом из бобов.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/64/Peking_Duck_Made_in_Tokyo.jpg"
     }
   },
   {
@@ -3765,291 +174,333 @@
     "isUN": true,
     "isMainland": true,
     "capital": "Нью-Дели",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20India.svg",
-    "food": {
-      "name": "Традиционное блюдо (Индия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 1326.09,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/4/41/Flag_of_India.svg",
+    "population": 1428.6,
+    "regionsCount": 28,
+    "millionCitiesCount": 46,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Драупади Мурму",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/President_Droupadi_Murmu_official_portrait.jpg"
+    },
+    "food": {
+      "name": "Бирьяни",
+      "desc": "Пряное блюдо из рассыпчатого длиннозерного риса басмати, приготовленное в казане слоями с маринованным мясом, шафраном, жареным луком и топленым маслом.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5a/%22Hyderabadi_Dum_Biryani%22.jpg"
     }
   },
   {
-    "name": "Тувалу",
-    "code": "TV",
-    "continent": "Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Фунафути",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tuvalu.svg",
-    "food": {
-      "name": "Традиционное блюдо (Тувалу)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.01,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Тонга",
-    "code": "TO",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нукуалофа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Tonga.svg",
-    "food": {
-      "name": "Традиционное блюдо (Тонга)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.11,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Самоа",
-    "code": "WS",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Апиа",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Samoa.svg",
-    "food": {
-      "name": "Традиционное блюдо (Самоа)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.2,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Соломоновы Острова",
-    "code": "SB",
-    "continent": "Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Хониара",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Solomon%20Islands.svg",
-    "food": {
-      "name": "Традиционное блюдо (Соломоновы Острова)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.61,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Вануату",
-    "code": "VU",
-    "continent": "Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порт-Вила",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Vanuatu.svg",
-    "food": {
-      "name": "Традиционное блюдо (Вануату)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.3,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Папуа — Новая Гвинея",
-    "code": "PG",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Порт-Морсби",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Papua%20New%20Guinea.svg",
-    "food": {
-      "name": "Традиционное блюдо (Папуа — Новая Гвинея)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 8.94,
-    "regionsCount": 10,
-    "millionCitiesCount": 1,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Палау",
-    "code": "PW",
-    "continent": "Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Нгерулмуд",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Palau.svg",
-    "food": {
-      "name": "Традиционное блюдо (Палау)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.02,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Науру",
-    "code": "NR",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Ярен",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Nauru.svg",
-    "food": {
-      "name": "Традиционное блюдо (Науру)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.01,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Федеративные Штаты Микронезии",
-    "code": "FM",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Паликир",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Federated%20States%20of%20Micronesia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Федеративные Штаты Микронезии)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.08,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Маршалловы Острова",
-    "code": "MH",
-    "continent": "Австралия и Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Маджуро",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20the%20Marshall%20Islands.svg",
-    "food": {
-      "name": "Традиционное блюдо (Маршалловы Острова)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.05,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Кирибати",
-    "code": "KI",
-    "continent": "Океания",
-    "isUN": true,
-    "isMainland": true,
-    "capital": "Южная Тарава",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Kiribati.svg",
-    "food": {
-      "name": "Традиционное блюдо (Кирибати)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.13,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
-    "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
-    }
-  },
-  {
-    "name": "Монголия",
-    "code": "MN",
+    "name": "Таиланд",
+    "code": "TH",
     "continent": "Азия",
     "isUN": true,
     "isMainland": true,
-    "capital": "Улан-Батор",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Mongolia.svg",
-    "food": {
-      "name": "Традиционное блюдо (Монголия)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 3.41,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
+    "capital": "Бангкок",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_Thailand.svg",
+    "population": 71.8,
+    "regionsCount": 77,
+    "millionCitiesCount": 1,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Пхэтхонгтхан Чинават",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/1/11/Paetongtarn_Shinawatra_2024.jpg"
+    },
+    "food": {
+      "name": "Том ям",
+      "desc": "Остро-кислый суп на ароматном бульоне с креветками, стеблями лемонграсса, листьями лайма, корнем галангала, грибами и жгучей пастой чили.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Tom_yam_kung.jpg"
     }
   },
   {
-    "name": "Фиджи",
-    "code": "FJ",
+    "name": "Вьетнам",
+    "code": "VN",
+    "continent": "Азия",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Ханой",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/2/21/Flag_of_Vietnam.svg",
+    "population": 98.8,
+    "regionsCount": 63,
+    "millionCitiesCount": 2,
+    "leader": {
+      "name": "То Лам",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/36/To_Lam_in_2024.jpg"
+    },
+    "food": {
+      "name": "Фо бо",
+      "desc": "Прозрачный пряный говяжий бульон долгой варки с плоской рисовой лапшой, тонкими мясными пластинками, свежей кинзой, мятой и соком лайма.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Pho-Beef-Noodles-2008.jpg"
+    }
+  },
+  {
+    "name": "США",
+    "code": "US",
+    "continent": "Северная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Вашингтон",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg",
+    "population": 335.8,
+    "regionsCount": 50,
+    "millionCitiesCount": 9,
+    "leader": {
+      "name": "Джо Байден",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/68/Joe_Biden_presidential_portrait.jpg"
+    },
+    "food": {
+      "name": "Бургер",
+      "desc": "Сочная поджаренная на гриле котлета из мраморной говядины внутри мягкой круглой булочки с расплавленным сыром, листьями салата и маринованными огурцами.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0b/RedDot_Burger.jpg"
+    }
+  },
+  {
+    "name": "Канада",
+    "code": "CA",
+    "continent": "Северная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Оттава",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Flag_of_Canada_%28Pantone%29.svg",
+    "population": 40.1,
+    "regionsCount": 13,
+    "millionCitiesCount": 3,
+    "leader": {
+      "name": "Джастин Трюдо",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Justin_Trudeau_in_2017.jpg"
+    },
+    "food": {
+      "name": "Путин",
+      "desc": "Горячий хрустящий картофель фри, посыпанный упругими кусочками свежего сырного зерна и щедро залитый густой коричневой мясной подливкой.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/77/Poutine.jpg"
+    }
+  },
+  {
+    "name": "Мексика",
+    "code": "MX",
+    "continent": "Северная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Мехико",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Flag_of_Mexico.svg",
+    "population": 129.5,
+    "regionsCount": 32,
+    "millionCitiesCount": 11,
+    "leader": {
+      "name": "Клаудия Шейнбаум",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Claudia_Sheinbaum_Pardo_%28cropped%29.jpg"
+    },
+    "food": {
+      "name": "Тако",
+      "desc": "Небольшие кукурузные лепешки, сложенные конвертом и наполненные жаренным на огне рубленым мясом, свежей кинзой, репчатым луком и острой сальсой.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/001_Tacos_de_carnitas%2C_tianguis_de_los_domingos%2C_Tepic.jpg"
+    }
+  },
+  {
+    "name": "Ямайка",
+    "code": "JM",
+    "continent": "Северная Америка",
+    "isUN": true,
+    "isMainland": false,
+    "capital": "Кингстон",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Flag_of_Jamaica.svg",
+    "population": 2.8,
+    "regionsCount": 14,
+    "millionCitiesCount": 0,
+    "leader": {
+      "name": "Эндрю Холнесс",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Andrew_Holness_2018.jpg"
+    },
+    "food": {
+      "name": "Аки и соленая рыба",
+      "desc": "Тушеное филе сушено-соленой трески с отварной мякотью экзотического плода, по нежной текстуре напоминающего омлет, со сладким перцем и тимьяном.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/53/Ackee_and_saltfish.jpg"
+    }
+  },
+  {
+    "name": "Куба",
+    "code": "CU",
+    "continent": "Северная Америка",
+    "isUN": true,
+    "isMainland": false,
+    "capital": "Гавана",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Flag_of_Cuba.svg",
+    "population": 11.0,
+    "regionsCount": 16,
+    "millionCitiesCount": 1,
+    "leader": {
+      "name": "Мигель Диас-Канель",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Miguel_D%C3%ADaz-Canel_%282023%29.jpg"
+    },
+    "food": {
+      "name": "Ропа вьеха",
+      "desc": "Мягкая томленая говядина, разобранная на тонкие сочные волокна и тушенная в соусе из спелых томатов, сладкого перца, лука, чеснока и оливок.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Ropa_vieja_%28Cuban_style_shredded_beef%29.jpg"
+    }
+  },
+  {
+    "name": "Бразилия",
+    "code": "BR",
+    "continent": "Южная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Бразилиа",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg",
+    "population": 215.3,
+    "regionsCount": 27,
+    "millionCitiesCount": 17,
+    "leader": {
+      "name": "Луис Инасиу Лула да Силва",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/3/35/Lula_-_foto_oficial05012023_%28cropped%29.jpg"
+    },
+    "food": {
+      "name": "Фейжоада",
+      "desc": "Густая тушеная похлебка из черных бобов с копчеными свиными колбасками, ребрышками и сушеным мясом, гарнированная дольками сочного апельсина.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Feijoada_carioca_completa.jpg"
+    }
+  },
+  {
+    "name": "Аргентина",
+    "code": "AR",
+    "continent": "Южная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Буэнос-Айрес",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Flag_of_Argentina.svg",
+    "population": 46.2,
+    "regionsCount": 24,
+    "millionCitiesCount": 1,
+    "leader": {
+      "name": "Хавьер Милей",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Javier_Milei_en_2023_%28cropped%29.jpg"
+    },
+    "food": {
+      "name": "Асадо",
+      "desc": "Крупные отруба отборных говяжьих ребер и вырезки, приготовленные методом долгого томления на наклонном гриле над тлеющими древесными углями.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Asado_argentino_2010.jpg"
+    }
+  },
+  {
+    "name": "Перу",
+    "code": "PE",
+    "continent": "Южная Америка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Лима",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Flag_of_Peru.svg",
+    "population": 34.0,
+    "regionsCount": 25,
+    "millionCitiesCount": 2,
+    "leader": {
+      "name": "Дина Болуарте",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/2/23/Dina_Boluarte_-_2022_%28cropped%29.jpg"
+    },
+    "food": {
+      "name": "Севиче",
+      "desc": "Кубики свежего филе сырой морской рыбы, быстро замаринованные в соке лайма с красным луком, острым перцем, зернами кукурузы и кусочками батата.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/78/Ceviche_de_pescado_en_Lima.jpg"
+    }
+  },
+  {
+    "name": "Египет",
+    "code": "EG",
+    "continent": "Африка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Каир",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fe/Flag_of_Egypt.svg",
+    "population": 109.3,
+    "regionsCount": 27,
+    "millionCitiesCount": 4,
+    "leader": {
+      "name": "Абдул-Фаттах Ас-Сиси",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/5/52/Abdel_Fattah_el-Sisi_official_portrait.jpg"
+    },
+    "food": {
+      "name": "Кошари",
+      "desc": "Сытная смесь из отварного риса, мелких макарон и коричневой чечевицы, дополненная нутом, хрустящим жареным луком и острым чесночно-томатным соусом.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/9/91/Koshary_plate.jpg"
+    }
+  },
+  {
+    "name": "ЮАР",
+    "code": "ZA",
+    "continent": "Африка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Претория",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+    "population": 62.0,
+    "regionsCount": 9,
+    "millionCitiesCount": 6,
+    "leader": {
+      "name": "Сирил Рамафоса",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Cyril_Ramaphosa_portrait_2018.jpg"
+    },
+    "food": {
+      "name": "Боботи",
+      "desc": "Запеченное мясное блюдо из пряного рубленого фарша с карри, миндалем и изюмом, покрытое нежной яично-молочной корочкой с лавровым листом.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Bobotie_and_yellow_rice.jpg"
+    }
+  },
+  {
+    "name": "Марокко",
+    "code": "MA",
+    "continent": "Африка",
+    "isUN": true,
+    "isMainland": true,
+    "capital": "Рабат",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg",
+    "population": 37.8,
+    "regionsCount": 12,
+    "millionCitiesCount": 5,
+    "leader": {
+      "name": "Мухаммед VI",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Mohammed_VI_of_Morocco.jpg"
+    },
+    "food": {
+      "name": "Тажин",
+      "desc": "Медленно томленная в конусообразной глиняной посуде нежная баранина с карамелизированным черносливом, обжаренным миндалем, шафраном и корицей.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Tajine_de_veau_aux_pruneaux.jpg"
+    }
+  },
+  {
+    "name": "Австралия",
+    "code": "AU",
     "continent": "Океания",
     "isUN": true,
     "isMainland": true,
-    "capital": "Сува",
-    "flagUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Flag%20of%20Fiji.svg",
-    "food": {
-      "name": "Традиционное блюдо (Фиджи)",
-      "desc": "Сытное национальное блюдо из запеченного мяса, свежих трав, пряных специй и отборных злаков.",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Good_Food_Display_-_NCI_Visuals_Online.jpg"
-    },
-    "population": 0.93,
-    "regionsCount": 10,
-    "millionCitiesCount": 0,
+    "capital": "Канберра",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28converted%29.svg",
+    "population": 26.6,
+    "regionsCount": 8,
+    "millionCitiesCount": 5,
     "leader": {
-      "name": "Глава государства",
-      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Profile_avatar_placeholder_large.png"
+      "name": "Энтони Албаниз",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/8/82/Anthony_Albanese_official_portrait.jpg"
+    },
+    "food": {
+      "name": "Мясной пирог",
+      "desc": "Небольшой порционный закрытый пирог из слоеного теста с начинкой из сочного говяжьего фарша в густой мясной подливе с карамелизированным луком.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Australian_meat_pie.jpg"
+    }
+  },
+  {
+    "name": "Новая Зеландия",
+    "code": "NZ",
+    "continent": "Океания",
+    "isUN": true,
+    "isMainland": false,
+    "capital": "Веллингтон",
+    "flagUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Flag_of_New_Zealand.svg",
+    "population": 5.2,
+    "regionsCount": 16,
+    "millionCitiesCount": 1,
+    "leader": {
+      "name": "Кристофер Лаксон",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Christopher_Luxon_2023.jpg"
+    },
+    "food": {
+      "name": "Павлова",
+      "desc": "Воздушный десерт из запеченного безе с хрустящей тонкой корочкой и нежной тягучей серединкой, украшенный взбитыми сливками и ломтиками киви.",
+      "photoUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Pavlova_dessert.jpg"
     }
   }
 ]
