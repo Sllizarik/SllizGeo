@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SllizGeo — Географическая викторина и Атлас</title>
+  <meta name="description" content="Интерактивная географическая викторина и картографический атлас 205 стран мира: контуры карт, флаги, столицы и национальные кухни." />
+  <meta property="og:title" content="SllizGeo — Географическая викторина и Атлас" />
+  <meta property="og:description" content="Интерактивная географическая викторина и картографический атлас 205 стран мира: контуры карт, флаги, столицы и национальные кухни." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="stylesheet" href="style.css?v=20261102f">
+<script src="_aistudio-iframe.js"></script></head>
+<body class="theme-dark">
+
+  <!-- Шапка: кнопки справа (включая отдельную кнопку Атласа 10m) -->
+  <header class="top-bar">
+    <div class="top-actions">
+      <button class="icon-btn" id="atlas-btn" title="Атлас контуров 10m (205 стран)">🗺️</button>
+      <button class="icon-btn" id="leaderboard-btn" title="Топ игроков">🏆</button>
+      <button class="icon-btn" id="book-btn" title="Энциклопедия">📖</button>
+      <button class="icon-btn" id="shop-btn" title="Магазин">🛒</button>
+      <button class="icon-btn" id="settings-btn" title="Настройки">⚙️</button>
+    </div>
+  </header>
+
+  <!-- Главный экран -->
+  <main class="main-screen">
+    <div class="hero hero-header">
+      <h1 class="logo-title">SllizGeo</h1>
+      <div class="countries-badge">
+        🌍 Доступно стран: <strong id="available-count">0</strong> из <strong id="total-count">0</strong>
+      </div>
+      <div class="settings-nav main-menu-tabs">
+        <button type="button" class="settings-nav-btn active" data-menu-tab="1">1</button>
+      </div>
+    </div>
+
+    <!-- Сетка игровых режимов -->
+    <div class="modes-grid">
+      <div class="mode-card" data-mode="flag-to-country">
+        <h3>Флаг → Страна</h3>
+        <p>Угадай государство по официальному флагу</p>
+      </div>
+
+      <div class="mode-card" data-mode="country-to-flag" style="display: none;">
+        <h3>Страна → Флаг</h3>
+        <p>Найди правильный флаг указанной страны</p>
+      </div>
+
+      <div class="mode-card" data-mode="capitals">
+        <h3>Столицы мира</h3>
+        <p>Угадай государство по его столице</p>
+      </div>
+
+      <div class="mode-card" data-mode="maps">
+        <h3>Карты мира</h3>
+        <p>Определи страну по её 10m контуру и врезкам</p>
+      </div>
+
+      <div class="mode-card" data-mode="food">
+        <h3>Кухни мира</h3>
+        <p>Блюда и ингредиенты без спойлеров</p>
+      </div>
+
+      <div class="mode-card" data-mode="temperature">
+        <h3>Температура</h3>
+        <p>Угадай страну по годовой температуре</p>
+      </div>
+
+      <div class="mode-card" data-mode="leaders">
+        <h3>Лидеры стран</h3>
+        <p>Портреты глав государств без гербов</p>
+      </div>
+
+      <div class="mode-card" data-mode="facts-deduction">
+        <h3>По фактам</h3>
+        <p>Угадай страну за 10 попыток</p>
+      </div>
+
+      <div class="mode-card" data-mode="neighbors">
+        <h3>Соседи</h3>
+        <p>Впиши всех сухопутных соседей государства</p>
+      </div>
+
+      <div class="mode-card" data-mode="distance">
+        <h3>Расстояние</h3>
+        <p>Ближайшая и дальняя страна по границам</p>
+      </div>
+
+      <div class="mode-card" data-mode="route">
+        <h3>Маршрут</h3>
+        <p>Сухопутный путь из страны А в страну Б</p>
+      </div>
+
+      <div class="mode-card split-mode-card">
+        <h3>Больше / Меньше</h3>
+        <div class="split-mode-actions">
+          <button type="button" class="split-mode-half" data-hl-type="area">📐 Территория (км²)</button>
+          <button type="button" class="split-mode-half" data-hl-type="population">👥 Население</button>
+        </div>
+      </div>
+
+      <div class="mode-card split-mode-card sorting-mode-card">
+        <div class="sorting-card-header">
+          <h3>Сортировка</h3>
+          <button type="button" class="sorting-info-btn" id="sorting-info-btn" title="Расшифровка категорий сортировки" aria-label="Расшифровка категорий">?</button>
+        </div>
+        <div class="sorting-mode-actions">
+          <button type="button" class="sorting-cat-btn" data-sort-cat="1">1</button>
+          <button type="button" class="sorting-cat-btn" data-sort-cat="2">2</button>
+          <button type="button" class="sorting-cat-btn" data-sort-cat="3">3</button>
+          <button type="button" class="sorting-cat-btn" data-sort-cat="4">4</button>
+          <button type="button" class="sorting-cat-btn" data-sort-cat="5">5</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Модальное окно-памятка режима «Сортировка» -->
+  <div class="modal-overlay" id="sorting-info-modal" style="display: none;">
+    <div class="modal-content sorting-info-dialog">
+      <div class="modal-header ingame-hints-header">
+        <h2>📊 Категории сортировки</h2>
+        <button type="button" class="close-btn" id="close-sorting-info">&times;</button>
+      </div>
+      <div class="sorting-info-list">
+        <div class="sorting-info-item"><span class="sorting-info-num">1</span><span>По площади территории (км²)</span></div>
+        <div class="sorting-info-item"><span class="sorting-info-num">2</span><span>По населению</span></div>
+        <div class="sorting-info-item"><span class="sorting-info-num">3</span><span>По среднегодовой температуре</span></div>
+        <div class="sorting-info-item"><span class="sorting-info-num">4</span><span>По количеству регионов</span></div>
+        <div class="sorting-info-item"><span class="sorting-info-num">5</span><span>По городам-миллионникам</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Экран викторины -->
+  <div class="game-screen" id="game-screen" style="display: none;">
+    <div class="game-top-bar">
+      <button class="icon-btn" id="exit-game-btn">✕</button>
+      <div class="game-progress" id="game-progress">1 / 20</div>
+      <div class="stat-pill">Очки: <span id="game-score">0</span></div>
+    </div>
+
+    <!-- Подсказки справа под очками: единая видимая кнопка + скрытые кнопки для совместимости с mode-*.js -->
+    <div class="ingame-boosters">
+      <button type="button" class="booster-btn" id="open-ingame-hints-btn">💡 Подсказки</button>
+      <button type="button" class="booster-btn" id="use-fifty-btn" style="display: none;">🌓 50/50 (<span id="ingame-fifty-count">0</span>)</button>
+      <button type="button" class="booster-btn" id="use-skip-btn" style="display: none;">🎯 Ответ (<span id="ingame-skip-count">0</span>)</button>
+    </div>
+
+    <!-- Контейнер вопроса и ответов -->
+    <div class="quiz-container">
+      <div class="question-box" id="question-box"></div>
+      <div class="answers-grid" id="answers-grid"></div>
+    </div>
+  </div>
+
+  <!-- Компактное всплывающее мини-окно подсказок во время игры -->
+  <div class="modal-overlay" id="ingame-hints-modal" style="display: none;">
+    <div class="modal-content ingame-hints-dialog">
+      <div class="modal-header ingame-hints-header">
+        <h2 id="ingame-hints-title">💡 Подсказки</h2>
+        <button type="button" class="close-btn" id="close-ingame-hints">&times;</button>
+      </div>
+      <div class="ingame-hints-list" id="ingame-hints-list">
+        <div class="unavailable-placeholder-card">
+          <div class="unavailable-placeholder-icon">🔒</div>
+          <div class="unavailable-placeholder-title">Пока недоступно</div>
+          <p class="unavailable-placeholder-desc">Раздел подсказок временно отключён и появится в следующих обновлениях.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Стильное окно подтверждения выхода -->
+  <div class="modal-overlay" id="exit-confirm-modal" style="display: none;">
+    <div class="results-card exit-dialog-card">
+      <div class="exit-dialog-icon">🚪</div>
+      <h2>Выйти в меню?</h2>
+      <p class="exit-dialog-desc">Текущий раунд будет прерван, а набранные очки не сохранятся.</p>
+      <div class="results-actions">
+        <button class="action-btn cancel-exit-btn" id="cancel-exit-btn">Остаться</button>
+        <button class="action-btn confirm-exit-btn" id="confirm-exit-btn">Выйти</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Экран результатов раунда -->
+  <div class="results-modal" id="results-modal" style="display: none;">
+    <div class="results-card">
+      <h2 id="results-title">Раунд завершён!</h2>
+      <div class="results-stats">
+        <div class="result-item">
+          <span>Счёт:</span>
+          <strong id="final-score">0</strong>
+        </div>
+        <div class="result-item">
+          <span>Получено монет:</span>
+          <strong id="final-coins">+0 🪙</strong>
+        </div>
+        <div class="result-item">
+          <span>Получено звёзд:</span>
+          <strong id="final-stars">+0 ⭐</strong>
+        </div>
+      </div>
+      <div class="results-actions">
+        <button class="action-btn retry-btn" id="retry-btn">Играть снова</button>
+        <button class="action-btn home-btn" id="to-menu-btn">В меню</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно: ТОП (ЗВЁЗДЫ) -->
+  <div class="modal-overlay" id="leaderboard-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>Личный рекорд</h2>
+        <button class="close-btn" id="close-leaderboard">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="top-stars-card">
+          <div class="stars-big">⭐ <span id="profile-stars">950</span></div>
+          <p>Общий рейтинг мастерства</p>
+        </div>
+        <div class="top-stats-list">
+          <div class="top-stat-row">
+            <span>Статус:</span>
+            <strong>Локальный профиль</strong>
+          </div>
+          <div class="top-stat-row">
+            <span>Сыграно раундов:</span>
+            <strong id="profile-games">0</strong>
+          </div>
+          <div class="top-stat-row">
+            <span>Онлайн таблица:</span>
+            <small style="color:var(--text-muted)">В разработке</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно: МАГАЗИН (заглушка «Пока недоступно») -->
+  <div class="modal-overlay" id="shop-modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2>🛒 Магазин</h2>
+        <button class="close-btn" id="close-shop">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="unavailable-placeholder-card">
+          <div class="unavailable-placeholder-icon">🛒</div>
+          <div class="unavailable-placeholder-title">Пока недоступно</div>
+          <p class="unavailable-placeholder-desc">Магазин бонусов и улучшений временно закрыт на обновление.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Модальное окно: ЭНЦИКЛОПЕДИЯ СТРАН -->
+  <div class="modal-overlay" id="book-modal">
+    <div class="modal-content book-modal-content">
+      <div class="modal-header">
+        <h2>Энциклопедия стран (205)</h2>
+        <button class="close-btn" id="close-book">&times;</button>
+      </div>
+      <div class="search-box">
+        <input type="text" id="country-search" placeholder="🔍 Поиск страны или столицы...">
+      </div>
+      <div class="book-list" id="book-list"></div>
+    </div>
+  </div>
+
+  <!-- Отдельная полная страница о стране (открывается при нажатии на флаг в Энциклопедии) -->
+  <div class="modal-overlay" id="country-detail-modal">
+    <div class="modal-content country-detail-modal-content">
+      <div class="modal-header detail-modal-header">
+        <div>
+          <h2>Полное досье страны</h2>
+          <small style="color:var(--text-muted); font-size:11px;">Нажмите на любую страну в списке ниже или воспользуйтесь поиском</small>
+        </div>
+        <button class="close-btn" id="close-country-detail" title="Закрыть досье">&times;</button>
+      </div>
+
+      <!-- Сверху поиск, а прямо под ним выбор страны -->
+      <div class="detail-top-Controls">
+        <div class="search-box" style="margin-bottom: 8px;">
+          <input type="text" id="detail-country-search" placeholder="🔍 Поиск страны или столицы...">
+        </div>
+        <div class="detail-selector-wrap">
+          <select id="detail-country-select" class="detail-country-select" title="Выбрать страну из списка"></select>
+          <div class="detail-country-chips" id="detail-country-chips"></div>
+        </div>
+      </div>
+
+      <!-- Полная информация о выбранной стране -->
+      <div class="country-detail-body" id="country-detail-body"></div>
+    </div>
+  </div>
+
+  <!-- Модальное окно: НАСТРОЙКИ (ВКЛАДКИ + НИЖНЯЯ ЗАКРЕПЛЁННАЯ ШАПКА) -->
+  <div class="modal-overlay" id="settings-modal">
+    <div class="modal-content settings-modal-content">
+      <div class="settings-nav">
+        <button class="settings-nav-btn active" data-tab="rounds">Раунды</button>
+        <button class="settings-nav-btn" data-tab="system">Системные</button>
+      </div>
+      <div class="modal-body settings-modal-body">
+        <div class="tab-pane active" id="pane-rounds">
+          <div class="setting-group">
+            <label class="group-title">Направление вопросов (5 классических режимов)</label>
+            <div class="direction-selector">
+              <button type="button" class="direction-btn active" data-direction="normal">Обычный</button>
+              <button type="button" class="direction-btn" data-direction="reverse">Наоборот</button>
+              <button type="button" class="direction-btn" data-direction="split">Двойной</button>
+            </div>
+          </div>
+          <div class="setting-group">
+            <label class="group-title">Сложность игры</label>
+            <div class="difficulty-selector">
+              <button class="diff-btn" data-diff="easy">Лёгкая</button>
+              <button class="diff-btn active" data-diff="normal">Средняя</button>
+              <button class="diff-btn" data-diff="hard">Сложная</button>
+            </div>
+          </div>
+          <div class="setting-group">
+            <div class="slider-header">
+              <label class="group-title">Вопросов в раунде:</label>
+              <span class="slider-val" id="questions-val">5</span>
+            </div>
+            <input type="range" id="questions-slider" min="5" max="5" step="5" value="5">
+            <small class="slider-hint" id="slider-hint">Доступно стран: 0</small>
+          </div>
+          <div class="setting-group toggles-group">
+            <label class="switch-row">
+              <span>Только страны ООН</span>
+              <input type="checkbox" id="filter-un">
+              <span class="custom-toggle"></span>
+            </label>
+            <label class="switch-row">
+              <span>Только материковые страны</span>
+              <input type="checkbox" id="filter-mainland">
+              <span class="custom-toggle"></span>
+            </label>
+          </div>
+          <div class="setting-group">
+            <label class="group-title">Регионы мира</label>
+            <div class="continents-grid">
+              <button class="continent-btn active" data-region="Европа">Европа</button>
+              <button class="continent-btn active" data-region="Азия">Азия</button>
+              <button class="continent-btn active" data-region="Африка">Африка</button>
+              <button class="continent-btn active" data-region="Северная Америка">Северная Америка</button>
+              <button class="continent-btn active" data-region="Южная Америка">Южная Америка</button>
+              <button class="continent-btn active" data-region="Австралия и Океания">Океания</button>
+            </div>
+          </div>
+        </div>
+        <div class="tab-pane" id="pane-system" style="display: none;">
+          <div class="setting-group">
+            <label class="group-title">Тема оформления</label>
+            <div class="theme-selector">
+              <button class="theme-btn active" data-theme="theme-dark">Тёмная</button>
+              <button class="theme-btn" data-theme="theme-neon">Неоновая</button>
+              <button class="theme-btn" data-theme="theme-light">Светлая</button>
+            </div>
+          </div>
+
+          <div class="setting-group" id="secret-download-group" style="display: none;">
+            <label class="group-title">Исходный код игры (для Acode и ПК)</label>
+            <button type="button" id="download-single-html-btn" class="download-zip-btn" style="margin-bottom: 8px; width: 100%; border: none; cursor: pointer;">
+              ⚡ Скачать всё в 1 файле для Acode (index.html)
+            </button>
+            <a href="sllizgeo-full-code.zip" download="sllizgeo-full-code.zip" id="download-full-zip-btn" class="download-zip-btn">
+              📥 Скачать все 11 файлов архивом (.ZIP)
+            </a>
+            <small class="slider-hint" id="download-status-hint" style="margin-bottom: 10px;">Или скачайте / скопируйте код нужного файла напрямую в Acode:</small>
+            <div class="code-files-grid">
+              <div class="code-file-row">
+                <a href="index.html" download="index.html" data-dl-file="index.html" class="code-file-link">📄 index.html</a>
+                <button type="button" class="copy-code-btn" data-copy-file="index.html">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="style.css" download="style.css" data-dl-file="style.css" class="code-file-link">🎨 style.css</a>
+                <button type="button" class="copy-code-btn" data-copy-file="style.css">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="app.js" download="app.js" data-dl-file="app.js" class="code-file-link">⚙️ app.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="app.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="data.js" download="data.js" data-dl-file="data.js" class="code-file-link">📊 data.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="data.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="media.js" download="media.js" data-dl-file="media.js" class="code-file-link">🖼️ media.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="media.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="atlas-10m-data.js" download="atlas-10m-data.js" data-dl-file="atlas-10m-data.js" class="code-file-link">🗺️ atlas-10m-data.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="atlas-10m-data.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="mode-maps.js" download="mode-maps.js" data-dl-file="mode-maps.js" class="code-file-link">🧭 mode-maps.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="mode-maps.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="mode-leaders.js" download="mode-leaders.js" data-dl-file="mode-leaders.js" class="code-file-link">👤 mode-leaders.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="mode-leaders.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="mode-food.js" download="mode-food.js" data-dl-file="mode-food.js" class="code-file-link">🍲 mode-food.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="mode-food.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="mode-flags.js" download="mode-flags.js" data-dl-file="mode-flags.js" class="code-file-link">🚩 mode-flags.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="mode-flags.js">📋 Копировать</button>
+              </div>
+              <div class="code-file-row">
+                <a href="mode-capitals.js" download="mode-capitals.js" data-dl-file="mode-capitals.js" class="code-file-link">🏛️ mode-capitals.js</a>
+                <button type="button" class="copy-code-btn" data-copy-file="mode-capitals.js">📋 Копировать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-header settings-bottom-header">
+        <h2>⚙️ Настройки</h2>
+        <button type="button" class="close-btn" id="close-settings-btn">&times;</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Полноэкранный Атлас всего мира (открывается кнопкой 🗺️ в шапке или кликом по контуру в Энциклопедии с подсветкой страны) -->
+  <div class="fullscreen-atlas-modal" id="fullscreen-atlas-modal" style="display: none;">
+    <div class="atlas-top-bar">
+      <div class="atlas-country-info">
+        <span class="atlas-country-flag" id="atlas-flag">🌍</span>
+        <div>
+          <h2 id="atlas-title">Атлас мира (205 стран)</h2>
+          <span id="atlas-subtitle">Двигайте карту пальцем или мышью • Нажмите на любую страну</span>
+        </div>
+      </div>
+      <div class="atlas-top-actions">
+        <select id="atlas-country-select" class="atlas-country-select" title="Выбрать страну на карте мира"></select>
+        <button class="atlas-ctrl-btn atlas-focus-btn" id="atlas-focus-country" title="Приблизить к выбранной стране" style="display: none;">🎯 К стране</button>
+        <div class="atlas-zoom-controls">
+          <button class="atlas-ctrl-btn" id="atlas-zoom-in" title="Приблизить">+</button>
+          <button class="atlas-ctrl-btn" id="atlas-zoom-out" title="Отдалить">−</button>
+          <button class="atlas-ctrl-btn" id="atlas-zoom-reset" title="Показать весь мир">🌍</button>
+        </div>
+        <button type="button" class="action-btn confirm-exit-btn close-atlas-btn" id="close-atlas-btn" onclick="document.getElementById('fullscreen-atlas-modal').style.display='none';">✕ Выйти</button>
+      </div>
+    </div>
+    <div class="atlas-map-container" id="atlas-map-container">
+      <!-- Сюда D3 рисует интерактивный Атлас всей карты мира -->
+    </div>
+  </div>
+
+  <!-- Библиотеки D3 и TopoJSON + предкомпилированный Атлас 10m (205 стран) -->
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+  <script src="atlas-10m-data.js?v=20261102g"></script>
+  <script src="data.js?v=20261102g"></script>
+  <script src="media.js?v=20261102g"></script>
+  <script src="mode-flags.js?v=20261102g"></script>
+  <script src="mode-capitals.js?v=20261102g"></script>
+  <script src="mode-food.js?v=20261102g"></script>
+  <script src="mode-maps.js?v=20261102g"></script>
+  <script src="mode-leaders.js?v=20261102g"></script>
+  <script src="app.js?v=20261102g"></script>
+</body>
+</html>
